@@ -1,0 +1,187 @@
+package s2.backtrack;
+
+import java.awt.BorderLayout;
+import java.awt.Container;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.BoxLayout;
+import javax.swing.JCheckBoxMenuItem;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+/**
+ *
+ * @author s@scalingbits.com
+ * @version 1.0
+ */
+public class Backtrack1 {
+    static int xgroesse = 15;
+    static int ygroesse = 10;
+    static Zelle[][] zellen;
+    static Labyrinth laby;
+    static JTextField statusfeld;
+    
+    public static void main(String[] args) {
+        
+        // Anlegen eines Feldes der Buttons und der Hintergrundstrukturen
+        Zelle.start = new Position(0,0,Position.Status.START);
+        Zelle.ziel = new Position(xgroesse-1,ygroesse-1,Position.Status.ZIEL);
+        laby = new Labyrinth(xgroesse,ygroesse,  Zelle.start, Zelle.ziel);
+        // Anlegen eines Feldes der Buttons
+        zellen = new Zelle[xgroesse][ygroesse];
+        
+        for (int x=0; x <zellen.length; x++) {
+            for (int y=0; y <zellen[0].length; y++) {
+                zellen[x][y]=new Zelle(laby.feld[x][y]);
+            }
+        }
+        zellen[0][0].setIcon(Zelle.startIcon);
+        zellen[xgroesse-1][ygroesse-1].setIcon(Zelle.zielIcon);
+        
+        // Rahmen anlegen
+        JFrame rahmen = new JFrame(Backtrack1.class.getName());
+        rahmen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        Container myPane = rahmen.getContentPane();
+        myPane.setLayout(new BorderLayout());
+        
+        JPanel buttonfeld = new JPanel();
+        buttonfeld.setLayout(new GridLayout(ygroesse,xgroesse));
+        for (int y=0; y <ygroesse; y++) {
+            for (int x=0; x <xgroesse; x++) {
+                buttonfeld.add(zellen[x][y]);
+            }
+        }
+        myPane.add(buttonfeld, BorderLayout.CENTER);
+        
+        JPanel guistatus = new JPanel();
+        BoxLayout horizontal = new BoxLayout(guistatus, BoxLayout.X_AXIS);
+        guistatus.setLayout(horizontal);
+        guistatus.add(new JLabel("Status: "));
+        statusfeld = new JTextField(20);
+        statusfeld.setEditable(false);
+        guistatus.add(statusfeld);
+        myPane.add(guistatus,BorderLayout.SOUTH);
+        
+        JMenu ablage = new JMenu("Ablage");
+   
+        JCheckBoxMenuItem editieren = new JCheckBoxMenuItem("Editieren");
+        JMenuItem wegfinden = new JMenuItem("Weg finden");
+        JMenuItem loeschen = new JMenuItem("Loeschen");
+        JMenuItem oeffnen   = new JMenuItem("Oeffnen");
+        JMenuItem speichern = new JMenuItem("Speichern");
+        JMenuItem beenden   = new JMenuItem("Beenden");
+
+        ablage.add(editieren);
+        ablage.add(wegfinden);
+        ablage.add(loeschen);
+        ablage.add(oeffnen);
+        ablage.add(speichern);
+        ablage.add(beenden);
+        
+        JMenuBar jmb = new JMenuBar();
+        rahmen.setJMenuBar(jmb);
+        jmb.add(ablage);
+ 
+        // Editiermodus für alle Zellen einschalten
+        editieren.addActionListener(
+                new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent ae) {
+                    Zelle.editierbar = editieren.isSelected();
+                    if (editieren.isSelected())
+                       statusfeld.setText("Editiermodus");
+                    else
+                        statusfeld.setText("");
+                }
+            }
+        );
+        
+        // Speichern des Labyrinths
+        speichern.addActionListener(
+                new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent ae) {
+                       statusfeld.setText("TBD: Speichern des Labyrinths");
+                }
+            }
+        );
+        
+        // Laden des Labyrinths
+        oeffnen.addActionListener(
+                new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent ae) {
+                       statusfeld.setText("TBD: Laden eines Labyrinths");
+                }
+            }
+        );
+        
+        // Weg finden 
+        wegfinden.addActionListener(
+                new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent ae) {
+                    statusfeld.setText("TBD: Finden des Weges");
+                    }
+                }
+        );
+        // Loeschen: Zurücksetzen in Initialzustand
+        loeschen.addActionListener(
+                new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent ae) {
+                    statusfeld.setText("Ruecksetzen des Feldes");
+                    if (Zelle.editierbar) {
+                        for (int i=0; i< zellen.length -1; i++)
+                            for (int j=0; j< zellen[0].length -1; j++) {
+                                zellen[i][j].p.zustand = Position.Status.LEER;
+                                zellen[i][j].update();
+                            }
+                        Zelle.start=new Position(0,0,Position.Status.START);
+                        zellen[0][0].setIcon(Zelle.startIcon);
+                        Zelle.ziel =new Position(xgroesse-1,ygroesse-1,Position.Status.ZIEL);
+                        zellen[xgroesse-1][ygroesse-1].setIcon(Zelle.zielIcon);
+
+                    } // Ende if editierbar
+                } // Ende Methode actionPerformed
+                } // Ende innere Klasse
+        );
+        
+        // Editiermodus für alle Zellen einschalten
+        editieren.addActionListener(
+                new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent ae) {
+                    Zelle.editierbar = editieren.isSelected();
+                    if (editieren.isSelected())
+                       statusfeld.setText("Editiermodus");
+                    else
+                        statusfeld.setText("");
+                }
+            }
+        );
+
+        // Programm beenden
+        beenden.addActionListener(
+                new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent ae) {
+                    System.exit(0);
+                }
+            }
+        );
+        
+        // JFrame packen (Layout berechnen)
+        rahmen.pack();
+        // ..und Swowtime ! (Anzeigen)
+        rahmen.setVisible(true);
+    }
+    
+}
+
