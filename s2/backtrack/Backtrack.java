@@ -20,15 +20,15 @@ import javax.swing.JTextField;
  * @author s@scalingbits.com
  * @version 1.0
  */
-public class Backtrack1 {
-    static int xgroesse = 15;
-    static int ygroesse = 10;
-    static Zelle[][] zellen;
-    static Labyrinth laby;
-    static JTextField statusfeld;
+public class Backtrack {
+    int xgroesse = 15;
+    int ygroesse = 10;
+    Zelle[][] zellen;
+    Labyrinth laby;
+    JTextField statusfeld;
+    private JFrame rahmen ;
     
-    public static void main(String[] args) {
-        
+    public Backtrack() {
         // Anlegen eines Feldes der Buttons und der Hintergrundstrukturen
         Zelle.start = new Position(0,0,Position.Status.START);
         Zelle.ziel = new Position(xgroesse-1,ygroesse-1,Position.Status.ZIEL);
@@ -45,7 +45,7 @@ public class Backtrack1 {
         zellen[xgroesse-1][ygroesse-1].setIcon(Zelle.zielIcon);
         
         // Rahmen anlegen
-        JFrame rahmen = new JFrame(Backtrack1.class.getName());
+        rahmen = new JFrame(Backtrack.class.getName());
         rahmen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Container myPane = rahmen.getContentPane();
         myPane.setLayout(new BorderLayout());
@@ -67,7 +67,9 @@ public class Backtrack1 {
         statusfeld.setEditable(false);
         guistatus.add(statusfeld);
         myPane.add(guistatus,BorderLayout.SOUTH);
-        
+    }
+    
+    public void menueleisteAnlegen() {
         JMenu ablage = new JMenu("Ablage");
    
         JCheckBoxMenuItem editieren = new JCheckBoxMenuItem("Editieren");
@@ -87,8 +89,21 @@ public class Backtrack1 {
         JMenuBar jmb = new JMenuBar();
         rahmen.setJMenuBar(jmb);
         jmb.add(ablage);
- 
-        // Editiermodus für alle Zellen einschalten
+        
+        editierenLabyrinth(editieren);
+        speichernLabyrinth(speichern);
+        ladenLabyrinth(oeffnen);
+        loesungFinden(wegfinden);
+        loeschenLabyrinth(loeschen);
+        beendenAnwendung(beenden);
+    }
+    
+    /**
+     * Hängt die Operation zum Editieren des Labyrinths an das JMenuItem
+     * @param editieren JMenuItem welches das Labyrinth editieren lassen soll
+     */
+    public final void editierenLabyrinth(JMenuItem editieren) {
+    // Editiermodus für alle Zellen einschalten
         editieren.addActionListener(
                 new ActionListener() {
                 @Override
@@ -101,8 +116,14 @@ public class Backtrack1 {
                 }
             }
         );
-        
-        // Speichern des Labyrinths
+    }
+    
+    /**
+     * Hängt die Operation zum Speichern des Labyrinths an das JMenuItem
+     * @param speichern JMenuItem welches das Labyrinth speichern soll
+     */
+    public void speichernLabyrinth(JMenuItem speichern) {
+         // Speichern des Labyrinths
         speichern.addActionListener(
                 new ActionListener() {
                 @Override
@@ -111,7 +132,14 @@ public class Backtrack1 {
                 }
             }
         );
-        
+    }
+    
+    /**
+     * Hängt die Operation zum Laden des Labyrinths an das JMenuItem
+     * @param oeffnen JMenuItem welches das Labyrinth laden soll
+     */
+    public void ladenLabyrinth(JMenuItem oeffnen){
+  
         // Laden des Labyrinths
         oeffnen.addActionListener(
                 new ActionListener() {
@@ -121,7 +149,13 @@ public class Backtrack1 {
                 }
             }
         );
-        
+    }
+    
+    /**
+     * Hängt die Operation zum Loesen  des Labyrinths an das JMenuItem
+     * @param wegfinden JMenuItem welche die Loesung soll
+     */
+    public void loesungFinden(JMenuItem wegfinden) {
         // Weg finden 
         wegfinden.addActionListener(
                 new ActionListener() {
@@ -131,6 +165,13 @@ public class Backtrack1 {
                     }
                 }
         );
+    }
+
+    /**
+     * Hängt die Operation zum Loeschen  des Labyrinths an das JMenuItem
+     * @param loeschen JMenuItem welches das Labyrinth loeschen soll
+     */
+    public final void loeschenLabyrinth(JMenuItem loeschen) {
         // Loeschen: Zurücksetzen in Initialzustand
         loeschen.addActionListener(
                 new ActionListener() {
@@ -152,21 +193,9 @@ public class Backtrack1 {
                 } // Ende Methode actionPerformed
                 } // Ende innere Klasse
         );
-        
-        // Editiermodus für alle Zellen einschalten
-        editieren.addActionListener(
-                new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent ae) {
-                    Zelle.editierbar = editieren.isSelected();
-                    if (editieren.isSelected())
-                       statusfeld.setText("Editiermodus");
-                    else
-                        statusfeld.setText("");
-                }
-            }
-        );
+    }
 
+    public void beendenAnwendung(JMenuItem beenden){
         // Programm beenden
         beenden.addActionListener(
                 new ActionListener() {
@@ -176,11 +205,23 @@ public class Backtrack1 {
                 }
             }
         );
-        
+    }
+    
+    public void anzeigen() {        
         // JFrame packen (Layout berechnen)
         rahmen.pack();
         // ..und Swowtime ! (Anzeigen)
         rahmen.setVisible(true);
+    }
+    
+    /**
+     * Hauptmethode der Anwendung
+     * @param args wird nicht verwendet
+     */
+    public static void main(String[] args) {
+        Backtrack meinFenster = new Backtrack();
+        meinFenster.menueleisteAnlegen();
+        meinFenster.anzeigen();
     }
     
 }

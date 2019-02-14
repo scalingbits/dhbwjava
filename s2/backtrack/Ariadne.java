@@ -11,13 +11,19 @@ import java.util.List;
 public class Ariadne {
     public static final int WARTEN=10; //ms Schlafen vor dem nächsten Schritt
     public Labyrinth laby;
+    /**
+     * Rueckwaertszeigeer zu Backtrack. Haesslich. Wid aber gebraucht
+     * zum dynamischen Updaten des Labyrinths
+     */
+    protected BacktrackSuche bt;
     
     /**
-     * Erzeuge ein Labyrinth
-     * @param laby ein zweidimensionales Feld von Positionen
+     * Erzeuge eine Loesung
+     * @param bt Rueckzeiger auf Backtrack. Wird für dynamische Updates benötigt
      */
-    public Ariadne(Labyrinth laby) {
-        this.laby  = new Labyrinth(laby);
+    public Ariadne(BacktrackSuche bt) {
+        this.bt = bt;
+        this.laby  = new Labyrinth(bt.laby);
     }
     
     /**
@@ -39,8 +45,8 @@ public class Ariadne {
         List<Position> einFaden;
         int x = von.x;
         int y = von.y;
-        Backtrack3.laby.update(laby);
-        Backtrack3.updateButtons();
+        bt.laby.update(laby);
+        bt.updateButtons();
         if (von.equals(nach)) {
                 System.out.println("Heureka!");
                 besterFaden = new LinkedList<>();

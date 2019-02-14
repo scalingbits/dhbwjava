@@ -47,11 +47,11 @@ public class Ariadne4Parallel extends Ariadne {
     }
     
     /**
-     * Erzeuge ein Labyrinth
-     * @param laby ein zweidimensionales Feld von Positionen
+     * Erzeuge eine Loesung
+     * @param bt Rueckzeiger auf Backtrack. Wird für dynamische Updates benötigt
      */
-    public Ariadne4Parallel(Labyrinth laby) {
-        super(laby);
+    public Ariadne4Parallel(BacktrackSuche bt) {
+        super(bt);
     }
     
     /**
@@ -67,8 +67,8 @@ public class Ariadne4Parallel extends Ariadne {
         int x = von.x;
         int y = von.y;
         System.out.println("Thread: " + Thread.currentThread());
-        Backtrack4.laby.update(laby);
-        Backtrack4.updateButtons();
+        bt.laby.update(laby);
+        bt.updateButtons();
         if (von.equals(nach)) {
                 System.out.println("Heureka!");
                 besterFaden = new LinkedList<>();
