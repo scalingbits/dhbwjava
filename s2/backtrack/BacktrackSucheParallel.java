@@ -48,5 +48,13 @@ public class BacktrackSucheParallel extends BacktrackSuche {
         }
         );
     } // Ende Methode loesungFinden
-    
+    /**
+     * Hauptmethode der Anwendung
+     * @param args wird nicht verwendet
+     */
+       public static void main(String[] args) {
+        BacktrackSucheParallel meinFenster = new BacktrackSucheParallel();
+        meinFenster.menueleisteAnlegen();
+        meinFenster.anzeigen();
+    }
 } // Ende Klasse
