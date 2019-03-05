@@ -2,7 +2,7 @@ package s2.sort;
 
 /**
  *
- * @author sschneid
+ * @author s@sclaingbits.com
  */
 public class QuickSort extends Sortierer {
 

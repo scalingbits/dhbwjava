@@ -2,7 +2,7 @@ package s2.sort;
 import java.util.concurrent.atomic.AtomicInteger;
 /**
  *
- * @author sschneid
+ * @author s@scalingbits.com
  * @version 2.1
  */
 public abstract class Sortierer {

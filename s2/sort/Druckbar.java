@@ -2,7 +2,7 @@ package s2.sort;
 
 /**
  *
- * @author sschneid
+ * @author s@scalingbits.com
  */
 public interface Druckbar {
     public void drucken();

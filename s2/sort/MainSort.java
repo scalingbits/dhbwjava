@@ -1,7 +1,7 @@
 package s2.sort;
 /**
  *
- * @author sschneid
+ * @author s@sclaingbits.com
  * @version 2.0
  */
 public class MainSort {

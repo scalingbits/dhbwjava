@@ -1,7 +1,7 @@
 package s2.sort;
 /**
  *
- * @author sschneid
+ * @author s@scalingbits.com
  * @version 2.0
  */
 public class TrivialSort extends Sortierer{

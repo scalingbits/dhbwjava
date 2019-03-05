@@ -2,7 +2,7 @@ package s2.sort;
 import java.util.Arrays;
 /**
  *
- * @author sschneid
+ * @author s@scalingbits.com
  * @version 1.0
  */
 public class Suchen {

@@ -3,7 +3,7 @@ import java.text.Collator;
 import java.util.Locale;
 /**
  *
- * @author sschneid
+ * @author s@scalingbits.com
  */
 public class Lexikographisch {
     public static void main(String[] args) {
