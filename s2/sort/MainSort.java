@@ -1,18 +1,29 @@
 package s2.sort;
+
+
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Type;
+
 /**
  *
  * @author s@sclaingbits.com
  * @version 2.0
  */
 public class MainSort {
+    private static String alogrithmusName;
      /**
      *
      * Das Hauptprogramm sortiert sechs Zahlen in Phase 1
      * Phase 2 wird nur aufgerufen wenn der Sortieralgorithmus
      * für die erste Phase korrekt war
-     * @param args
+     * @param args ein optionaler Parameter, der Names der Klasse des Algorithmus
      */
     public static void main(String[] args) {
+        if (args.length > 0)
+            alogrithmusName = args[0];
+        else
+            alogrithmusName="";
         int zeit = 3;
         System.out.println("Phase 1: Einfacher Test mit 6 Elementen");
         boolean erfolg = phase1();
@@ -31,16 +42,50 @@ public class MainSort {
      * @ return der Sortieralgorithmus
      */
     public static Sortierer algorithmusWahl(int[] feld) {
-        Sortierer sort;
+        Sortierer sort= null;
         // Wähle ein Sortieralgorithmus abhängig von der
         // gewünschten Implementierung
-        //sort= new TrivialSort(feld);
-        //sort = new SelectionSort(feld);
-        //sort = new InsertionSort(feld);
-        // sort = new BubbleSort(feld);
-        //sort = new QuickSort(feld);
-        //sort = new QuickSortParallel(feld);
-        sort = new HeapSort(feld);
+        String nameSortierKlasse;
+        if (alogrithmusName.equals("")) {
+           alogrithmusName = "TrivialSort";
+           //alogrithmusName = "SelectionSort";
+           //alogrithmusName = "InsertionSort";
+           //alogrithmusName = "BubbleSort";
+           //alogrithmusName = "QuickSort";
+           //alogrithmusName = "QuickSortParallel";
+        }
+        
+        Class<?> meineKlasse;
+        Constructor<?> konstruktor;
+        
+        try {
+            // Dynamisches Aufrufen einer Klasse
+            // Hole Metainformation über Klasse
+            meineKlasse = Class.forName("s2.sort."+ alogrithmusName);
+            // Hole alle Konstruktoren
+            Constructor[] konstruktoren = meineKlasse.getConstructors();
+            // Nimm den Ersten. Es sollte nure einen geben
+            konstruktor = konstruktoren[0];
+            // Erzeuge eine Instanz dynamisch
+            sort = (Sortierer) konstruktor.newInstance((Object)feld);
+
+        } catch (ClassNotFoundException ex) {
+            System.out.println("Klasse nicht gefunden. Scotty beam me up");
+        } catch (InstantiationException ex) {
+            System.out.println("Probleme beim Instantieren. Scotty beam me up");
+        } catch (IllegalAccessException ex) {
+            System.out.println("Probleme beim Zugriff. Scotty beam me up");
+        //} catch (NoSuchMethodException ex) {
+        //    System.out.println("Falscher Konstruktor. Scotty beam me up");
+        } catch (SecurityException ex) {
+            System.out.println("Sicherheitsprobleme. Scotty beam me up");
+        } catch (IllegalArgumentException ex) {
+            System.out.println("Falsches Argument. Scotty beam me up");
+        } catch (InvocationTargetException ex) {
+            System.out.println("Falsches Ziel. Scotty beam me up");
+        }
+
+        //sort = new HeapSort(feld);
         //sort.geschwaetzig = true;
         return sort;
     }

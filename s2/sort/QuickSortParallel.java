@@ -3,11 +3,11 @@ import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveAction;
 /**
  *
- * @author s@sclaingbits.com
+ * @author s@scalingbits.com
  */
 public class QuickSortParallel extends Sortierer{
     static int SIZE_THRESHOLD=1000; // Schwellwert für paralleles Sortieren
-    private static final ForkJoinPool threadPool = new ForkJoinPool();
+    private static final ForkJoinPool THREADPOOL = new ForkJoinPool();
     /**
      * Konstruktor: Akzeptiere ein Feld von int. Reiche
      * das Feld an die Oberklasse weiter.
@@ -16,6 +16,7 @@ public class QuickSortParallel extends Sortierer{
      */
     public QuickSortParallel(int[] s) {
         super(s, false);
+        System.out.println("Größe Threadpool: " + THREADPOOL.getParallelism());
     }
     /**
      * Innere statische Klasse die Fork and Join aus dem Concurrency package
@@ -66,7 +67,7 @@ public class QuickSortParallel extends Sortierer{
      */
     @Override
     public void sortieren(int startIndex, int endeIndex) {
-        threadPool.invoke(new SortTask(startIndex,endeIndex,this));
+        THREADPOOL.invoke(new SortTask(startIndex,endeIndex,this));
     }
     /**
      * sortiert ein Eingabefeld s und gibt eine Referenz auf dea Feld wieder
