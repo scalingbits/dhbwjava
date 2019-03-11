@@ -54,10 +54,8 @@ public class MainSort {
            //alogrithmusName = "QuickSort";
            //alogrithmusName = "QuickSortParallel";
         }
-        
         Class<?> meineKlasse;
         Constructor<?> konstruktor;
-        
         try {
             // Dynamisches Aufrufen einer Klasse
             // Hole Metainformation über Klasse
@@ -68,15 +66,12 @@ public class MainSort {
             konstruktor = konstruktoren[0];
             // Erzeuge eine Instanz dynamisch
             sort = (Sortierer) konstruktor.newInstance((Object)feld);
-
         } catch (ClassNotFoundException ex) {
             System.out.println("Klasse nicht gefunden. Scotty beam me up");
         } catch (InstantiationException ex) {
             System.out.println("Probleme beim Instantieren. Scotty beam me up");
         } catch (IllegalAccessException ex) {
             System.out.println("Probleme beim Zugriff. Scotty beam me up");
-        //} catch (NoSuchMethodException ex) {
-        //    System.out.println("Falscher Konstruktor. Scotty beam me up");
         } catch (SecurityException ex) {
             System.out.println("Sicherheitsprobleme. Scotty beam me up");
         } catch (IllegalArgumentException ex) {
@@ -84,8 +79,6 @@ public class MainSort {
         } catch (InvocationTargetException ex) {
             System.out.println("Falsches Ziel. Scotty beam me up");
         }
-
-        //sort = new HeapSort(feld);
         //sort.geschwaetzig = true;
         return sort;
     }
