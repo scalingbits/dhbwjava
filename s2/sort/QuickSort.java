@@ -20,8 +20,8 @@ public class QuickSort extends Sortierer {
      * sortiert ein Eingabefeld s und gibt eine Referenz auf dea Feld wieder
      * zurück
      *
-     * @param s ein unsortiertes Feld
-     * @return ein sortiertes Feld
+     * @param startIndex Beginn des zu sortierenden Intervalls
+     * @param endeIndex Ende des zu sortierenden Intervalls
      */
     @Override
     public void sortieren(int startIndex, int endeIndex) {

@@ -20,11 +20,13 @@ public class MainSort {
      * @param args ein optionaler Parameter, der Names der Klasse des Algorithmus
      */
     public static void main(String[] args) {
+        int zeit = 3;
         if (args.length > 0)
             alogrithmusName = args[0];
+            if (args.length > 1)
+                zeit = Integer.decode(args[1]);
         else
             alogrithmusName="";
-        int zeit = 3;
         System.out.println("Phase 1: Einfacher Test mit 6 Elementen");
         boolean erfolg = phase1();
         if (erfolg) {
