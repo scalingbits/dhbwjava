@@ -6,7 +6,7 @@ import java.util.concurrent.RecursiveAction;
  * @author s@scalingbits.com
  */
 public class QuickSortParallel extends Sortierer{
-    static int SIZE_THRESHOLD=2000; // Schwellwert für paralleles Sortieren
+    static int SIZE_THRESHOLD=20000; // Schwellwert für paralleles Sortieren
     private static final ForkJoinPool THREADPOOL = new ForkJoinPool();
     /**
      * Konstruktor: Akzeptiere ein Feld von int. Reiche
