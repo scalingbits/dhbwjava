@@ -28,7 +28,7 @@ public class TrivialSort extends Sortierer{
         if (istKleiner(von+2,von+1)) {
             tausche(von+1,von+2);
         }
-            druckenKonsole();
+        //druckenKonsole();
     }
     @Override
     public String algorithmus() {

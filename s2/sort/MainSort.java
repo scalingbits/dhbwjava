@@ -11,7 +11,7 @@ import java.lang.reflect.Type;
  * @version 2.0
  */
 public class MainSort {
-    private static String alogrithmusName;
+    private static String algorithmusName;
      /**
      *
      * Das Hauptprogramm sortiert sechs Zahlen in Phase 1
@@ -22,11 +22,11 @@ public class MainSort {
     public static void main(String[] args) {
         int zeit = 3;
         if (args.length > 0)
-            alogrithmusName = args[0];
+            algorithmusName = args[0];
             if (args.length > 1)
                 zeit = Integer.decode(args[1]);
         else
-            alogrithmusName="";
+            algorithmusName="";
         System.out.println("Phase 1: Einfacher Test mit 6 Elementen");
         boolean erfolg = phase1();
         if (erfolg) {
@@ -40,28 +40,28 @@ public class MainSort {
     }
     /**
      * Auswahl des Sortieralgorithmus
-     * @ param feld das zu sortierende Feld
-     * @ return der Sortieralgorithmus
+     * @param feld das zu sortierende Feld
+     * @return der Sortieralgorithmus
      */
     public static Sortierer algorithmusWahl(int[] feld) {
         Sortierer sort= null;
         // Wähle ein Sortieralgorithmus abhängig von der
         // gewünschten Implementierung
         String nameSortierKlasse;
-        if (alogrithmusName.equals("")) {
-           alogrithmusName = "TrivialSort";
-           //alogrithmusName = "SelectionSort";
-           //alogrithmusName = "InsertionSort";
-           //alogrithmusName = "BubbleSort";
-           //alogrithmusName = "QuickSort";
-           //alogrithmusName = "QuickSortParallel";
+        if (algorithmusName.equals("")) {
+           algorithmusName = "TrivialSort";
+           //algorithmusName = "SelectionSort";
+           //algorithmusName = "InsertionSort";
+           //algorithmusName = "BubbleSort";
+           //algorithmusName = "QuickSort";
+           //algorithmusName = "QuickSortParallel";
         }
         Class<?> meineKlasse;
         Constructor<?> konstruktor;
         try {
             // Dynamisches Aufrufen einer Klasse
             // Hole Metainformation über Klasse
-            meineKlasse = Class.forName("s2.sort."+ alogrithmusName);
+            meineKlasse = Class.forName("s2.sort."+ algorithmusName);
             // Hole alle Konstruktoren
             Constructor[] konstruktoren = meineKlasse.getConstructors();
             // Nimm den Ersten. Es sollte nure einen geben
