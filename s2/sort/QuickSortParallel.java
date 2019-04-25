@@ -6,7 +6,7 @@ import java.util.concurrent.RecursiveAction;
  * @author s@scalingbits.com
  */
 public class QuickSortParallel extends Sortierer{
-    static int SIZE_THRESHOLD=20000; // Schwellwert für paralleles Sortieren
+    static int SIZE_THRESHOLD=256; // Schwellwert für paralleles Sortieren
     private static final ForkJoinPool THREADPOOL = new ForkJoinPool();
     /**
      * Konstruktor: Akzeptiere ein Feld von int. Reiche
@@ -34,6 +34,7 @@ public class QuickSortParallel extends Sortierer{
          * @param qsp Referenz auf das zu sortierende Objekt
          */
         SortTask(int lo, int hi, QuickSortParallel qsp) {
+            // Umkopieren der Eingabeparameter
             this.lo = lo;
             this.hi = hi;
             this.qsp =qsp;
@@ -45,8 +46,7 @@ public class QuickSortParallel extends Sortierer{
         @Override
         protected void compute() {
             //System.out.println(" Thread ID => " + Thread.currentThread().getId());
-            if (hi - lo < SIZE_THRESHOLD) {
-                // Sortiere kleine Intervalle seriell
+            if (hi - lo < SIZE_THRESHOLD) {// Sortiere kleine Intervalle seriell
                 qsp.sortierenSeriell(lo, hi);}
             else { // Sortiere große Intervalle parallel
                 int obergrenzeLinkesIntervall;
@@ -61,20 +61,18 @@ public class QuickSortParallel extends Sortierer{
         }
     }
     /**
-     * sortiert ein Eingabefeld s und gibt eine Referenz auf dea Feld wieder
-     * zurück
-     * @param s ein unsortiertes Feld
-     * @return ein sortiertes Feld
+     * sortiere das Feld mit dem Quicksort parallel
+     * @param startIndex Erstes Element des Intervalls
+     * @param endeIndex Letztes Element des Intervalls
      */
     @Override
     public void sortieren(int startIndex, int endeIndex) {
         THREADPOOL.invoke(new SortTask(startIndex,endeIndex,this));
     }
     /**
-     * sortiert ein Eingabefeld s und gibt eine Referenz auf dea Feld wieder
-     * zurück
-     * @param s ein unsortiertes Feld
-     * @return ein sortiertes Feld
+     * sortiere das Feld mit dem Quicksort seriell
+     * @param startIndex Erstes Element des Intervalls
+     * @param endeIndex Letztes Element des Intervalls
      */
     public void sortierenSeriell(int startIndex, int endeIndex) {
         if (endeIndex > startIndex) {

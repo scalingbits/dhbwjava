@@ -24,7 +24,7 @@ public class BinaerbaumLoesung {
      * Da der neue Knoten die Wurzel des neuen Teilbaums bilden kann,
      * wird eventuell ein Zeiger auf einen neuen Teilbaum zurückgeliefert
      * Randbedingung:
-     * * Es wird kein Knoten mit einem Wert eingefügt der schon existiertz
+     * * Es wird kein Knoten mit einem Wert eingefügt der schon existiert
      * @param teilbaum
      * @param s
      */

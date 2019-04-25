@@ -64,7 +64,7 @@ public class EineListe {
      */
     public void einfuegeAnKopf(Listenknoten k) {
         System.out.println("2. Implementieren Sie EineListe.einfuegeAnKopf()");
-    }
+        }
     /**
      * Lösche einen Knoten aus der Liste. Mache nichts falls es nichts zu
      * gibt
