@@ -32,7 +32,7 @@ public Baumknoten getWurzelknoten() {return wurzelKnoten;}
      */
     private void einfuegen(Baumknoten teilbaum, Baumknoten s) {
         System.out.println("Implementieren Sie die Methode Binaerbaum:einfuegen()");
-    }
+                }
      /**
      * Öffentliche Methoden zum Entfernen eines Baumknotens
      * @param s
@@ -51,7 +51,7 @@ public Baumknoten getWurzelknoten() {return wurzelKnoten;}
     private Baumknoten entfernen(Baumknoten teilbaum, Baumknoten s) {
         System.out.println("Implementieren Sie die Methode Binaerbaum:entfernen()");
         return teilbaum;
-        }
+              }
      /**
      * Berechnung der Hoehe des Baums
      * @return Hoehe des Baums
