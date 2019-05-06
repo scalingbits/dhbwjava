@@ -49,10 +49,10 @@ public static void ausgabenMatrikelnr(Map<Integer,Student> mp) {
         }
         int mnr = 15;
         System.out.println("Student mit Matrikelnummer " + mnr +
-                " ist:" + mp.get(mnr)); // Einsetzen: Student mit Matrikelnr mnr
+                " ist:" + mp.get(mnr)); // Einsetzen: Studentin mit Matrikelnr mnr
         mnr = 16;
         System.out.println("Student mit Matrikelnummer " + mnr +
-                " ist:" + mp.get(mnr) ); // Einsetzen: Student mit Matrikelnr mnr
+                " ist:" + mp.get(mnr) ); // Einsetzen: Studentin mit Matrikelnr mnr
         System.out.println("Alle Werte der MatrikelMap:");
         Collection<Student> l = mp.values(); // Einsetzen: Collection mit den Studenten
         Iterator<Student> iterStudi = l.iterator();
@@ -78,10 +78,10 @@ public static void ausgabenNamen(Map<String,Student> mp) {
         }
         String nme = "Merian";
         System.out.println("Student mit Name " + nme +
-                " ist:" + mp.get(nme)); // Einsetzen der Operation zum Auslesen des Student mit Namen nme
+                " ist:" + mp.get(nme)); // Einsetzen der Operation zum Auslesen der Studentin mit Namen nme
         nme = "Herschel";
         System.out.println("Student mit Name " + nme +
-                " ist:" + mp.get(nme)); // Einsetzen der Operation zum Auslesen des Student mit Namen nme
+                " ist:" + mp.get(nme)); // Einsetzen der Operation zum Auslesen der Studenin mit Namen nme
         System.out.println("Alle Werte der NamenMap:");
         Collection<Student> l = mp.values(); // Einsetzen: Auslesen der gesamten Collection
         Iterator<Student> iterStudi = l.iterator();

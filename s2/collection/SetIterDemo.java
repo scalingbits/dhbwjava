@@ -30,7 +30,7 @@ public static void ausgaben(Set<Student> menge) {
         System.out.println("Inhalt der Menge ("
                 + menge.getClass() + "):"); // Nicht ersetzen
         while (true) { // Abbruchbedingung ersetzen. Die Schleife terminiert so nicht!
-            System.out.println("Hier Student aus Iterator in Schleife auslesen");
+            System.out.println("Hier Studentinnen aus Iterator in Schleife auslesen");
             s = null;
             System.out.println("Student: " + s); // Nicht ersetzen
         }
