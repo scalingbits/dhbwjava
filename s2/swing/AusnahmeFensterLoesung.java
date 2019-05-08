@@ -21,7 +21,7 @@ public class AusnahmeFensterLoesung implements ActionListener {
     private JFrame hf;
     private JButton okButton;
     private JButton exitButton;
-    private Exception myException;
+    final private Exception myException;
     /**
      * Aufbau des Fensters zur Ausnahmebehandlung
      *
@@ -98,6 +98,7 @@ public class AusnahmeFensterLoesung implements ActionListener {
      * 11. ter Schritt
      * @param e
      */
+    @Override
     public void actionPerformed(ActionEvent e) {
         JButton source = (JButton) (e.getSource());
         if (source == exitButton) {

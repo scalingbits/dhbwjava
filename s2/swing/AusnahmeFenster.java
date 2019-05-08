@@ -95,7 +95,7 @@ public class AusnahmeFenster {
     }
     /**
      * Hauptprogramm zum Testen des Ausnahmefensters
-     * @throws Exception
+     * @param args keine Eingaben
      */
     public static void main(String[] args) {
         AusnahmeFenster dasFenster;

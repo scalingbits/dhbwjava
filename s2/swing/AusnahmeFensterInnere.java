@@ -50,6 +50,7 @@ public class AusnahmeFensterInnere {
         exitButton.setText("Beenden");
         // 10. Hinzügen der Eventbehandlung
         okButton.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 myException.printStackTrace();
             }
@@ -128,7 +129,7 @@ public class AusnahmeFensterInnere {
  
     /**
      * Hauptporgramm zum Testen des Ausnahmefensters
-     * @throws Exception
+     * @param args keine Eingaben
      */
     public static void main(String[] args) {
         AusnahmeFensterInnere dasFenster;
