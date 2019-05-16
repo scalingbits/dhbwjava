@@ -90,7 +90,7 @@ public class Zelle extends JButton{
     
     /**
      * Erzeugt eine Ikone in der richtigen Größe und Farbe
-     * @param farbe fir Farber der Ikone
+     * @param farbe Farbe der Ikone
      * @return die erzeugte Ikone
      */
     public static ImageIcon erzeugeIcon(Color farbe) {
@@ -119,12 +119,12 @@ public class Zelle extends JButton{
         myFrame.setJMenuBar(jmb);
         JMenu jm = new JMenu("Ablage");
         jmb.add(jm);
-        JMenuItem start   = new JMenuItem("Start");
-        JMenuItem ziel    = new JMenuItem("Ziel");
+        JMenuItem startItem   = new JMenuItem("Start");
+        JMenuItem zielItem    = new JMenuItem("Ziel");
         JMenuItem loesung = new JMenuItem("Loesung");
         JCheckBoxMenuItem editieren = new JCheckBoxMenuItem("Editieren");
         JMenuItem beenden = new JMenuItem("Test beenden");
-        start.addActionListener(
+        startItem.addActionListener(
                 new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent ae) {
@@ -135,7 +135,7 @@ public class Zelle extends JButton{
                 }
             }
         );
-        ziel.addActionListener(
+        zielItem.addActionListener(
                 new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent ae) {
@@ -175,8 +175,8 @@ public class Zelle extends JButton{
                 }
             }
         );
-        jm.add(start);
-        jm.add(ziel);
+        jm.add(startItem);
+        jm.add(zielItem);
         jm.add(loesung);
         jm.add(editieren);
         jm.add(beenden);
