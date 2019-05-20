@@ -153,7 +153,7 @@ public class Backtrack {
     
     /**
      * Hängt die Operation zum Loesen  des Labyrinths an das JMenuItem
-     * @param wegfinden JMenuItem welche die Loesung soll
+     * @param wegfinden JMenuItem welchs die Loesung triggern soll
      */
     public void loesungFinden(JMenuItem wegfinden) {
         // Weg finden 
@@ -210,7 +210,7 @@ public class Backtrack {
     public void anzeigen() {        
         // JFrame packen (Layout berechnen)
         rahmen.pack();
-        // ..und Swowtime ! (Anzeigen)
+        // ..und Showtime ! (Anzeigen)
         rahmen.setVisible(true);
     }
     

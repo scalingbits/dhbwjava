@@ -30,7 +30,7 @@ public class DateiTest {
                     + file1.getAbsolutePath() );
             file2.createNewFile();
             System.out.println("Datei wurde angelegt in : " 
-                    + file1.getAbsolutePath() );
+                    + file2.getAbsolutePath() );
             
             System.out.println("Dateien im Verzeichnis " 
                     + dir.getAbsolutePath());
