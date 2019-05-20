@@ -26,8 +26,13 @@ public class Backtrack {
     Zelle[][] zellen;
     Labyrinth laby;
     JTextField statusfeld;
-    private JFrame rahmen ;
+    final private JFrame rahmen ;
     
+    /**
+     * Konstruktor der Klasse. Hier werden die meißten graphischen Objekte
+     * angelegt. Diese Technik hilft in spaeteren Phasen beim spezialisieren
+     * deiser Klasse
+     */
     public Backtrack() {
         // Anlegen eines Feldes der Buttons und der Hintergrundstrukturen
         Zelle.start = new Position(0,0,Position.Status.START);
@@ -69,6 +74,10 @@ public class Backtrack {
         myPane.add(guistatus,BorderLayout.SOUTH);
     }
     
+    /** 
+     * Anlegen einer Menueleister. Diese Methode ist nützlich, da sie von
+     * spezialisierten Klassen wieder verwendet werden kann.
+     */
     public void menueleisteAnlegen() {
         JMenu ablage = new JMenu("Ablage");
    
@@ -195,6 +204,10 @@ public class Backtrack {
         );
     }
 
+    /**
+     * Implementierung eines Actionlisteners zum Beenden der Anwendungh
+     * @param beenden Das JMenuItem wleches die Anwendung beenden soll
+     */
     public void beendenAnwendung(JMenuItem beenden){
         // Programm beenden
         beenden.addActionListener(
@@ -207,6 +220,10 @@ public class Backtrack {
         );
     }
     
+    /**
+     * Anzeigen des JFrames. Diese Methode ist in Spezialisierungen der Klasse
+     * nuetzlich, da man sie wiederverwenden kann.
+     */
     public void anzeigen() {        
         // JFrame packen (Layout berechnen)
         rahmen.pack();

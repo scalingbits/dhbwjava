@@ -9,7 +9,7 @@ import java.util.List;
  * @version 1.0
  */
 public class Ariadne {
-    public static final int WARTEN=10; //ms Schlafen vor dem nächsten Schritt
+    public static final int WARTEN=500; //ms Schlafen vor dem nächsten Schritt
     public Labyrinth laby;
     /**
      * Rueckwaertszeigeer zu Backtrack. Haesslich. Wid aber gebraucht
@@ -55,11 +55,10 @@ public class Ariadne {
         else { // Wir suchen weiter
             // Bin nicht am Ziel
             // Markiere aber Feld, damit ich nicht nochmal drüber laufe
-            // laby.feld[x][y].zustand =Position.Status.KRUEMEL;
             // Lasse Kruemmel fallen
             von.zustand = Position.Status.KRUEMEL;
-            System.out.println("Kruemel auf Position["+von.x + "][" + von.y + "]");
-            // Ermittele alle Optionen
+            //System.out.println("Kruemel auf Position["+von.x + "][" + von.y + "]");
+            // Ermittle alle Optionen
             List<Position> optionen = findeOptionen(von);
             if (optionen.isEmpty())
                 System.out.println("Ende. Muss zurück...");

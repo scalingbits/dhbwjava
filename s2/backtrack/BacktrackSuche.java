@@ -15,7 +15,7 @@ public class BacktrackSuche extends BacktrackIO {
     /**
      * Hängt die Operation zum Loesen des Labyrinths an das JMenuItem
      *
-     * @param wegfinden JMenuItem welche die Loesung soll
+     * @param wegfinden JMenuItem welche die Loesung finden soll
      */
     public void loesungFinden(JMenuItem wegfinden) {
         // Weg finden 
@@ -25,7 +25,7 @@ public class BacktrackSuche extends BacktrackIO {
                 new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
-                // Ohne einen eigenen Thread wird es keine Graphik
+                // Ohne einen eigenen Thread wird es keine Graphik-
                 // updates geben
                 Thread t = new Thread() {
                     public void run() {
