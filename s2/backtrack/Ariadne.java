@@ -1,7 +1,9 @@
 package s2.backtrack;
 
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 /**
  *
@@ -59,7 +61,7 @@ public class Ariadne {
             von.zustand = Position.Status.KRUEMEL;
             //System.out.println("Kruemel auf Position["+von.x + "][" + von.y + "]");
             // Ermittle alle Optionen
-            List<Position> optionen = findeOptionen(von);
+            Set<Position> optionen = findeOptionen(von);
             if (optionen.isEmpty())
                 System.out.println("Ende. Muss zurück...");
             for (Position p: optionen) {
@@ -83,12 +85,12 @@ public class Ariadne {
     /**
      *  Finde mögliche freie Stellen die Nachbar von der Position sind
      * @param von Die Position von der freie Stellen gesucht werden sollen
-     * @return Liste der freien Positionen
+     * @return Menge der freien Positionen
      */
-    public List<Position> findeOptionen(Position von) {
+    public Set<Position> findeOptionen(Position von) {
         int x = von.x;
         int y = von.y;
-        List<Position> optionen = new LinkedList<>();
+        Set<Position> optionen = new HashSet<>();
             // Checke Oben
             if ((y>0)
                   && (laby.feld[x][y-1].zustand != Position.Status.WAND)

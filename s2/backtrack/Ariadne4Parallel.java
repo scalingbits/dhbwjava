@@ -2,6 +2,7 @@ package s2.backtrack;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ForkJoinPool;
@@ -82,7 +83,7 @@ public class Ariadne4Parallel extends Ariadne {
             von.zustand = Position.Status.KRUEMEL;
             System.out.println("Kruemel auf Position["+von.x + "][" + von.y + "]");
             // Ermittele alle Optionen
-            List<Position> optionen = findeOptionen(von);
+            Set<Position> optionen = findeOptionen(von);
             if (optionen.isEmpty())
                 System.out.println("Ende. Muss zurück...");
             List<Future<List<Position>>> list = new LinkedList<>();
