@@ -188,8 +188,8 @@ public class Backtrack {
                 public void actionPerformed(ActionEvent ae) {
                     statusfeld.setText("Ruecksetzen des Feldes");
                     if (Zelle.editierbar) {
-                        for (int i=0; i< zellen.length -1; i++)
-                            for (int j=0; j< zellen[0].length -1; j++) {
+                        for (int i=0; i< zellen.length; i++)
+                            for (int j=0; j< zellen[0].length; j++) {
                                 zellen[i][j].p.zustand = Position.Status.LEER;
                                 zellen[i][j].update();
                             }
