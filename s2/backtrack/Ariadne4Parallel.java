@@ -71,7 +71,7 @@ public class Ariadne4Parallel extends Ariadne {
         bt.laby.update(laby);
         bt.updateButtons();
         if (von.equals(nach)) {
-                System.out.println("Heureka!");
+            bt.statusfeld.setText("Heureka!");
                 besterFaden = new LinkedList<>();
                 besterFaden.add(nach);
             }
@@ -81,11 +81,12 @@ public class Ariadne4Parallel extends Ariadne {
             //laby.feld[x][y].zustand =Position.Status.KRUEMEL;
             // Lasse Kruemmel fallen
             von.zustand = Position.Status.KRUEMEL;
-            System.out.println("Kruemel auf Position["+von.x + "][" + von.y + "]");
+            //System.out.println("Kruemel auf Position["+von.x + "][" + von.y + "]");
             // Ermittele alle Optionen
             Set<Position> optionen = findeOptionen(von);
             if (optionen.isEmpty())
-                System.out.println("Ende. Muss zurück...");
+                bt.statusfeld.setText("Ende auf Position (" + von.x + "," +
+                        von.y +"). Muss zurück...");
             List<Future<List<Position>>> list = new LinkedList<>();
             for (Position p:optionen) {
                 Callable<List<Position>> worker = new SearchCallable(this,p, laby.ziel);

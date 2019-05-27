@@ -50,7 +50,7 @@ public class Ariadne {
         bt.laby.update(laby);
         bt.updateButtons();
         if (von.equals(nach)) {
-                System.out.println("Heureka!");
+            bt.statusfeld.setText("Heureka!");
                 besterFaden = new LinkedList<>();
                 besterFaden.add(nach);
             }
@@ -63,7 +63,8 @@ public class Ariadne {
             // Ermittle alle Optionen
             Set<Position> optionen = findeOptionen(von);
             if (optionen.isEmpty())
-                System.out.println("Ende. Muss zurück...");
+                bt.statusfeld.setText("Ende auf Position (" + von.x + "," +
+                        von.y +"). Muss zurück...");
             for (Position p: optionen) {
                     try {
                         Thread.sleep(WARTEN);
