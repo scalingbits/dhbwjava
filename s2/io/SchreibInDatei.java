@@ -32,6 +32,7 @@ public class SchreibInDatei {
             umkopieren(rein,raus);
         } catch (IOException ex) {
             System.out.println("Probleme im IO Subsystem. Scotty beam me up");
+            System.out.println("Ausnahme: " +ex.getMessage());
         } 
         
     }
