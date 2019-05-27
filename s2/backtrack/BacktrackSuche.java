@@ -17,6 +17,7 @@ public class BacktrackSuche extends BacktrackIO {
      *
      * @param wegfinden JMenuItem welche die Loesung finden soll
      */
+    @Override
     public void loesungFinden(JMenuItem wegfinden) {
         // Weg finden 
         BacktrackSuche myBacktrack = this; // Diese Kruecke wird

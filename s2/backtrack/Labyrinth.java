@@ -58,7 +58,7 @@ public class Labyrinth implements Serializable {
     } // End Methode
     
     public Position getPos(int x, int y) {
-        if ((x>=0) && (x<feld.length) && (y>=0) && (y<feld.length))
+        if ((x>=0) && (x<feld.length) && (y>=0) && (y<feld[0].length))
             return feld[x][y];
         else
             return null;

@@ -6,7 +6,7 @@ package s2.thread;
  */
 public class EinMonitor {
 
-long invariante;
+    long invariante;
     long a;
     long b;
 
@@ -29,7 +29,7 @@ synchronized  public void buchen(long wert) {
         sleepABit(MainTest.sleepPeriod/5);
         GUIupdate(MainTest.NOTINCRITICALPATH);
 
-if ((a+b) != invariante)
+        if ((a+b) != invariante)
             System.out.println("Inkonsistenter Zustand");
     }
    

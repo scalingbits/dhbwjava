@@ -6,15 +6,16 @@ package s2.thread;
  */
 public class ParaIncrement extends Thread {
     public static int zaehler=0;
-    public static final int  MAX= Integer.MAX_VALUE/10;
+    public static final int  MAX= Integer.MAX_VALUE/100;
     
-    public static void increment() {
+    synchronized public static void increment() {
         zaehler++;
     }
 
      /**
      * Starten des Threads
      */
+     @Override
     public void run() {
         for (int i=0; i < MAX; i++) {
             increment();
