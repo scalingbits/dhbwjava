@@ -29,7 +29,7 @@ public class Ariadne {
     }
     
     /**
-     * suche in einem Labyrinth nach einem Pfad zum Ziel
+     * Suche in einem Labyrinth nach einem Pfad zum Ziel
      * @return laenge des Pfades
      */
     public List<Position> suche() {
@@ -93,25 +93,15 @@ public class Ariadne {
         int y = von.y;
         Set<Position> optionen = new HashSet<>();
             // Checke Oben
-            if ((y>0)
-                  && (laby.feld[x][y-1].zustand != Position.Status.WAND)
-                  && (laby.feld[x][y-1].zustand != Position.Status.KRUEMEL))
-                optionen.add(laby.feld[x][y-1]);
+            if ((y>0) && laby.feld[x][y-1].neuerWeg()) optionen.add(laby.feld[x][y-1]);
             // Checke Links
-            if ((x>0)
-                 && (laby.feld[x-1][y].zustand != Position.Status.WAND)
-                 && (laby.feld[x-1][y].zustand != Position.Status.KRUEMEL))
-                optionen.add(laby.feld[x-1][y]);
+            if ((x>0) && laby.feld[x-1][y].neuerWeg()) optionen.add(laby.feld[x-1][y]);
             // Checke Rechts
             if ((x<laby.feld.length-1)
-                 && (laby.feld[x+1][y].zustand != Position.Status.WAND)
-                 && (laby.feld[x+1][y].zustand != Position.Status.KRUEMEL))
-                optionen.add(laby.feld[x+1][y]);
+                    && laby.feld[x+1][y].neuerWeg()) optionen.add(laby.feld[x+1][y]);
             // Checke Unten
             if ((y<laby.feld[0].length-1)
-                 && (laby.feld[x][y+1].zustand != Position.Status.WAND)
-                 && (laby.feld[x][y+1].zustand != Position.Status.KRUEMEL))
-                optionen.add(laby.feld[x][y+1]);
+                    && laby.feld[x][y+1].neuerWeg()) optionen.add(laby.feld[x][y+1]);
          return optionen;
     } // Ende findeOptionen()
 }
