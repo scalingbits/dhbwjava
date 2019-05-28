@@ -27,7 +27,7 @@ public class Ariadne {
         this.bt = bt;
         this.laby  = new Labyrinth(bt.laby);
     }
-    
+
     /**
      * Suche in einem Labyrinth nach einem Pfad zum Ziel
      * @return laenge des Pfades
@@ -38,9 +38,9 @@ public class Ariadne {
     
     /**
      * Suche ab einer gegebenen Situation
-     * @param von
-     * @param nach
-     * @return eine Liste des Pfades wenn Kösung gefunden wurde
+     * @param von Pfad von der gegebenen Position suchen
+     * @param nach Pfad zu dieser Zielposition suchen
+     * @return eine Liste des Pfades wenn Lösung gefunden wurde
      */
     public List<Position> suche(Position von, Position nach) {
         List<Position> besterFaden = null;

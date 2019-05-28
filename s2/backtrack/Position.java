@@ -59,7 +59,7 @@ public class Position implements Serializable{
     }
     
     @Override
-    public String toString() {
+    public String  toString() {
         return (x + ", " +y + ", " + zustand);
     }
     
