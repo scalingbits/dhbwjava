@@ -6,13 +6,13 @@ import java.util.concurrent.RecursiveAction;
  * @author s@scalingbits.com
  */
 public class QuickSortParallel extends Sortierer{
-    static int SIZE_THRESHOLD=256; // Schwellwert für paralleles Sortieren
+    private static int SIZE_THRESHOLD=256; // Schwellwert für paralleles Sortieren
     private static final ForkJoinPool THREADPOOL = new ForkJoinPool();
     /**
      * Konstruktor: Akzeptiere ein Feld von int. Reiche
      * das Feld an die Oberklasse weiter.
      * Der Algorithmus ist  parallel (true Argument)
-     * @param s
+     * @param s das zu sortierende Feld
      */
     public QuickSortParallel(int[] s) {
         super(s, false);
@@ -74,7 +74,7 @@ public class QuickSortParallel extends Sortierer{
      * @param startIndex Erstes Element des Intervalls
      * @param endeIndex Letztes Element des Intervalls
      */
-    public void sortierenSeriell(int startIndex, int endeIndex) {
+    private void sortierenSeriell(int startIndex, int endeIndex) {
         if (endeIndex > startIndex) {
              int obergrenzeLinkesIntervall= teilsortieren(startIndex, endeIndex);
              //System.out.println("Seriell: "+
@@ -87,7 +87,7 @@ public class QuickSortParallel extends Sortierer{
                 sortierenSeriell(obergrenzeLinkesIntervall+1,endeIndex);}
         }
     }
-    public int teilsortieren(int startIndex, int endeIndex) {
+    private int teilsortieren(int startIndex, int endeIndex) {
         int i = startIndex;
         int j = endeIndex;
         int pivotWert = feld[startIndex+(endeIndex-startIndex)/2];
@@ -112,8 +112,8 @@ public class QuickSortParallel extends Sortierer{
         return i-1;
     }
     /**
-     * Liefert den Namen des Insertion Sorts
-     * @return
+     * Liefert den Namen des Quicksorts
+     * @return Name des Sortieralgorithmus (Quicksort)
      */
     public String algorithmus() {
         return "QuickSort mit Fork and Join";

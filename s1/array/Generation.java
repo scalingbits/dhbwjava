@@ -20,7 +20,7 @@ public class Generation {
      * Anlegen aller benoetigten Felder mit Initialwerten
      * Alle Feldelemente sollen mit dem Zustand "false" = leer versehen sein
      */
-    public Generation() {
+    Generation() {
         // Initialisieren sie die beiden Felder
         // alle Felder sollen den Zustand "false" haben. Dies ist ein leeres Feld
 
@@ -81,7 +81,7 @@ public class Generation {
                 if (alteGeneration[x][y] && (nachbarn<2))  {
                     meinFeld[x][y]= false;
                 }
-                // Tod wegen Überbevölerung
+                // Tod wegen Überbevölkerung
                 if (alteGeneration[x][y] && (nachbarn>3))  {
                     meinFeld[x][y]= false;
                 }
