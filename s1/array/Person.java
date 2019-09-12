@@ -4,9 +4,9 @@ package s1.array;
  * @author s@scalingbits.com
  */
 public class Person {
-    final private public String vorname;
-    final private public String nachname;
-    final private public String telefonnummer;
+    final private String vorname;
+    final private String nachname;
+    final private String telefonnummer;
     /**
      * Der Konstruktor erlaubt das Belegen der Attribute. Sie können
      * spaeter nicht mehr geändert werden

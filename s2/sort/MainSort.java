@@ -49,11 +49,11 @@ public class MainSort {
         // gewünschten Implementierung
         String nameSortierKlasse;
         if (algorithmusName.equals("")) {
-           algorithmusName = "TrivialSort";
+           //algorithmusName = "TrivialSort";
            //algorithmusName = "SelectionSort";
            //algorithmusName = "InsertionSort";
            //algorithmusName = "BubbleSort";
-           //algorithmusName = "QuickSort";
+           algorithmusName = "QuickSort";
            //algorithmusName = "QuickSortParallel";
         }
         Class<?> meineKlasse;

@@ -8,7 +8,7 @@ public class ParaIncrement extends Thread {
     public static int zaehler=0;
     public static final int  MAX= Integer.MAX_VALUE/100;
     
-    synchronized public static void increment() {
+    public static void increment() {
         zaehler++;
     }
 

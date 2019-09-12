@@ -40,7 +40,6 @@ public static final int INCRITICALPATH = 0;
         threadStatus = ENDED;
         System.out.println("Thread [" + meineID + "] beendet...");
     }
-
     public static void main(String[] args) {
         // Anlegen des Monitorobjekts
         myMonitor = new EinMonitor(1000000L);
