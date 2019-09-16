@@ -1,19 +1,9 @@
 package s2.backtrack;
 
-import java.awt.BorderLayout;
-import java.awt.Container;
-import java.awt.GridLayout;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.BoxLayout;
-import javax.swing.JCheckBoxMenuItem;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
 
 /**
  *
@@ -111,7 +101,7 @@ public class Backtrack {
      * Hängt die Operation zum Editieren des Labyrinths an das JMenuItem
      * @param editieren JMenuItem welches das Labyrinth editieren lassen soll
      */
-    public final void editierenLabyrinth(JMenuItem editieren) {
+    public final void editierenLabyrinth(final JMenuItem editieren) {
     // Editiermodus für alle Zellen einschalten
         editieren.addActionListener(
                 new ActionListener() {

@@ -1,18 +1,10 @@
 package s2.backtrack;
 
-import java.awt.Color;
-import java.awt.Graphics2D;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JCheckBoxMenuItem;
-import javax.swing.JFrame;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
 
 /**
  *
@@ -60,7 +52,7 @@ public class Zelle extends JButton{
                 @Override
                 public void actionPerformed(ActionEvent ae) {
                     Zelle meineZelle = (Zelle) ae.getSource();
-                    if (meineZelle.editierbar) {
+                    if (editierbar) {
                         if (p.zustand == Position.Status.LEER) {
                             p.zustand = Position.Status.WAND;                    
                         }
@@ -113,7 +105,7 @@ public class Zelle extends JButton{
         xRaster= 200;
         yRaster= 200;
         Position p = new Position(0,0,Position.Status.LEER);
-        Zelle testButton = new Zelle(p);
+        final Zelle testButton = new Zelle(p);
         myFrame.add(testButton);
         JMenuBar jmb = new JMenuBar();
         myFrame.setJMenuBar(jmb);
@@ -122,7 +114,7 @@ public class Zelle extends JButton{
         JMenuItem startItem   = new JMenuItem("Start");
         JMenuItem zielItem    = new JMenuItem("Ziel");
         JMenuItem loesung = new JMenuItem("Loesung");
-        JCheckBoxMenuItem editieren = new JCheckBoxMenuItem("Editieren");
+        final JCheckBoxMenuItem editieren = new JCheckBoxMenuItem("Editieren");
         JMenuItem beenden = new JMenuItem("Test beenden");
         startItem.addActionListener(
                 new ActionListener() {

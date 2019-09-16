@@ -1,9 +1,9 @@
 package s2.backtrack;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
-import javax.swing.JMenuItem;
 
 /**
  *
@@ -18,7 +18,7 @@ public class BacktrackSucheParallel extends BacktrackSuche {
      */
     public void loesungFinden(JMenuItem wegfinden) {
         // Weg finden 
-        BacktrackSuche myBacktrack = this; // Diese Kruecke wird
+        final BacktrackSuche myBacktrack = this; // Diese Kruecke wird
                 // wegen der inneren Klasse benötigt
         wegfinden.addActionListener(
                 new ActionListener() {

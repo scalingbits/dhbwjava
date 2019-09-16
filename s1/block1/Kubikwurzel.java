@@ -1,19 +1,12 @@
 package s1.block1;
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Container;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JApplet;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
 /**
  *
- * @author sschneid
- * @version 1.3
+ * @author s@scalingbits.com
+ * @version 1.4
  *
  * Copyright (c) 2016, Dr. Stefan Schneider, schneider4me.de All rights
  * reserved.
