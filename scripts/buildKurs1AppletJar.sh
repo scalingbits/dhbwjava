@@ -38,12 +38,12 @@ echo "Baue BinaerCastApplet.jar"
   jar cvfem ../../../jar/BinaerCastApplet.jar \
    s1.block2.BinaerCastApplet \
    ../../../scripts/BinaerCastApplet-manifest.txt \
-   s1.block2/BinaerCastApplet.class 
+   s1/block2/BinaerCastApplet.class 
 )
 echo "Baue IntShiftApplet.jar"
 ( cd ../out/production/dhbwjava; \
   jar cvfem ../../../jar/IntShiftApplet.jar \
    s1.block2.IntShiftApplet \
    ../../../scripts/IntShiftApplet-manifest.txt \
-   s1.block2/IntShiftApplet.class 
+   s1/block2/IntShiftApplet.class 
 )
