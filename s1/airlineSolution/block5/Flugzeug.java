@@ -1,9 +1,9 @@
-package s1.airlineSolution.block4;
+package s1.airlineSolution.block5;
 
 /**
  *
  * @author s@scalingbits.com
- * Implementiere einen Konstruktor
+ *
  */
 public class Flugzeug {
     String kennzeichen;
@@ -25,7 +25,7 @@ public class Flugzeug {
      * @param maxGewicht Maximalgewicht des Flugzeugs
      */
     public Flugzeug(String kennzeichen, int maxPassagiere, double leergewicht,
-            double maxGewicht) {
+                    double maxGewicht) {
         this.kennzeichen = kennzeichen;
         if (maxPassagiere >= 0)
             this.maxPassagiere = maxPassagiere;
@@ -38,6 +38,26 @@ public class Flugzeug {
             this.maxGewicht= maxGewicht;
         else
             this.maxGewicht= leergewicht;
+    }
+    /**
+     * Alternatives Anlegen eines Flugzeugs
+     * @param kennzeichen das was da hinten auf dem Leitwerk steht...
+     * @param maxPassagiere maximale Anzahl der Passagiere
+     * @param leergewicht Leergewicht des Flugzeugs
+     */
+    public Flugzeug(String kennzeichen, int maxPassagiere, double leergewicht) {
+        this(kennzeichen,maxPassagiere,leergewicht,2*leergewicht);
+        // Hier kann man noch spezielles machen...
+    }
+
+    /**
+     * Anlegen eines Airbus A320 (zum Bsp.)
+     * @param kennzeichen das was da hinten auf dem Leitwerk steht...
+     */
+    public Flugzeug(String kennzeichen) {
+        this(kennzeichen,120,400000F);
+        besatzung++; //Ein Pilot
+        System.out.println("Flugzeug ist fertig");
     }
     /**
      * 

@@ -6,31 +6,58 @@ package s1.airlineSolution.block7;
  */
 public class Flugzeug {
 
-    static final float duchschnittsgewicht = 100F;
+    static final double duchschnittsgewicht = 100F;
     final int maxPassagiere;
     private int passagiere;
     private int besatzung;
-    float treibstoff;
-    float leergewicht;
+    double treibstoff;
+    double leergewicht;
     String kennzeichen;
+    final double maxGewicht;
     private static Flugzeug tanker; // Singleton
 
-    public Flugzeug(String kennz, int maxPas, float leerg) {
-        kennzeichen = kennz;
-        if (maxPas >= 0) {
-            this.maxPassagiere = maxPas;
-        } else {
-            maxPassagiere = 0;
-        }
-        passagiere = 0;
-        treibstoff = 0;
-        leergewicht = leerg;
+    /**
+     * Beim Anlegen eines Flugzeuges werden die wichtigsten invarianten
+     * Größen erfasst
+     * @param kennzeichen das was da hinten auf dem Leitwerk steht...
+     * @param maxPassagiere maximale Anzahl der Passagiere
+     * @param leergewicht Leergewicht des Flugzeugs
+     * @param maxGewicht Maximalgewicht des Flugzeugs
+     */
+    public Flugzeug(String kennzeichen, int maxPassagiere, double leergewicht,
+                    double maxGewicht) {
+        this.kennzeichen = kennzeichen;
+        if (maxPassagiere >= 0)
+            this.maxPassagiere = maxPassagiere;
+        else
+            this.maxPassagiere = 0;
+        this.besatzung = 0;
+        this.treibstoff = 0;
+        this.leergewicht = leergewicht;
+        if (maxGewicht > leergewicht)
+            this.maxGewicht= maxGewicht;
+        else
+            this.maxGewicht= leergewicht;
+    }
+    /**
+     * Alternatives Anlegen eines Flugzeugs
+     * @param kennzeichen das was da hinten auf dem Leitwerk steht...
+     * @param maxPassagiere maximale Anzahl der Passagiere
+     * @param leergewicht Leergewicht des Flugzeugs
+     */
+    public Flugzeug(String kennzeichen, int maxPassagiere, double leergewicht) {
+        this(kennzeichen,maxPassagiere,leergewicht,2*leergewicht);
+        // Hier kann man noch spezielles machen...
     }
 
-    private Flugzeug(String kennz) {
-        this(kennz,120,400000F);
-        besatzung++;
-        System.out.println("Flugzeig ist fertig");
+    /**
+     * Anlegen eines Airbus A320 (zum Bsp.)
+     * @param kennzeichen das was da hinten auf dem Leitwerk steht...
+     */
+    private Flugzeug(String kennzeichen) {
+        this(kennzeichen,120,400000F);
+        besatzung++; //Ein Pilot
+        System.out.println("Flugzeug ist fertig");
     }
 
     // Das ist eine Factory
@@ -62,14 +89,14 @@ public class Flugzeug {
         }
     }
 
-    public float gewicht() {
-        float g;
+    public double gewicht() {
+        double g;
         g = leergewicht + treibstoff
                 + (passagiere + besatzung) * duchschnittsgewicht;
         return g;
     }
 
-    static public float maxPassagierGewicht() {
+    static public double maxPassagierGewicht() {
         return duchschnittsgewicht * 3;
     }
 
