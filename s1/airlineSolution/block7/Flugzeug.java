@@ -1,157 +1,139 @@
 package s1.airlineSolution.block7;
-
-/**
- *
- * @author s@scalingbits.com
- */
 public class Flugzeug {
-
-    static final double duchschnittsgewicht = 100F;
-    final int maxPassagiere;
+    public String kennzeichen; // Ein Attribut vom Typ einer Zeichenkette
+    // 1. Privates Attribut zur Verwaltung der Passagierkapazität
+    //     Tipp: Untersuchen Sie die Druckmethode zur Wahl der
+    //           Variablennamen (1-5)!
+    private int maxPassagiere;
+    // 2. Privates Attribut zur Verwaltung der aktuellen Pasagiere
     private int passagiere;
-    private int besatzung;
-    double treibstoff;
-    double leergewicht;
-    String kennzeichen;
-    final double maxGewicht;
-    private static Flugzeug tanker; // Singleton
+    // 3. Leergewicht in privates Attribut ändern
+    public int leergewicht; // Ein Attribut vom Type einer Ganzzahl
+    // 4. Maximales Gewicht des Flugzeugs
+    private int maxgewicht;
+    // 5. Öffentliche Konstante für durchschn. Passagiergewicht
+    public final int PASSAGIERGEWICHT = 85;
+
+    // Anzahl aller erzeugten Flugzeuge
+    private static int objekte;
 
     /**
-     * Beim Anlegen eines Flugzeuges werden die wichtigsten invarianten
-     * Größen erfasst
-     * @param kennzeichen das was da hinten auf dem Leitwerk steht...
-     * @param maxPassagiere maximale Anzahl der Passagiere
-     * @param leergewicht Leergewicht des Flugzeugs
-     * @param maxGewicht Maximalgewicht des Flugzeugs
+     * 8. Konstruktor implementieren
+     * Konstruktur der Klasse Flugzeug
+     * @param kennz     Kennzeichen des Flugzeugs
+     * @param kapazitaet Passagierkapazität
+     * @param leergew   Leergewicht in kg
+     * @param maxgew    Maximalgewicht in kg
      */
-    public Flugzeug(String kennzeichen, int maxPassagiere, double leergewicht,
-                    double maxGewicht) {
-        this.kennzeichen = kennzeichen;
-        if (maxPassagiere >= 0)
-            this.maxPassagiere = maxPassagiere;
-        else
-            this.maxPassagiere = 0;
-        this.besatzung = 0;
-        this.treibstoff = 0;
-        this.leergewicht = leergewicht;
-        if (maxGewicht > leergewicht)
-            this.maxGewicht= maxGewicht;
-        else
-            this.maxGewicht= leergewicht;
-    }
-    /**
-     * Alternatives Anlegen eines Flugzeugs
-     * @param kennzeichen das was da hinten auf dem Leitwerk steht...
-     * @param maxPassagiere maximale Anzahl der Passagiere
-     * @param leergewicht Leergewicht des Flugzeugs
-     */
-    public Flugzeug(String kennzeichen, int maxPassagiere, double leergewicht) {
-        this(kennzeichen,maxPassagiere,leergewicht,2*leergewicht);
-        // Hier kann man noch spezielles machen...
-    }
-
-    /**
-     * Anlegen eines Airbus A320 (zum Bsp.)
-     * @param kennzeichen das was da hinten auf dem Leitwerk steht...
-     */
-    private Flugzeug(String kennzeichen) {
-        this(kennzeichen,120,400000F);
-        besatzung++; //Ein Pilot
-        System.out.println("Flugzeug ist fertig");
-    }
-
-    // Das ist eine Factory
-    // 1. Privaten Konstruktor
-    // 2.. Öffentliche statische Methode (die den Konstruktor aufruft)
-    public static Flugzeug baueAirbusA320(String kennz) {
-        Flugzeug f = new Flugzeug(kennz);
-        // Seriennummer erhöhen
-        // Rechnung schreiben
-        // ...
-        return f;
-    }
-
-    // Singleton
-    // 1. privates statisches Attribut
-    // Öffentliche statische Methode
-    public static Flugzeug tankFlugzeug() {
-        if (tanker == null) tanker = new Flugzeug("D-ESSO");
-        return tanker;
-    }
-
-    public int lese_Besatzung() {
-        return besatzung;
-    }
-
-    public void setBesatzung(int besatzung) {
-        if (besatzung >= 0) {
-            this.besatzung = besatzung;
+    public Flugzeug(String kennz, int kapazitaet, int leergew, int maxgew) {
+        kennzeichen = kennz;
+        objekte++;
+        // Prüfen ob Kapazität größere Null ist
+        if (kapazitaet >= 0) {
+            maxPassagiere = kapazitaet;
+        } else {
+            maxPassagiere = 0;
         }
-    }
-
-    public double gewicht() {
-        double g;
-        g = leergewicht + treibstoff
-                + (passagiere + besatzung) * duchschnittsgewicht;
-        return g;
-    }
-
-    static public double maxPassagierGewicht() {
-        return duchschnittsgewicht * 3;
-    }
-
-    /**
-     * Hier steigen Passagiere ein
-     *
-     * @param e Anzahl der Passagiere
-     */
-    public void einsteigen(int e) {
-        einsteigen();
-        if (e > 1) {
-            einsteigen(e - 1);
+        // Prüfen ob Leergewicht größer Null ist
+        if (leergew > 0) {
+            leergewicht = leergew;
+        } else {
+            leergewicht = 0;
         }
-    }
-
-    public void einsteigen(double e) {
-        if ((passagiere + e <= maxPassagiere) && (e >= 0)) {
-            passagiere = passagiere + 15;
+        // Prüfen ob Maximalgewicht größer-gleich Leergeicht ist.
+        if (maxgew > leergewicht) {
+            maxgewicht = maxgew;
+        } else {
+            maxgewicht = leergewicht; // Viel Spass...
         }
     }
 
     /**
-     * Hier steigen Passagiere und Besatzungsmitglieder ein Vorsicht bei den
-     * Bewsatzsmitgliedern wird kein Check durchgeführt
-     *
-     * @param e Anzahl der Passagiere.
-     * @param besatz Anzahl der Besatzung
+     * 10. Fügt einen Passagier zum aktuellen Flugzeug hinzu
      */
-    public void einsteigen(int e, int besatz) {
-        if ((passagiere + e <= maxPassagiere) && (e >= 0)) {
-            passagiere = passagiere + e;
-            System.out.println("Bitte einsteigen");
-        }
-        besatzung = besatz;
-    }
-
     public void einsteigen() {
-        final int a;
-        if (passagiere + 1 <= maxPassagiere) {
+        if (passagiere < maxPassagiere) {
             passagiere++;
         }
-
     }
 
-    public void alleEinsteigen(int pass, int bes) {
-        if ((passagiere + pass <= maxPassagiere) && (pass >= 0)) {
-            passagiere = passagiere + pass;
+    /**
+     *
+     * @param anzahl Anzahl der Passagiere die einsteigen sollen
+     */
+    public void einsteigen(int anzahl) {
+        if ((anzahl >0) && (passagiere+anzahl) <= maxPassagiere) {
+            passagiere+= anzahl;
         }
-        besatzung = besatzung + bes;
     }
 
-    public int anzPassagiere() { return passagiere;}
-
-    public String getKennzeichen() {
-        return kennzeichen;
+    /**
+     * 11. Entfernt einen Passagier des aktuellen Flugzeugs
+     */
+    public void aussteigen() {
+        if (passagiere > 0) {
+            passagiere--;
+        }
     }
+
+    /**
+     *
+     * @param anzahl Anzahl der Passagiere die aussteigen sollen
+     */
+    public void aussteigen(int anzahl) {
+        if ((anzahl >0) && (passagiere-anzahl) >=0) {
+            passagiere-= anzahl;
+        }
+    }
+
+    /**
+     * 12. Ausgabe der aktuellen Anzahl der Passagiere
+     * @return aktuelle Anzahl der Passagiere
+     */
+    public int anzahlPassagiere() {return passagiere;}
+
+
+    /**
+     * 6. Berechnen des aktuellen Gewichts
+     * @return aktuelles Gewicht
+     */
+    public int gewicht() {
+        return (leergewicht+ passagiere*PASSAGIERGEWICHT);}
+
+    /**
+     * 13. Ausgabe der maximalen Anzahl der Passagiere
+     * @return Maximale Anzahl der Passagiere
+     */
+    public int passagierkapazitaet() {return maxPassagiere;}
+
+    /**
+     *
+     * @return Anzahl aller erzeugten Objekte der Klasse Flugzeug
+     */
+    public static int anzahlFlugzeuge() {return objekte;}
+
+    /**
+     * Eine Methode zum Drucken der Attributbelegung des Objekts
+     * Die Methode erfordert keine Eingaben. Sie erzeugt keine
+     * Ausgaben
+     */
+    public void drucken() {
+        // 7. Vervollständigen der Druckmethode
+        System.out.println("*****************************");
+        System.out.println("Kennzeichen:        " + kennzeichen);
+        System.out.println("Leergewicht:        " + leergewicht + "kg");
+        System.out.println("Maximalgewicht:     " + maxgewicht + "kg");
+        System.out.println("Aktuelles Gewicht : " + gewicht() + "kg");
+        System.out.println("Passagiere:         " + passagiere);
+        System.out.println("Maximal Anzahl P.:  " + maxPassagiere);
+        System.out.println("******************** " + objekte + " Flugz.");
+    }
+
+    /**
+     * Ueberschriebene Methode die das Kennzeichen anstatt der Objektidentitaet
+     * druckt
+     * @return
+     */
+    public String toString() {return kennzeichen;}
 
 }
