@@ -8,6 +8,7 @@ public class Flughafen {
 
     String name;
     Passagierflugzeug[] gates;
+    // 1. Neu in Block 8: Ein Vorfeld für Flugzeuge
     Flugzeug[] vorfeld;
     float treibstofflager;
 

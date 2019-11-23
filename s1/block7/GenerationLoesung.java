@@ -54,6 +54,7 @@ public class GenerationLoesung {
                 if ((i + 1 < size) && (j > 0) && alt[i + 1][j - 1]) nachbar++; //rechts, oben
                 if ((i + 1 < size) && (j + 1 < size) && alt[i + 1][j + 1]) nachbar++; //rechts, unten
 
+
 // Übernehmen des alten Status als Default
                 aktuell[i][j] = alt[i][j];
                 // Geburt einer neuen Zelle

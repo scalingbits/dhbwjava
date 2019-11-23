@@ -5,7 +5,7 @@ package s1.airlineSolution.block5;
  * @author s@scalingbits.com
  *
  */
-public class Flugzeug {
+public class Passagierflugzeug {
     String kennzeichen;
     int passagiere;
     int besatzung;
@@ -24,8 +24,8 @@ public class Flugzeug {
      * @param leergewicht Leergewicht des Flugzeugs
      * @param maxGewicht Maximalgewicht des Flugzeugs
      */
-    public Flugzeug(String kennzeichen, int maxPassagiere, double leergewicht,
-                    double maxGewicht) {
+    public Passagierflugzeug(String kennzeichen, int maxPassagiere, double leergewicht,
+                             double maxGewicht) {
         this.kennzeichen = kennzeichen;
         if (maxPassagiere >= 0)
             this.maxPassagiere = maxPassagiere;
@@ -45,7 +45,7 @@ public class Flugzeug {
      * @param maxPassagiere maximale Anzahl der Passagiere
      * @param leergewicht Leergewicht des Flugzeugs
      */
-    public Flugzeug(String kennzeichen, int maxPassagiere, double leergewicht) {
+    public Passagierflugzeug(String kennzeichen, int maxPassagiere, double leergewicht) {
         this(kennzeichen,maxPassagiere,leergewicht,2*leergewicht);
         // Hier kann man noch spezielles machen...
     }
@@ -54,7 +54,7 @@ public class Flugzeug {
      * Anlegen eines Airbus A320 (zum Bsp.)
      * @param kennzeichen das was da hinten auf dem Leitwerk steht...
      */
-    public Flugzeug(String kennzeichen) {
+    public Passagierflugzeug(String kennzeichen) {
         this(kennzeichen,120,400000F);
         besatzung++; //Ein Pilot
         System.out.println("Flugzeug ist fertig");

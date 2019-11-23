@@ -6,12 +6,12 @@ package s1.airlineSolution.block1;
  */
 public class Flughafen {
     String name;
-    Flugzeug gate1;
-    Flugzeug gate2;
-    Flugzeug gate3;
-    Flugzeug gate4;
-    Flugzeug gate5;
-    Flugzeug gate6;
+    Passagierflugzeug gate1;
+    Passagierflugzeug gate2;
+    Passagierflugzeug gate3;
+    Passagierflugzeug gate4;
+    Passagierflugzeug gate5;
+    Passagierflugzeug gate6;
     double treibstoffLager;
     
     public static void main(String[] args) {
@@ -28,13 +28,13 @@ public class Flughafen {
         System.out.println("***********************");
         
         // Boeing 747, https://de.wikipedia.org/wiki/Boeing_747#747-400
-        Flugzeug lh1 = new Flugzeug();
+        Passagierflugzeug lh1 = new Passagierflugzeug();
         lh1.kennzeichen ="D-ABTL";
         
         pad.gate1 = lh1;
         
         // Airbus A380 https://de.wikipedia.org/wiki/Airbus_A380#A380-800
-        Flugzeug lh2 = new Flugzeug();
+        Passagierflugzeug lh2 = new Passagierflugzeug();
         lh2.kennzeichen = "D-AIMA";
         
         pad.gate2 = lh2;

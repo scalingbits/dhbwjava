@@ -7,12 +7,12 @@ package s1.airlineSolution.block4;
 public class Flughafen {
 
     String name;
-    Flugzeug gate1;
-    Flugzeug gate2;
-    Flugzeug gate3;
-    Flugzeug gate4;
-    Flugzeug gate5;
-    Flugzeug gate6;
+    Passagierflugzeug gate1;
+    Passagierflugzeug gate2;
+    Passagierflugzeug gate3;
+    Passagierflugzeug gate4;
+    Passagierflugzeug gate5;
+    Passagierflugzeug gate6;
     double treibstoffLager;
 
     public static void main(String[] args) {
@@ -30,7 +30,7 @@ public class Flughafen {
         
 
         // Boeing 747, https://de.wikipedia.org/wiki/Boeing_747#747-400
-        Flugzeug lh1 = new Flugzeug("D-ABTL", 360, 191000, 400000);
+        Passagierflugzeug lh1 = new Passagierflugzeug("D-ABTL", 360, 191000, 400000);
         lh1.besatzung = 16;
 
         pad.treibstoffLager -= lh1.tanken(1000);
@@ -47,7 +47,7 @@ public class Flughafen {
         System.out.println("Flugzeug an Gate 1: " + pad.gate1);
 
         // Airbus A380 https://de.wikipedia.org/wiki/Airbus_A380#A380-800
-        Flugzeug lh2 = new Flugzeug("D-AIMN", 526, 286000, 500000);
+        Passagierflugzeug lh2 = new Passagierflugzeug("D-AIMN", 526, 286000, 500000);
         lh2.besatzung = 20;
         pad.treibstoffLager -= lh2.tanken(4000);
 

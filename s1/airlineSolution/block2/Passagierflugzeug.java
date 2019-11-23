@@ -5,7 +5,7 @@ package s1.airlineSolution.block2;
  * @author s@scalingbits.com
  * // Implementiere Passagiere, Anzahl Besatzung, Methode toString
  */
-public class Flugzeug {
+public class Passagierflugzeug {
     String kennzeichen;
     int passagiere;
     int besatzung;

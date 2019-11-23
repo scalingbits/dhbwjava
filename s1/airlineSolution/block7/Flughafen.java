@@ -2,28 +2,32 @@ package s1.airlineSolution.block7;
 public class Flughafen {
     String name;
 
-    Flugzeug[] gate;
+    // 1. Neu in block 7: Die Anzahl der Gates ist variable
+    // Alle Zuweisungen zu den Gates müssen korrigiert werdem
+    Passagierflugzeug[] gate;
     double treibstoffLager;
 
+    // 2. Neu im Block 7: Der Flughafen wird mit einem Konstruktor initialisiert
     /**
      *
-     * @param name Name des Flugzeuge
+     * @param name Name des Flughafens
      * @param gates Anzahl der Gates
      */
     public Flughafen(String name, int gates) {
         this.name = name;
-        gate = new Flugzeug[gates];
+        gate = new Passagierflugzeug[gates];
     }
 
 
     public static void main(String[] args) {
 
+        // 3. Neu in Block 7 : Anlegen eines Flughafen mit einem Konstruktor
         Flughafen pad = new Flughafen("Paderborn",6);
         pad.treibstoffLager = 1000000;
 
 
         // Boeing 747, https://de.wikipedia.org/wiki/Boeing_747#747-400
-        Flugzeug lh1 = new Flugzeug("ABTL",450000,200,200);
+        Passagierflugzeug lh1 = new Passagierflugzeug("ABTL",450000,200,200);
         lh1.einsteigen(120);
 
         double aktGewicht=lh1.gewicht();
@@ -42,7 +46,7 @@ public class Flughafen {
         lh1.drucken();
 
         // Airbus A380 https://de.wikipedia.org/wiki/Airbus_A380#A380-800
-        Flugzeug lh2 = new Flugzeug("ABTL",500000,100,200);
+        Passagierflugzeug lh2 = new Passagierflugzeug("ABTL",500000,100,200);
 
         lh2.einsteigen(100);
 
@@ -55,7 +59,7 @@ public class Flughafen {
         // Hänge Flugzeug um. mover bewegt Flugzeug
         // von Gate 1 nach Gate 3
 
-        Flugzeug mover = pad.gate[1];
+        Passagierflugzeug mover = pad.gate[1];
         pad.gate[1]=null;
 
         pad.drucken();

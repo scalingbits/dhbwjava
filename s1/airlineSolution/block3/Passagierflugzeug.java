@@ -4,7 +4,7 @@ package s1.airlineSolution.block3;
  *
  * @author s@scalingbits.com
  */
-public class Flugzeug {
+public class Passagierflugzeug {
     String kennzeichen;
     int passagiere;
     int besatzung;

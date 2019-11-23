@@ -1,5 +1,5 @@
 package s1.airlineSolution.block7;
-public class Flugzeug {
+public class Passagierflugzeug {
     public String kennzeichen; // Ein Attribut vom Typ einer Zeichenkette
     // 1. Privates Attribut zur Verwaltung der Passagierkapazität
     //     Tipp: Untersuchen Sie die Druckmethode zur Wahl der
@@ -25,7 +25,7 @@ public class Flugzeug {
      * @param leergew   Leergewicht in kg
      * @param maxgew    Maximalgewicht in kg
      */
-    public Flugzeug(String kennz, int kapazitaet, int leergew, int maxgew) {
+    public Passagierflugzeug(String kennz, int kapazitaet, int leergew, int maxgew) {
         kennzeichen = kennz;
         objekte++;
         // Prüfen ob Kapazität größere Null ist

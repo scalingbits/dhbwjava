@@ -5,7 +5,7 @@ package s1.airlineSolution.block4;
  * @author s@scalingbits.com
  * Implementiere einen Konstruktor
  */
-public class Flugzeug {
+public class Passagierflugzeug {
     String kennzeichen;
     int passagiere;
     int besatzung;
@@ -24,8 +24,8 @@ public class Flugzeug {
      * @param leergewicht Leergewicht des Flugzeugs
      * @param maxGewicht Maximalgewicht des Flugzeugs
      */
-    public Flugzeug(String kennzeichen, int maxPassagiere, double leergewicht,
-            double maxGewicht) {
+    public Passagierflugzeug(String kennzeichen, int maxPassagiere, double leergewicht,
+                             double maxGewicht) {
         this.kennzeichen = kennzeichen;
         if (maxPassagiere >= 0)
             this.maxPassagiere = maxPassagiere;
