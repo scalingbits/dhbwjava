@@ -20,14 +20,14 @@ public class WeckerUhr extends JPanel {
     int stunde = 0;
     boolean klingeln = false;
     String tzString; // aktuelle Zeitzone
-    int initialHeight;
+    final int initialHeight;
     float zoom = 1;
     boolean an = false;
-    JFrame hf; // Das Fenster der Anwendung
-    Container myPane;
-    JTextField h,m,s;
-    JButton eingabe;
-    Weckzeit wz;
+    final JFrame hf; // Das Fenster der Anwendung
+    final Container myPane;
+    final JTextField h,m,s;
+    final JButton eingabe;
+    final Weckzeit wz;
     int klingelRadius = 0;
     /**
      * Konstruktor der Klasse. Er initialisiert die Grafik

@@ -1,16 +1,11 @@
 package s2.baum;
 
-/**
- *
- * @author s@scalingbits.com
- */
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import javax.swing.JPanel;
+import javax.swing.*;
+import java.awt.*;
 
 /**
  *
+ *  * Das Panel des BaumGUIs
  * @author sschneid
  */
 public class BaumPanel extends JPanel{

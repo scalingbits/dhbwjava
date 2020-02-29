@@ -95,12 +95,12 @@ public class FlugzeugTest {
             //     Drucken Sie eine Warnung aus falls Sie einen Passagier
             //     nicht umsteigen lassen.
             while (a380Defekt.anzahlPassagiere()> 0) {
-                if (jumbo1.anzahlPassagiere() < jumbo1.passagierkapazität()) {
+                if (jumbo1.anzahlPassagiere() < jumbo1.passagierkapazitaet()) {
                     a380Defekt.aussteigen();
                     jumbo1.einsteigen();
                 }
                 else // Jumbo 1 is voll...
-                    if (jumbo2.anzahlPassagiere() < jumbo2.passagierkapazität()) {
+                    if (jumbo2.anzahlPassagiere() < jumbo2.passagierkapazitaet()) {
                         a380Defekt.aussteigen();
                         jumbo2.einsteigen();
                     }

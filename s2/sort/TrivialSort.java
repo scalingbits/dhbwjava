@@ -9,14 +9,14 @@ public class TrivialSort extends Sortierer{
      * Konstruktor: Akzeptiere ein Feld von int. Reiche
      * das Feld an die Oberklasse weiter.
      * Der Algorithmus ist nicht parallel (false Argument)
-     * @param s
+     * @param s das zu sortierende Feld
      */
     public TrivialSort(int[] s) { super(s,false); }
     /**
      * Diese Methode sortiert leider nur die beiden ersten Elemente
      * auf der Position von und (von+1)
-     * @param von
-     * @param bis
+     * @param von erste Indexposition die sortiert wird
+     * @param bis letzte Indexposition die sortiert
      */
     @Override
     public void sortieren(int von, int bis) {

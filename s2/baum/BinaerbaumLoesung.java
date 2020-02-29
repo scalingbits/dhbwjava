@@ -70,8 +70,7 @@ public class BinaerbaumLoesung {
                 if (altLinks != null) einfuegen(result, altLinks);
             }
             else
-                if (altLinks!=null) result = altLinks;
-                else result = null;
+                result = altLinks;
          }
          else if (teilbaum.getWert()<s.getWert()) {
             Baumknoten k = teilbaum.getRechterK();

@@ -42,7 +42,8 @@ public class Arithmetik3 {
         int ergebnis=0;
         if (x==0) 
             ergebnis=0;
-        else 
+        else
+            //noinspection SuspiciousNameCombination
             ergebnis=mult(y,(x-1))+y;
         
         return ergebnis;

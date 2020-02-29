@@ -1,4 +1,4 @@
-package block3;
+package s1.block3;
 
 // Gute Kandidaten
 // 2^30-1 = 1073741823

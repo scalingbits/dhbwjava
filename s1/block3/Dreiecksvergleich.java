@@ -1,9 +1,9 @@
-package block3;
+package s1.block3;
 
 public class Dreiecksvergleich {
 
     public static void main(String[] args) {
-        float x[] = new float[3];
+        float[] x = new float[3];
         int j;
         if (args.length > 2) {
             try {

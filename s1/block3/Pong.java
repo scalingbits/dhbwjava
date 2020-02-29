@@ -1,15 +1,16 @@
 /*
  * Zeichnen einer analogen Uhr in einem JFrame
  */
-package block3;
-
-import java.awt.*;
-import java.awt.event.*;
-import static java.lang.Math.min;
-import static java.lang.Math.max;
-import static java.lang.Math.abs;
+package s1.block3;
 
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+
+import static java.lang.Math.*;
 
 /**
  *
@@ -45,6 +46,8 @@ public class Pong extends JApplet {
         /**
          * Es wurde eine Taste gedrückt.
          * Der Tastendruck muss analysiert werden
+         * @param e Ereignis
+         *
          */
         public void keyPressed(KeyEvent e) {
             char c = e.getKeyChar();
@@ -59,6 +62,7 @@ public class Pong extends JApplet {
         @Override
         /**
          * Taste losgelassen. Alle Schlägerbewegungen einstellen
+         * @param e Ereignis
          */
         public void keyReleased(KeyEvent e) {
             schlaegerHoch= false;
@@ -95,7 +99,7 @@ public class Pong extends JApplet {
             g.fillArc(ballPosX, ballPosY,ballDurchm, ballDurchm, 0, 360);
         }
 
-        public void paintStatus(Graphics g) {;
+        public void paintStatus(Graphics g) {
             if (detail) {
                 g.drawString("d: Details an/aus",200,20);
                 g.drawString("f: stop/weiter",200,40);
@@ -111,7 +115,6 @@ public class Pong extends JApplet {
                     + schlaegerPosY + "]", 200, 200);
                 g.drawString("Schlägergroesse: [" + schlaegerGroesseX + ","
                     + schlaegerGroesseY + "]", 200, 220);
-                ;
             }
         }
     }

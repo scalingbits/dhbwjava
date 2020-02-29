@@ -7,7 +7,7 @@ import java.util.Arrays;
  */
 public class Suchen {
     public static int[] feld;
-    public static int groesse = 500000000;
+    public final static int groesse = 500000000;
     /**
      * Hauptprogramm
      * @param args
@@ -54,7 +54,6 @@ public class Suchen {
     }
      /**
       * Sortiere ein Feld mit der Klasse Arrays und messe die Zeit
-      * @param suchwert der gesuchte Wert
       */
     public static void sortiere() {
         System.out.println("Sortieren mit Arrays.sort()");

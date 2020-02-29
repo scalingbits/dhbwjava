@@ -6,7 +6,7 @@ import java.util.concurrent.RecursiveAction;
  * @author s@scalingbits.com
  */
 public class QuickSortParallel extends Sortierer{
-    private static int SIZE_THRESHOLD=256; // Schwellwert für paralleles Sortieren
+    private final static int SIZE_THRESHOLD=256; // Schwellwert für paralleles Sortieren
     private static final ForkJoinPool THREADPOOL = new ForkJoinPool();
     /**
      * Konstruktor: Akzeptiere ein Feld von int. Reiche
@@ -24,8 +24,8 @@ public class QuickSortParallel extends Sortierer{
      * implementiert. Sie macht aus Methodenaufrufen, Taskaufrufe von Threads
      */
     static class SortTask extends RecursiveAction {
-        int lo, hi;
-        QuickSortParallel qsp;
+        final int lo, hi;
+        final QuickSortParallel qsp;
 
         /**
          * Speichere alle wichtigen Parameter für den Task

@@ -9,7 +9,7 @@ public class InsertionSort extends Sortierer {
      * Konstruktor: Akzeptiere ein Feld von int. Reiche
      * das Feld an die Oberklasse weiter.
      * Der Algorithmus ist nicht parallel (false Argument)
-     * @param s
+     * @param s das zu sortierende Feld
      */
     public InsertionSort(int[] s) {
         super(s,false);

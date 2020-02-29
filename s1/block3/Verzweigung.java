@@ -1,7 +1,7 @@
-package block3;
+package s1.block3;
 public class Verzweigung {
 public static void main(String[] args) {
-    int x[] = new int[3];
+    int[] x = new int[3];
     if (args.length > 2 ) {
         try {
            for (int i=0; i<3; i++)

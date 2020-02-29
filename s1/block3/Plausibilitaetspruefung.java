@@ -1,7 +1,7 @@
-package block3;
+package s1.block3;
 public class Plausibilitaetspruefung {
     public static void main(String[] args) {
-       int monatTage[] = {0, 31, 28, 31, 30, 31, 30,
+       int[] monatTage = {0, 31, 28, 31, 30, 31, 30,
                              31, 31, 30, 31, 30, 13};
        int tag = 0;
        int monat = 0;

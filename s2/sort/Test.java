@@ -15,7 +15,7 @@ class Test {
         System.out.println(s);
         if (s.equals(a[0]))
             System.out.println("Gleich");
-        else System.out.println("Gleich");
+        else System.out.println("Ungleich");
 
         char ii = a[0].charAt(2);
         char ss = s.charAt(2);

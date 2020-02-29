@@ -1,11 +1,9 @@
 package s2.swing;
 
-import java.awt.Container;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JApplet;
-import javax.swing.JFrame;
-import javax.swing.JTextField;
 /**
  *
  * @author s@scalingbits.com
@@ -13,7 +11,7 @@ import javax.swing.JTextField;
 public class TextfieldJApplet extends JApplet implements ActionListener {
  
     final private JTextField myTextField;
-    static boolean appletContext = true;
+    static final boolean appletContext = true;
     JFrame f;
 
    public TextfieldJApplet() {

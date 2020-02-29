@@ -1,21 +1,9 @@
 package s1.block2;
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Container;
-import java.awt.Dimension;
-import java.awt.Graphics;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
-import javax.swing.BoxLayout;
-import javax.swing.ButtonGroup;
-import javax.swing.JApplet;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JRadioButton;
-import javax.swing.JTextField;
 /**
  *
  * @author s@scalingbits.com
@@ -238,8 +226,4 @@ public class BinaerIntApplet extends JApplet implements ActionListener {
         f.pack();
         f.setVisible(true);
     }
-    /**
-     * Berechnen eines neuen Tupels von Kubikwurzel
-     * und dazu gehöriger dritter Potenz
-     */
 }

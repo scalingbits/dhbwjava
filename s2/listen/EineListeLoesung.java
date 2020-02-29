@@ -144,7 +144,7 @@ public class EineListeLoesung {
     public boolean enthaelt(Listenknoten k) {
         Listenknoten t = kopf;
         boolean result = false;
-        while ((result == false) && (t != null)) {
+        while ((!result) && (t != null)) {
             result = (t == k);
             if (!result) {
                 t = t.getNachfolger();

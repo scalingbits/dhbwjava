@@ -98,7 +98,5 @@ public class Flugzeug {
         System.out.println("Passagiere:         " + passagiere);
         System.out.println("Maximal Anzahl P.:  " + maxPassagiere);
         System.out.println("*****************************");
-    }
-
-    public int passagierkapazität() {return maxPassagiere;}
-}
+    } // Ende Methode drucken()
+} // Ende der Klasse

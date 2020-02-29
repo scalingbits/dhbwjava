@@ -45,8 +45,6 @@ public class Ariadne {
     public List<Position> suche(Position von, Position nach) {
         List<Position> besterFaden = null;
         List<Position> einFaden;
-        int x = von.x;
-        int y = von.y;
         bt.laby.update(laby);
         bt.updateButtons();
         if (von.equals(nach)) {

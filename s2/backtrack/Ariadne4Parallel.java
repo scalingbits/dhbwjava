@@ -65,8 +65,6 @@ public class Ariadne4Parallel extends Ariadne {
     public List<Position> suche(Position von, Position nach) {
         List<Position> besterFaden = null;
         List<Position> einFaden;
-        int x = von.x;
-        int y = von.y;
         System.out.println("Thread: " + Thread.currentThread());
         bt.laby.update(laby);
         bt.updateButtons();

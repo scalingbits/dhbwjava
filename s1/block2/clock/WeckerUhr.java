@@ -2,22 +2,11 @@ package s1.block2.clock;
 /*
  * Zeichnen einer analogen Uhr in einem JFrame
  */
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Container;
-import java.awt.Graphics;
-import java.awt.GridLayout;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Calendar;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
 
 /**
  *
@@ -31,11 +20,11 @@ public class WeckerUhr extends JPanel {
     boolean klingeln = false;
     String tzString; // aktuelle Zeitzone
     boolean an = false;
-    JFrame hf; // Das Fenster der Anwendung
-    Container myPane;
-    JTextField h,m,s;
-    JButton eingabe;
-    Weckzeit wz;
+    final JFrame hf; // Das Fenster der Anwendung
+    final Container myPane;
+    final JTextField h,m,s;
+    final JButton eingabe;
+    final Weckzeit wz;
     int klingelRadius = 0;
     /**
      * Konstruktor der Klasse. Er initialisiert die Grafik

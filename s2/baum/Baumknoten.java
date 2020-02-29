@@ -12,10 +12,7 @@ public class Baumknoten {
     public int getWert() {
         return wert;
     }
- 
-    public void setWert(int wert) {
-        this.wert = wert;
-    }
+
     /**
      * Verwalte linken Knoten
      */

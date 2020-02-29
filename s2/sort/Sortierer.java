@@ -9,7 +9,7 @@ public abstract class Sortierer {
    /**
    * Das zu sortierende Feld
    */
-   protected int[] feld;
+   final protected int[] feld;
    private int maxWert = Integer.MAX_VALUE;
    // Zähler für serielle Sortieralgorithmen
    private long          tauschZaehlerSeriell;
@@ -45,6 +45,7 @@ public abstract class Sortierer {
    }
    /**
    * die Groesse des zu sortierenden Feldes
+    * @return die Groesse des Feldes
    */
    public int feldgroesse() {
       return feld.length;
@@ -59,7 +60,8 @@ public abstract class Sortierer {
    }
    /**
    * sortiert das Eingabefeld
-   * @param s ein unsortiertes Feld
+    * @param startIndex Beginn des zu sortierenden Intervalls
+    * @param endeIndex Ende des zu sortierenden Intervalls
    */
    abstract public void sortieren(int startIndex, int endeIndex);
    /**

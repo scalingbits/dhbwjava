@@ -19,7 +19,7 @@ public class Haendler {
     }
 
 
-    public void geschäftsEröffnung(Kraftwagen[] k) {
+    public void geschaeftsEroeffnung(Kraftwagen[] k) {
         team[0].neuerWagen(0, k[0]);
         team[1].neuerWagen(0, k[1]);
         team[2].neuerWagen(0, k[2]);
@@ -94,7 +94,7 @@ public class Haendler {
 
         Haendler h = new Haendler("Gebrauchtwagen-Schmidt");
         h.einstellenTeam("Achim", "Bolle", "Caesar");
-        h.geschäftsEröffnung(flotte);
+        h.geschaeftsEroeffnung(flotte);
         h.drucken();
         h.verkaufeFahrzeug(0, 0, 40404.04);
         h.einstellenFahrzeug(0, 0, flotte[7]);

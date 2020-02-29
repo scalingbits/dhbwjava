@@ -1,22 +1,10 @@
 package s1.block2.clock;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Container;
-import java.awt.Graphics;
-import java.awt.GridLayout;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Calendar;
-import javax.swing.JApplet;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
 
 /**
  *
@@ -32,10 +20,10 @@ public class WeckerUhrNextGen extends JApplet {
     String tzString; // aktuelle Zeitzone
     boolean an = false;
     Container hf; // Das Fenster der Anwendung
-    Container myPane;
-    JTextField h, m, s;
-    JButton eingabe;
-    Weckzeit wz;
+    final Container myPane;
+    final JTextField h, m, s;
+    final JButton eingabe;
+    final Weckzeit wz;
     int klingelRadius = 0;
 
     public WeckerUhrNextGen() {
@@ -96,9 +84,9 @@ public class WeckerUhrNextGen extends JApplet {
         if (!appletMode) {
             // Erzeuge einen Menüeintrag zum Beenden des Programms
             ((JFrame)hf).pack();
-            ((JFrame)hf).setSize(2 * ZeigerLoesung.maxRadius + 80,
+            hf.setSize(2 * ZeigerLoesung.maxRadius + 80,
                     2 * ZeigerLoesung.maxRadius + 130);
-            ((JFrame)hf).setVisible(true);
+            hf.setVisible(true);
             ((JFrame)hf).setAlwaysOnTop(true);
         }
     }

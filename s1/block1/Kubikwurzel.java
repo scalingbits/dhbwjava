@@ -43,13 +43,13 @@ public class Kubikwurzel extends JApplet {
     private int wurzel = 0;
     private int potenz = 0;
     final private JTextField eingabeFeld;
-    private String statusText;
     final private JLabel status;
     final private JLabel challenge;
     /**
      * Innere Klasse zum Behandeln der GUI Eingaben
      */
     private class MyListener implements ActionListener {
+        String statusText;
         @Override
         public void actionPerformed(ActionEvent e) {
             int eing = 0;

@@ -9,9 +9,10 @@ public class ShellSortE extends Sortierer {
     public ShellSortE(int[] s) {super(s,false); }
 
     /**
-     * sortiert ein Eingabefeld s und gibt eine Referenz auf dea Feld wieder
+     * sortiert ein Eingabefeld s und gibt eine Referenz auf das Feld wieder
      * zurück
-     * @param s ein unsortiertes Feld
+     * @param startIndex erstes zu sortierendes Feldelement
+     * @param endeIndex letztes zu sortierendes Feldelement
      * @return ein sortiertes Feld
      */
     public void sortieren(int startIndex, int endeIndex) {

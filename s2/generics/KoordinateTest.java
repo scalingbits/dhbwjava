@@ -25,7 +25,7 @@ public class KoordinateTest<T extends Number> {
         k12 = new KoordinateTest<Double>(2.2d, 3.3d);
         k21 = new KoordinateTest<Integer>(2, 3);
         //k31 = new Koordinate<String>("11","22");
-        k41 = new KoordinateTest<Number>(2l, 3l);
+        k41 = new KoordinateTest<Number>(2L, 3L);
 
         k41 = new KoordinateTest<Number>(4.4d, 5.5f);
         k11 = new KoordinateTest<Double>(3.3d,9.9d);

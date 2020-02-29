@@ -1,14 +1,9 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package block3;
-
+package s1.block3;
+import java.util.Scanner;
 /**
- *
+ * Klasse Eingabe
  * @author sschneid
  */
-import java.util.Scanner;
 public class Eingabe {
     public static void main(String[] args) {
         Scanner eingabe = new Scanner(System.in);

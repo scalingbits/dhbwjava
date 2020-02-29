@@ -1,23 +1,11 @@
 package s2.thread;
 
-import java.awt.BorderLayout;
-import java.awt.Container;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.BoxLayout;
-import javax.swing.ButtonGroup;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JPanel;
-import javax.swing.JRadioButton;
-import javax.swing.JSlider;
-import javax.swing.JTextField;
+import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 /**
  *
  * @author s@scalingbits.com
@@ -27,15 +15,15 @@ public class ThreadFenster {
     final private JFrame hf;
     private JButton okButton;
     final private JButton exitButton;
-    JTextField threadDisplay;
+    final JTextField threadDisplay;
     private final static int SLEEPMIN = 1;
     private final static int SLEEPMAX = 2000;
     private final static int SLEEPINIT = 500;
     private final int threadCurrent = 10;
-    public ThreadingPanel tp;
+    final public ThreadingPanel tp;
     public boolean synchron = true;
-    JRadioButton syncButton;  
-    JRadioButton nosyncButton;
+    final JRadioButton syncButton;
+    final JRadioButton nosyncButton;
 
 public class exitActionListener implements ActionListener {
     @Override

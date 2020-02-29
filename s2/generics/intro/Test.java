@@ -1,9 +1,8 @@
+package s2.generics.intro;
 /**
- *
+ * Klasse zum Testen
  * @author s@scalingbits.com
  */
-package s2.generics.intro;
-
 public class Test {
     public static void main(String[] args) {
         Person hans = new Person();
@@ -45,7 +44,7 @@ public class Test {
         // Nicht generische Verwendung der Klasse Zimmer
         Zimmer wohnung = new Zimmer();
         
-        wohnung.rein(new String ("Guten Morgen"));
+        wohnung.rein("Guten Morgen");
         // ... Viel Code dazwischen
         String x =  (String) wohnung.einwohner();
         System.out.println(x);

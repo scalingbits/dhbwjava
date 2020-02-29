@@ -9,13 +9,14 @@ public class BubbleSort extends Sortierer {
      * Konstruktor: Akzeptiere ein Feld von int. Reiche
      * das Feld an die Oberklasse weiter.
      * Der Algorithmus ist nicht parallel (false Argument)
-     * @param s
+     * @param s das zu sortierende Feld
      */
     public BubbleSort(int[] s) {super(s, false); }
     /**
      * sortiert ein Eingabefeld s und gibt eine Referenz auf dea Feld wieder
      * zurück
-     * @param s ein unsortiertes Feld
+     * @param startIndex erstes zu sortierendes Feldelement
+     * @param endeIndex letztes zu sortierendes Feldelement
      * @return ein sortiertes Feld
      */
     public void sortieren(int startIndex, int endeIndex) {

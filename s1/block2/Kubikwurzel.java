@@ -1,16 +1,9 @@
 package s1.block2;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Container;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JApplet;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
 
 public class Kubikwurzel extends JApplet {
 
@@ -20,12 +13,12 @@ public class Kubikwurzel extends JApplet {
     private int falsch = 0;
     private int wurzel = 0;
     private int potenz = 0;
-    private JTextField eingabeFeld;
-    private String statusText;
-    private JLabel status;
-    private JLabel challenge;
+    final private JTextField eingabeFeld;
+    final private JLabel status;
+    final private JLabel challenge;
 
     private class MyListener implements ActionListener {
+        String statusText;
         @Override
         public void actionPerformed(ActionEvent e) {
             int eing = 0;

@@ -1,7 +1,7 @@
-package block3;
+package s1.block3;
 public class Zahlenstatistik {
     public static void main(String[] args) {
-        int feld[];
+        int[] feld;
         int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
         float average = 0;

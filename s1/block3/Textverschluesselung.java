@@ -1,4 +1,4 @@
-package block3;
+package s1.block3;
 public class Textverschluesselung {
     public static void main(String[] args) {
     String myText = "";

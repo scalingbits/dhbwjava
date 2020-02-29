@@ -1,10 +1,10 @@
-package block3;
+package s1.block3;
 import java.util.Calendar; // Nur für optionalen Teil benötigt!
 import java.util.GregorianCalendar;
 
 public class WochentagBerechnung {
     public static void main(String[] args) {
-       int monatOffSet[] = new int[13];
+       int[] monatOffSet = new int[13];
        int tag = 0;
        int monat = 0;
        int jahr=0;

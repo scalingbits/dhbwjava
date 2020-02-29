@@ -1,9 +1,9 @@
-package block3;
+package s1.block3;
 public class Haeufigkeitzeichen {
 public static void main(String[] args) {
     String myText="";
     char c;
-    int histogram[] = new int[Character.MAX_VALUE];
+    int[] histogram = new int[Character.MAX_VALUE];
 
     if (args.length > 0 ) {
         myText=args[0];

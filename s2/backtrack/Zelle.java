@@ -23,7 +23,7 @@ public class Zelle extends JButton{
     /**
      * Die x,y Position
      */
-    public Position p;
+    final public Position p;
     
     public static Icon leerIcon;
     public static Icon wandIcon;
