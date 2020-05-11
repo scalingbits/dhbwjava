@@ -1,17 +1,10 @@
 package s2.swing;
 
-import java.awt.BorderLayout;
-import java.awt.Container;
-import java.awt.GridLayout;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.net.URL;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextArea;
 
 /**
  *
@@ -39,7 +32,7 @@ public class AusnahmeFensterLoesung implements ActionListener {
         hf = new JFrame("Anwendungsfehler");
         // 8. Labelerzeugung
         logo = meinLogo();
-        // 4. Beenden bei Schliesen des Fenster
+        // 4. Beenden bei Schliesen des Fensters
         hf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         // 5. Anlegen der Buttons
         okButton = new JButton();
@@ -81,7 +74,7 @@ public class AusnahmeFensterLoesung implements ActionListener {
     private JLabel meinLogo() {
         URL logoURL;
         JLabel logoLabel;
-        String myURL = "http://www.dhbw-mannheim.de/fileadmin/templates/default/img/signet.gif";
+        String myURL = "https://upload.wikimedia.org/wikipedia/commons/0/01/DHBW_MA_Logo.jpg";
         try {
             logoURL = new URL(myURL);
             ImageIcon myImage = new ImageIcon(logoURL);
@@ -96,7 +89,7 @@ public class AusnahmeFensterLoesung implements ActionListener {
     /**
      * Behandlung der JButton Ereignisse
      * 11. ter Schritt
-     * @param e
+     * @param e ActionEvent nach Schnittstellenforserung
      */
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -123,9 +116,8 @@ public class AusnahmeFensterLoesung implements ActionListener {
     /**
      * Eine Testmethode die eine durch eine Division durch Null eine
      * Ausnahme provoziert
-     * @throws Exception
      */
-    public static void myTestMethod() throws Exception {
+    public static void myTestMethod() {
         int a = 5;
         int b = 5;
         int c = 10;

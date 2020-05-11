@@ -1,7 +1,7 @@
 package s2.collection;
 public class Student implements Comparable {
 
-int matrikelnr;
+   int matrikelnr;
    String name;
    String vorname;
    int semester;
@@ -19,9 +19,9 @@ int matrikelnr;
     }
  
    /**
-     * Studenten werden anhand Ihre Matrikelnr verglichen
-     * @param o
-     * @return
+     * Studenten werden Anhand ihrer Matrikelnr verglichen
+     * @param o Student mit dem verglichen wird
+     * @return -1, 0, 1 nach Standard
      */
     public int compareTo(Object o) {
         int diff = 0;
@@ -37,10 +37,10 @@ int matrikelnr;
         return diff;
     }
 
-public boolean equals(Object o) {
+    public boolean equals(Object o) {
         return (compareTo(o) == 0);
     }
-   public int hashCode() {
+    public int hashCode() {
         return matrikelnr;
     }
-}
+   }

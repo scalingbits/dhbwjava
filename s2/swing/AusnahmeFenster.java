@@ -10,10 +10,10 @@ import java.net.URL;
  * @author s@scalingbits.com
  */
 public class AusnahmeFenster {
-    private JFrame hf;
-    private JButton okButton;
-    private JButton exitButton;
-    private Exception myException;
+    private final JFrame hf;
+    private final JButton okButton;
+    private final JButton exitButton;
+    private final Exception myException;
      /**
      * Aufbau des Fensters zur Ausnahmebehandlung
      *
@@ -63,7 +63,7 @@ public class AusnahmeFenster {
     private JLabel meinLogo() {
         URL logoURL;
         JLabel logoLabel;
-        String myURL = "http://www.dhbw-mannheim.de/fileadmin/templates/default/img/DHBW_Header_Logo.gif";
+        String myURL = "https://upload.wikimedia.org/wikipedia/commons/0/01/DHBW_MA_Logo.jpg";
         try {
             logoURL = new URL(myURL);
             ImageIcon myImage = new ImageIcon(logoURL);
@@ -78,7 +78,7 @@ public class AusnahmeFenster {
     /**
      * Behandlung der JButton-Ereignisse
      * 11. ter Schritt
-     * @param e
+     * @param e ActionEvent eines Ereignisses, wie gefordert von Schnittstelle
      */
     public void actionPerformed(ActionEvent e) {
         //System.exit(0);
@@ -100,11 +100,10 @@ public class AusnahmeFenster {
      /**
      * Eine Testmethode die mit einer Division durch Null eine
      * Ausnahme provoziert
-     * @throws Exception
      */
-    public static void myTestMethod() throws Exception {
+    public static void myTestMethod() {
         int a = 5;
-        int b = 5;
+        int b = 4+1;
         int c = 10;
         c = c / (a - b);
         System.out.println("Programm regulär beendet");

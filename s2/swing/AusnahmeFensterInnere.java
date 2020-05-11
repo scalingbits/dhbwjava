@@ -1,22 +1,20 @@
 package s2.swing;
 
-import java.awt.BorderLayout;
-import java.awt.Container;
-import java.awt.GridLayout;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.net.URL;
-import javax.swing.*;
  
 /**
  *
  * @author s@scalingbits.com
  */ 
 public class AusnahmeFensterInnere {
-    private JFrame hf;
-    private JButton okButton;
-    private JButton exitButton;
-    private Exception myException;
+    private final JFrame hf;
+    private final JButton okButton;
+    private final JButton exitButton;
+    private final Exception myException;
  
     public class SystemExitAction implements ActionListener{
     @Override
@@ -96,7 +94,7 @@ public class AusnahmeFensterInnere {
         URL logoURL;
         JLabel logoLabel;
         String myURL =
-                "http://www.dhbw-mannheim.de/fileadmin/templates/default/img/signet.gif";
+                "https://upload.wikimedia.org/wikipedia/commons/0/01/DHBW_MA_Logo.jpg";
  
         try {
             logoURL = new URL(myURL);
@@ -113,7 +111,7 @@ public class AusnahmeFensterInnere {
     /**
      * Behandlung der JButton Ereignisse
      * 11. ter Schritt
-     * @param e
+     * @param e Parameter wie von Schnittstelle gefordert
      */
     public void actionPerformed(ActionEvent e) {
         JButton source = (JButton) (e.getSource());
@@ -144,12 +142,11 @@ public class AusnahmeFensterInnere {
     /**
      * Eine Testmethode die eine durch eine Division durch Null eine
      * Ausnahme provoziert
-     * @throws Exception
      */
-    public static void myTestMethod() throws Exception {
+    public static void myTestMethod()  {
  
         int a = 5;
-        int b = 5;
+        int b = 4+1;
         int c = 10;
         c = c / (a-5);
         System.out.println("Programm regulär beendet");

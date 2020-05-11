@@ -14,7 +14,7 @@ public abstract class Sortierer {
    // Zähler für serielle Sortieralgorithmen
    private long          tauschZaehlerSeriell;
    private long          vergleichszaehlerSeriell;
-   // Zähler für paralelle Sortieralgorithmen
+   // Zähler für parallele Sortieralgorithmen
    private AtomicInteger tauschZaehlerParallel;
    private AtomicInteger vergleichszaehlerParallel;
    /**
@@ -52,8 +52,8 @@ public abstract class Sortierer {
    }
    /**
    * Gibt ein Feldelement auf gegebenem Index aus
-   * @param index
-   * @return
+   * @param index Index des zu suchenden Feldes
+   * @return Wert des Feldeintrages
    */
    public int getElement(int index) {
       return feld[index];
@@ -66,14 +66,14 @@ public abstract class Sortierer {
    abstract public void sortieren(int startIndex, int endeIndex);
    /**
    * Eine Referenz auf das Feld
-   * @return
+   * @return Zeiger auf das Feld
    */
    public int[] dasFeld() {
       return feld;
    }
    /**
    * kontrolliert ob ein Feld sortiert wurde
-   * @return
+   * @return wahr wenn korrekt sortiert
    */
    public boolean validierung() {
         boolean korrekt;
@@ -85,7 +85,7 @@ public abstract class Sortierer {
     }
     /**
      * Liefert den Namen des implementierten Sortieralgorithmus
-     * @return
+     * @return Name das Algorithmus
      */
     abstract public String algorithmus();
     /**
@@ -113,9 +113,9 @@ public abstract class Sortierer {
         else          return vergleichszaehlerSeriell;
     }
     /**
-     * vergleicht  zwei Zahlen a und b auf Größe
-     * @param a
-     * @param b
+     * vergleicht zwei Zahlen a und b auf Größe
+     * @param a erster Vergleichswert
+     * @param b zweiter Vergleichswert
      * @return wahr wenn a kleiner b ist
      */
     public  boolean istKleiner(int a, int b) {
@@ -127,8 +127,8 @@ public abstract class Sortierer {
     }
     /**
      * vergleicht zwei Zahlen a und b auf Größe
-     * @param a
-     * @param b
+     * @param a erster Vergleichswert
+     * @param b zweiter Vergleichswert
      * @return wahr wenn a kleiner oder gleich b ist
      */
     public  boolean istKleinerGleich(int a, int b) {
@@ -148,8 +148,8 @@ public abstract class Sortierer {
     }
     /**
      * Tausche den Inhalt der Position a mit dem Inhalt der Position b
-     * @param a
-     * @param b
+     * @param a erster Vertauschswert
+     * @param b zweiter Vertatauschswert
      */
     public  void tausche(int a, int b) {
         tZaehler();
