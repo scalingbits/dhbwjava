@@ -14,7 +14,7 @@ public class Ariadne {
     public static final int WARTEN=500; //ms Schlafen vor dem nächsten Schritt
     public Labyrinth laby;
     /**
-     * Rueckwaertszeigeer zu Backtrack. Haesslich. Wid aber gebraucht
+     * Rueckwaertszeigeer zu Backtrack. Haesslich. Wird aber gebraucht
      * zum dynamischen Updaten des Labyrinths
      */
     protected BacktrackSuche bt;

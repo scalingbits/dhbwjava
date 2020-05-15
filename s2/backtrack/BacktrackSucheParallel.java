@@ -7,7 +7,8 @@ import java.util.List;
 
 /**
  *
- * @author stsch
+ * @author s@scalingbits.com
+ * @version 1.0
  */
 public class BacktrackSucheParallel extends BacktrackSuche {
 

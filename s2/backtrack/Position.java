@@ -10,7 +10,8 @@ import java.io.Serializable;
 public class Position implements Serializable{
     public int x;
     public int y;
-    public enum Status {LEER,WAND,KRUEMEL,START,ZIEL,LOESUNG};
+    public enum Status {LEER,WAND,KRUEMEL,START,ZIEL,LOESUNG}
+
     public Status zustand;
     
     public Position (int x, int y, Status s) {
@@ -38,7 +39,7 @@ public class Position implements Serializable{
     /**
      * Update a Position with the values of another Position
      * @param p The Position will will be read for the update
-     * @return
+     * @return nothing
      */
     public void update (Position p) {
         if (p != null) {
