@@ -46,7 +46,7 @@ public class Labyrinth implements Serializable {
     /**
      * Erneuere alle Werte des Objekts mit den Werten des angegebenen
      *  Labyrinths
-     * @param l Die Vorlage f&uuml;r die Erneuerung der Werte
+     * @param l Die Vorlage fuer die Erneuerung der Werte
      */
     public final void update(Labyrinth l) {
         for (int y=0; y<feld[0].length; y++)
@@ -59,7 +59,6 @@ public class Labyrinth implements Serializable {
     } // Ende Methode update()
 
     /**
-     *
      * @param x x-Koordinate
      * @param y y-Koordinate
      * @return die Position zur Koordinate. Sie enthaelt den Zustand!

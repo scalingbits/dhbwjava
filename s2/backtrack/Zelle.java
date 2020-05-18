@@ -18,7 +18,13 @@ public class Zelle extends JButton{
      * Alle Objekte teilen sich diese Eigenschaft
      */
     public static boolean editierbar = false;
+    /**
+     * Zeiger auf die eine, globale  Startposition im Labyrinth
+     */
     public static Position start;
+    /**
+     * Zeiger auf die eine, globale  Zielposition im Labyrinth
+     */
     public static Position ziel;
     /**
      * Die x,y Position

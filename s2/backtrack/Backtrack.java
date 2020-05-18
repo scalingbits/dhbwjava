@@ -11,11 +11,30 @@ import java.awt.event.ActionListener;
  * @version 1.0
  */
 public class Backtrack {
+    /**
+     * Groesse in der X Dimension
+     */
     int xgroesse = 15;
+    /**
+     * Groesse in der y Dimension
+     */
     int ygroesse = 10;
+    /**
+     * Das zweidimensionale Feld der graphischen Zellen
+     */
     Zelle[][] zellen;
+
+    /**
+     * Das Labyrinth
+     */
     Labyrinth laby;
+    /**
+     * Zeiger auf das Statusfeld am Fuss
+     */
     JTextField statusfeld;
+    /**
+     * Das Fenster der Anwendung
+     */
     final private JFrame rahmen ;
     
     /**

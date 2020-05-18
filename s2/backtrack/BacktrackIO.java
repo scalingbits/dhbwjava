@@ -1,17 +1,10 @@
 package s2.backtrack;
 
+import javax.swing.*;
+import javax.swing.filechooser.FileSystemView;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import javax.swing.JFileChooser;
-import javax.swing.JMenuItem;
-import javax.swing.filechooser.FileSystemView;
+import java.io.*;
 
 /**
  *
@@ -65,7 +58,6 @@ public class BacktrackIO extends Backtrack {
 
     /**
      * Hängt die Operation zum Laden des Labyrinths an das JMenuItem
-     *
      * @param oeffnen JMenuItem welches das Labyrinth laden soll
      */
     public final void ladenLabyrinth(JMenuItem oeffnen) {
