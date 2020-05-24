@@ -29,8 +29,8 @@ public class SchreibInDateiLoesung {
             Writer raus = new FileWriter(datei);
             System.out.println("Der Text der jetzt eingegeben wird, wird in " +
                     "der Datei " + f + " gespeichert");
-            System.out.println("Abschliesen mit Strg-Z oder Ctrl-Z");
-            System.out.println("Abschliesen Auf Unix/Linux mit Ctrl-D");
+            System.out.println("Abschliessen mit Strg-Z oder Ctrl-Z");
+            System.out.println("Abschliessen Auf Unix/Linux mit Ctrl-D");
             umkopieren(rein,raus);
           
             rein = new FileReader(f);

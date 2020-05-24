@@ -22,8 +22,8 @@ public class DateiTest {
         
         if (dir.exists())
             System.out.println("Verzeichnis " +  d + " existiert bereits");
-        
-        dir.mkdir();
+        else
+            dir.mkdir();
         try {
             file1.createNewFile();
             System.out.println("Datei wurde angelegt in : " 
