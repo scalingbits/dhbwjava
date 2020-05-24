@@ -31,7 +31,6 @@ public class SchreibInDatei {
             System.out.println("Abschliessen auf Unix/Linux mit Ctrl-D");
             System.out.println("Abschliessen auf Mac mit IntelliJ mit Cmd-D");
             umkopieren(rein,raus);
-            raus.close();
         } catch (IOException ex) {
             System.out.println("Probleme im IO Subsystem. Scotty beam me up");
             System.out.println("Ausnahme: " +ex.getMessage());

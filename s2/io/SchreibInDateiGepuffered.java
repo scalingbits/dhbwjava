@@ -35,9 +35,8 @@ public class SchreibInDateiGepuffered {
                     new OutputStreamWriter(System.out));
             
             System.out.println("Ausgabe des in Datei " + f 
-                    + "gespeichertem Texts");
+                    + " gespeichertem Texts");
             umkopieren(rein,raus);
-            raus.close();
         } catch (IOException ex) {
             System.out.println("Probleme im IO Subsystem. Scotty beam me up");
         }
