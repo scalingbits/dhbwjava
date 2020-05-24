@@ -3,14 +3,7 @@
  */
 package s2.io;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
+import java.io.*;
 
 /**
  *
@@ -44,10 +37,10 @@ public class SchreibInDateiGepuffered {
             System.out.println("Ausgabe des in Datei " + f 
                     + "gespeichertem Texts");
             umkopieren(rein,raus);
+            raus.close();
         } catch (IOException ex) {
             System.out.println("Probleme im IO Subsystem. Scotty beam me up");
-        } 
-        
+        }
     }
     /**
      * Umkopieren zwischen zwei Streams

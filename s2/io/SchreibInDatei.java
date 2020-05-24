@@ -23,19 +23,19 @@ public class SchreibInDatei {
         try {
             String f = "scalingbits.txt";
             File datei = new File(f);
-            Reader rein = new InputStreamReader(System.in);
-            Writer raus = new FileWriter(datei);
+            InputStreamReader rein = new InputStreamReader(System.in);
+            FileWriter raus = new FileWriter(datei);
             System.out.println("Der Text der jetzt eingegeben wird, wird in " +
                     "der Datei " + f + " gespeichert");
             System.out.println("Abschliessen mit Strg-Z oder Ctrl-Z");
             System.out.println("Abschliessen auf Unix/Linux mit Ctrl-D");
             System.out.println("Abschliessen auf Mac mit IntelliJ mit Cmd-D");
             umkopieren(rein,raus);
+            raus.close();
         } catch (IOException ex) {
             System.out.println("Probleme im IO Subsystem. Scotty beam me up");
             System.out.println("Ausnahme: " +ex.getMessage());
-        } 
-        
+        }
     }
     /**
      * Umkopieren zwischen zwei Streams

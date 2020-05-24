@@ -33,13 +33,15 @@ public class SchreibInDateiLoesung {
             System.out.println("Abschliessen auf Unix/Linux mit Ctrl-D");
             System.out.println("Abschliessen auf Mac mit IntelliJ mit Cmd-D");
             umkopieren(rein,raus);
-          
+            raus.close();
+
             rein = new FileReader(f);
             raus = new OutputStreamWriter(System.out);
-            
+
             System.out.println("Ausgabe des in Datei " + f 
-                    + "gespeichertem Texts");
+                    + " gespeichertem Texts");
             umkopieren(rein,raus);
+            rein.close();
         } catch (IOException ex) {
             System.out.println("Probleme im IO Subsystem. Scotty beam me up");
         } 
