@@ -28,7 +28,8 @@ public class SchreibInDatei {
             System.out.println("Der Text der jetzt eingegeben wird, wird in " +
                     "der Datei " + f + " gespeichert");
             System.out.println("Abschliessen mit Strg-Z oder Ctrl-Z");
-            System.out.println("Abschliessen Auf Unix/Linux mit Ctrl-D");
+            System.out.println("Abschliessen auf Unix/Linux mit Ctrl-D");
+            System.out.println("Abschliessen auf Mac mit IntelliJ mit Cmd-D");
             umkopieren(rein,raus);
         } catch (IOException ex) {
             System.out.println("Probleme im IO Subsystem. Scotty beam me up");
