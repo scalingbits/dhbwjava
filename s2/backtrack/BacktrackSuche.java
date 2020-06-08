@@ -26,8 +26,10 @@ public class BacktrackSuche extends BacktrackIO {
                 new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
-                // Ohne einen eigenen Thread wird es keine Graphik-
-                // updates geben
+                /*
+                 Ohne einen eigenen Thread wird es keine Graphik-
+                 updates geben
+                */
                 Thread t = new Thread() {
                     public void run() {
                         statusfeld.setText("Streue Krümel");

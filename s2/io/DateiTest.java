@@ -17,8 +17,8 @@ public class DateiTest {
         String f1 = "datei1.txt";
         String f2 = "datei2.txt";
         File dir  = new File(d);
-        File file1  = new File(d + "/" + f1);
-        File file2  = new File(d + "/" + f2);
+        File file1  = new File(d + File.separatorChar + f1);
+        File file2  = new File(d + File.separatorChar + f2);
         
         if (dir.exists())
             System.out.println("Verzeichnis " +  d + " existiert bereits");
