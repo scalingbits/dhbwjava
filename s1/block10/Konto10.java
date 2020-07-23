@@ -39,7 +39,7 @@ public class Konto10 {
      * welches nichts von der internen Implementierung der Klasse weis.
      * Die Methode wurde nur aus Gründen der Kompaktheit in dieser Klasse
      * implementiert
-     * @param args
+     * @param args Kommandozeilenparameter (nicht benötigt)
      */
     public static void main(String[] args) {
         Konto10 a1 = new Konto10(500, 50);

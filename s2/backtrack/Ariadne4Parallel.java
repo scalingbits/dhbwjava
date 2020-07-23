@@ -56,8 +56,8 @@ public class Ariadne4Parallel extends Ariadne {
     
     /**
      * Suche ab einer gegebenen Situation
-     * @param von
-     * @param nach
+     * @param von Start
+     * @param nach Ziel
      * @return eine Liste des Pfades wenn Kösung gefunden wurde
      */
     @Override

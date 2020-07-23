@@ -32,7 +32,7 @@ public class Konto2 {
      * welches nicht die interne Implementierung der Klasse.
      * Die Methode wurde nur aus Gründen der Kompaktheit in dieser Klasse
      * implementiert
-     * @param args
+     * @param args Kommandozeilenparameter (nicht benötigt)
      */
     public static void main(String[] args) {
         Konto2 a1 = new Konto2(500);

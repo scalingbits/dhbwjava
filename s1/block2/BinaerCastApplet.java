@@ -1,22 +1,10 @@
 package s1.block2;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Container;
-import java.awt.Dimension;
-import java.awt.Graphics;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
-import javax.swing.BoxLayout;
-import javax.swing.ButtonGroup;
-import javax.swing.JApplet;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JRadioButton;
-import javax.swing.JTextField;
 /**
  *
  * @author s@scalingbits.com
@@ -207,7 +195,7 @@ public class BinaerCastApplet extends JApplet implements ActionListener {
                     if (charButton.isSelected()) {
                         char zuWert = (char)wert;
                         zuBits = decode(zuWert);
-                        zuString = "'"+Character.toString(zuWert)+"'";
+                        zuString = "'"+ zuWert +"'";
                     }
                     if (intButton.isSelected()) {
                         int zuWert = wert;
@@ -238,7 +226,7 @@ public class BinaerCastApplet extends JApplet implements ActionListener {
                     if (charButton.isSelected()) {
                         char zuWert = (char)wert;
                         zuBits = decode(zuWert);
-                        zuString = "'"+Character.toString(zuWert)+"'";
+                        zuString = "'"+ zuWert +"'";
                     }
                     if (intButton.isSelected()) {
                         int zuWert = wert;
@@ -255,7 +243,7 @@ public class BinaerCastApplet extends JApplet implements ActionListener {
                     vonTypeTxt = "char";
                     char wert = eingabeWert.charAt(0);
                     vonBits = decode(wert);
-                    vonString = "'"+Character.toString(wert)+"'";
+                    vonString = "'"+ wert +"'";
                     if (byteButton.isSelected()) {
                         byte zuWert = (byte)wert;
                         zuBits = decode(zuWert);
@@ -269,7 +257,7 @@ public class BinaerCastApplet extends JApplet implements ActionListener {
                     if (charButton.isSelected()) {
                         char zuWert = wert;
                         zuBits = decode(zuWert);
-                        zuString = "'"+Character.toString(zuWert)+"'";
+                        zuString = "'"+ zuWert +"'";
                     }
                     if (intButton.isSelected()) {
                         int zuWert = wert;
@@ -300,7 +288,7 @@ public class BinaerCastApplet extends JApplet implements ActionListener {
                     if (charButton.isSelected()) {
                         char zuWert = (char)wert;
                         zuBits = decode(zuWert);
-                        zuString = "'"+Character.toString(zuWert)+"'";
+                        zuString = "'"+ zuWert +"'";
                     }
                     if (intButton.isSelected()) {
                         int zuWert = wert;
@@ -331,7 +319,7 @@ public class BinaerCastApplet extends JApplet implements ActionListener {
                     if (charButton.isSelected()) {
                         char zuWert = (char)wert;
                         zuBits = decode(zuWert);
-                        zuString = "'"+Character.toString(zuWert)+"'";
+                        zuString = "'"+ zuWert +"'";
                     }
                     if (intButton.isSelected()) {
                         int zuWert = (int)wert;
@@ -395,7 +383,7 @@ public class BinaerCastApplet extends JApplet implements ActionListener {
      /**
      * Starten der Anwendung als eigenständiges Programm
      *
-     * @param args
+     * @param args Kommandozeilenparameter (nicht benötigt)
      */
     public static void main(String[] args) {
         // Es wird ein JFrame benötigt, in das das Applet als Komponente

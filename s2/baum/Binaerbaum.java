@@ -27,15 +27,15 @@ public Baumknoten getWurzelknoten() {return wurzelKnoten;}
      * wird eventuell ein Zeiger auf einen neuen Teilbaum zurückgeliefert
      * Randbedingung:
      * * Es wird kein Knoten mit einem Wert eingefügt der schon existiert
-     * @param teilbaum
-     * @param s
+     * @param teilbaum In diesen Teilbaum wird etwas eingefuegt
+     * @param s der einzufuegende Knoten
      */
     private void einfuegen(Baumknoten teilbaum, Baumknoten s) {
         System.out.println("Implementieren Sie die Methode Binaerbaum:einfuegen()");
                 }
      /**
      * Öffentliche Methoden zum Entfernen eines Baumknotens
-     * @param s
+     * @param s der zu entfernende Knoten
      */
     public void entfernen(Baumknoten s) {
         wurzelKnoten = entfernen(wurzelKnoten,s);}
@@ -62,7 +62,7 @@ public Baumknoten getWurzelknoten() {return wurzelKnoten;}
     }
     /**
      * Rückgabe des Namens
-     * @return
+     * @return Names des Algorithmus
      */
     public String algorithmus() {return "Binaerbaum";}
 

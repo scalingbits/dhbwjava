@@ -42,13 +42,14 @@ public class Pong extends JApplet {
 
     public class SchlaegerListener extends KeyAdapter {
         long zeit;
-        @Override
+
         /**
          * Es wurde eine Taste gedrückt.
          * Der Tastendruck muss analysiert werden
          * @param e Ereignis
          *
          **/
+        @Override
         public void keyPressed(KeyEvent e) {
             char c = e.getKeyChar();
             if ((c == 'I') || (c == 'i')) schlaegerHoch= true;
@@ -59,11 +60,12 @@ public class Pong extends JApplet {
             if ((c == 'F') || (c == 'f')) freeze = !freeze;
             else zeit = System.nanoTime();
         }
-        @Override
+
         /**
          * Taste losgelassen. Alle Schlägerbewegungen einstellen
          * @param e Ereignis
          */
+        @Override
         public void keyReleased(KeyEvent e) {
             schlaegerHoch= false;
             schlaegerRunter= false;

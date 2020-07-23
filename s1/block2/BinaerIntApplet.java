@@ -37,13 +37,13 @@ import java.awt.event.KeyEvent;
  * either expressed or implied, of the FreeBSD Project.
  */
 public class BinaerIntApplet extends JApplet implements ActionListener {
-    private JTextField eingabeText;
-    private JButton enterButton;
-    private JRadioButton byteButton;
-    private JRadioButton charButton;
-    private JRadioButton shortButton;
-    private JRadioButton intButton;
-    private JRadioButton longButton;
+    private final JTextField eingabeText;
+    private final JButton enterButton;
+    private final JRadioButton byteButton;
+    private final JRadioButton charButton;
+    private final JRadioButton shortButton;
+    private final JRadioButton intButton;
+    private final JRadioButton longButton;
     private int[] bits;
     private String eingabeWert = "0";
     private String typeTxt = "int";
@@ -102,7 +102,7 @@ public class BinaerIntApplet extends JApplet implements ActionListener {
     /**
      * Dies Methode erlaubt das Malen der Vektorgraphik
      * auf dem Hintergrund der graphischen Komponente
-     * @param g
+     * @param g das Grafikobjekt (kommt vom Laufzeitsystem)
      */
     @Override
     public void paint(Graphics g) {
@@ -129,7 +129,7 @@ public class BinaerIntApplet extends JApplet implements ActionListener {
     /**
      * Diese Methode wird nach einer Eingabe aufgerufen.
      * Sie dekodiert die Eingabe des Benutzers
-     * @param e
+     * @param e das Ereignisobjekt
      */
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
@@ -215,7 +215,7 @@ public class BinaerIntApplet extends JApplet implements ActionListener {
      /**
      * Starten der Anwendung als eigenständiges Programm
      *
-     * @param args
+     * @param args Kommandozeilenparameter (nicht benötigt)
      */
     public static void main(String[] args) {
         // Es wird ein JFrame benötigt, in das das Applet als Komponente

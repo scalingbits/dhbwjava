@@ -1,9 +1,11 @@
 package s1.block4;
 
+import java.util.Arrays;
+
 public class FibonacciCached {
 
     private static long[] cache;
-    private static int cacheSize = 93;
+    private static final int cacheSize = 93;
 
     private static long fib(int f) {
         long ergebnis = 0;
@@ -28,11 +30,9 @@ public class FibonacciCached {
 
     private static void initialisiereCache() {
         cache = new long[cacheSize];
-        for (int i = 0; i < cache.length; i++) {
-            // Die Belegung mit -1 bedeutet, 
-            // dass der Fibonacciwert nicht berechnet ist
-            cache[i] = -1;
-        }
+        // Die Belegung mit -1 bedeutet,
+        // dass der Fibonacciwert nicht berechnet ist
+        Arrays.fill(cache, -1);
     }
 
     public static void main(String[] args) {

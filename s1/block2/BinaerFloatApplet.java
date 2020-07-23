@@ -1,19 +1,9 @@
 package s1.block2;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Container;
-import java.awt.Dimension;
-import java.awt.Graphics;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.BoxLayout;
-import javax.swing.JApplet;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
 
 /**
  *
@@ -49,13 +39,13 @@ import javax.swing.JTextField;
  */
 public class BinaerFloatApplet extends JApplet implements ActionListener {
 
-    private JTextField eingabeText;
-    private JButton enterButton;
-    private JButton nanButton;
-    private JButton negativeInfinityButton;
-    private JButton positiveInfinityButton;
-    private JButton maxButton;
-    private JButton minButton;
+    private final JTextField eingabeText;
+    private final JButton enterButton;
+    private final JButton nanButton;
+    private final JButton negativeInfinityButton;
+    private final JButton positiveInfinityButton;
+    private final JButton maxButton;
+    private final JButton minButton;
     private int[] bits;
     private String eingabeWert = "1";
     private int vorzeichen;
@@ -251,7 +241,7 @@ public class BinaerFloatApplet extends JApplet implements ActionListener {
      /**
      * Starten der Anwendung als eigenständiges Programm
      *
-     * @param args
+     * @param args Kommandozeilenparameter (nicht benötigt)
      */
     public static void main(String[] args) {
         // Es wird ein JFrame benötigt, in das das Applet als Komponente

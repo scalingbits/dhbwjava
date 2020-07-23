@@ -1,7 +1,7 @@
 package s1.block10;
 public class Konto5 {
     int betrag;
-    private int ueberweisungsLimit;
+    private final int ueberweisungsLimit;
     private static final int MINLIMIT =1;
     public Konto5(int startBetrag, int ll) {
         betrag = startBetrag;
@@ -28,7 +28,7 @@ public class Konto5 {
      * welches nichts von der internen Implementierung der Klasse weis.
      * Die Methode wurde nur aus Gründen der Kompaktheit in dieser Klasse
      * implementiert
-     * @param args
+     * @param args Kommandozeilenparameter (nicht benötigt)
      */
     public static void main(String[] args) {
         Konto5 a1 = new Konto5(500, 50);

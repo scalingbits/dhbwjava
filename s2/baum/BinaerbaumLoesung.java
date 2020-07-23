@@ -8,7 +8,7 @@ public class BinaerbaumLoesung {
     public Baumknoten getWurzelknoten() {return wurzelKnoten;}
     /**
      * Füge einen neuen Baumknoten in einen Baum ein
-     * @param s
+     * @param s einzufuegender Knoten
      */
     public void einfuegen(Baumknoten s) {
         if (wurzelKnoten == null) {
@@ -25,8 +25,8 @@ public class BinaerbaumLoesung {
      * wird eventuell ein Zeiger auf einen neuen Teilbaum zurückgeliefert
      * Randbedingung:
      * * Es wird kein Knoten mit einem Wert eingefügt der schon existiert
-     * @param teilbaum
-     * @param s
+     * @param teilbaum In diesen Teilbaum wird eingefügt
+     * @param s der einzufuegende Knoten
      */
     private void einfuegen(Baumknoten teilbaum, Baumknoten s) {
         if (!(s.getWert()==teilbaum.getWert())) {
@@ -45,7 +45,7 @@ public class BinaerbaumLoesung {
     }
     /**
      * Öffentliche Methoden zum Entfernen eines Baumknotens
-     * @param s
+     * @param s der zu entfernende Knoten
      */
     public  void entfernen(Baumknoten s) {
         wurzelKnoten = entfernen(wurzelKnoten,s);}
@@ -93,7 +93,7 @@ public class BinaerbaumLoesung {
     }
     /**
      * Rückgabe des Namens
-     * @return
+     * @return der Name des ALgorithmus
      */
     public String algorithmus() {return "Binaerbaum";}
 

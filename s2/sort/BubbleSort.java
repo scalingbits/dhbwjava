@@ -17,7 +17,6 @@ public class BubbleSort extends Sortierer {
      * zurück
      * @param startIndex erstes zu sortierendes Feldelement
      * @param endeIndex letztes zu sortierendes Feldelement
-     * @return ein sortiertes Feld
      */
     public void sortieren(int startIndex, int endeIndex) {
         boolean vertauscht;
@@ -33,7 +32,7 @@ public class BubbleSort extends Sortierer {
     }
     /**
      * Liefert den Namen des Bubble Sorts
-     * @return
+     * @return Names des Algorithmus
      */
     public String algorithmus() {
         return "Bubble Sort";

@@ -107,7 +107,7 @@ public class Kubikwurzel extends JApplet {
      /**
      * Starten der Anwendung als eigenständiges Programm
      *
-     * @param args
+     * @param args Kommandozeilenparameter (nicht benötigt)
      */
     public static void main(String[] args) {
         JFrame f = new JFrame("Kubikwurzel");

@@ -32,7 +32,7 @@ public class Ganzzahl implements EinfacherListenknoten {
  
     /**
      * Hauptprogramm zum Testen
-     * @param args
+     * @param args Kommandozeilenparameter (nicht benötigt)
      */
     public static void main(String[] args) {
         Ganzzahl z1 = new Ganzzahl(11);
