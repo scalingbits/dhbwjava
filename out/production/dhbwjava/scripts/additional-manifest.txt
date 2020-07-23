@@ -1,0 +1,4 @@
+Permissions: sandbox
+Codebase: *
+Implementation-Version: 1.2
+Implementation-Vendor: Stefan Schneider
