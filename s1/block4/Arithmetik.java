@@ -5,8 +5,8 @@ public class Arithmetik {
     /**
      * Liest von der Kommazeile zwei Ganzzahlen ein und multipliziert sie
      *
-     * @param args
-     */
+     * @param args Konsolenparameter
+     **/
     public static void main(String[] args) {
         int a = 5;
         int b = 8;

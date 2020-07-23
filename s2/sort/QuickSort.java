@@ -13,7 +13,7 @@ public class QuickSort extends Sortierer {
      @param s das zu sortierende Feld
      */
     public QuickSort(int[] s) {
-        super(s, false);
+        super(s, true);
     }
 
     /**

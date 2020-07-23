@@ -64,8 +64,8 @@ public class BaumknotenLoesung {
 
     /**
      * Drucken einen Unterbaum und rücke entsprechend bei Unterbäumen ein
-     * @param einruecken
-     */
+     * @param einruecken eingerueckte Zeichen
+     **/
     public void druckeUnterbaum(int einruecken) {
         if (l != null) {
             l.druckeUnterbaum(einruecken + 1);
@@ -81,15 +81,14 @@ public class BaumknotenLoesung {
 
     /**
      * Berechne Höhe des Baums durch rekursive Tiefensuche
-     * @return
-     */
+     * @return die Hoehe des Baumes
+     **/
     public int hoehe() {
         int lmax = 1;
         int rmax = 1;
         if (l != null) lmax = 1 + l.hoehe();
         if (r != null) rmax = 1 + r.hoehe();
-        if (rmax > lmax) return rmax;
-        else             return lmax;
+        return Math.max(rmax, lmax);  //Berechne Maximum
     }
 
     /**
@@ -103,8 +102,8 @@ public class BaumknotenLoesung {
 
     /**
      * Erlaubt den Zahlenwert als Text auszudrucken
-     * @return
-     */
+     * @return das Objekt als Zeichenkette
+     **/
     public String toString() { return Integer.toString(wert);}
 
 }

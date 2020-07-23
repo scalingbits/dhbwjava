@@ -30,7 +30,7 @@ public BaumPanel(Binaerbaum derBaum) {
 /**
      * Methode die das Panel überlädt mit der Implementierung
      * der Baumgraphik
-     * @param g
+     * @param g das Graphikobjekt
      */
     public void paintComponent(Graphics g) {
        super.paintComponent(g);

@@ -79,11 +79,11 @@ hf.pack();
         hf.setAlwaysOnTop(true);
     }
 
-/**
+    /**
      * Diese Methode wird bei allen Aktionen der Menüleiste oder
      * der Buttons aufgerufen
-     * @param e
-     */
+     * @param e Beschreibung der Action
+     **/
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
         int wert = 0;

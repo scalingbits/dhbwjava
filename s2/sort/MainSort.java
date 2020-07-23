@@ -3,6 +3,7 @@ package s2.sort;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.util.Arrays;
 
 /**
  *
@@ -52,8 +53,8 @@ public class MainSort {
            //algorithmusName = "SelectionSort";
            //algorithmusName = "InsertionSort";
            //algorithmusName = "BubbleSort";
-           algorithmusName = "QuickSort";
-           //algorithmusName = "QuickSortParallel";
+           //algorithmusName = "QuickSort";
+           algorithmusName = "QuickSortParallel";
         }
         Class<?> meineKlasse;
         Constructor<?> konstruktor;
@@ -136,9 +137,7 @@ public class MainSort {
             anzahl = (int) (anzahl * steigerung);
             // Erzeugen eines neuen Feldes
             gz = new int[anzahl];
-            for (int i = 0; i < gz.length; i++) {
-                gz[i] = 1;
-            }
+            Arrays.fill(gz, 1);
             sort = algorithmusWahl(gz);
             sort.generiereZufallsbelegung();
             sort.zaehlerRuecksetzen();

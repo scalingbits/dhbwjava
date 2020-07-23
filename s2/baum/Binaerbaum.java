@@ -10,8 +10,8 @@ public class Binaerbaum {
 public Baumknoten getWurzelknoten() {return wurzelKnoten;}
      /**
      * Füge einen neuen Baumknoten in einen Baum ein
-     * @param s
-     */
+     * @param s einzufuegender Baumknoten
+     **/
     public void einfuegen(Baumknoten s) {
         if (wurzelKnoten == null) {
             // Der Baum ist leer. Füge Wurzelknoten ein.

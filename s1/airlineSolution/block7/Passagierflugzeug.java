@@ -4,13 +4,13 @@ public class Passagierflugzeug {
     // 1. Privates Attribut zur Verwaltung der Passagierkapazität
     //     Tipp: Untersuchen Sie die Druckmethode zur Wahl der
     //           Variablennamen (1-5)!
-    private int maxPassagiere;
+    private final int maxPassagiere;
     // 2. Privates Attribut zur Verwaltung der aktuellen Pasagiere
     private int passagiere;
     // 3. Leergewicht in privates Attribut ändern
     public int leergewicht; // Ein Attribut vom Type einer Ganzzahl
     // 4. Maximales Gewicht des Flugzeugs
-    private int maxgewicht;
+    private final int maxgewicht;
     // 5. Öffentliche Konstante für durchschn. Passagiergewicht
     public final int PASSAGIERGEWICHT = 85;
 
@@ -29,23 +29,12 @@ public class Passagierflugzeug {
         kennzeichen = kennz;
         objekte++;
         // Prüfen ob Kapazität größere Null ist
-        if (kapazitaet >= 0) {
-            maxPassagiere = kapazitaet;
-        } else {
-            maxPassagiere = 0;
-        }
+        maxPassagiere = Math.max(kapazitaet, 0);
         // Prüfen ob Leergewicht größer Null ist
-        if (leergew > 0) {
-            leergewicht = leergew;
-        } else {
-            leergewicht = 0;
-        }
+        leergewicht = Math.max(leergew, 0);
         // Prüfen ob Maximalgewicht größer-gleich Leergeicht ist.
-        if (maxgew > leergewicht) {
-            maxgewicht = maxgew;
-        } else {
-            maxgewicht = leergewicht; // Viel Spass...
-        }
+        // Viel Spass...
+        maxgewicht = Math.max(maxgew, leergewicht);
     }
 
     /**

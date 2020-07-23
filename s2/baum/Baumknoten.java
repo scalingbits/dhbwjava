@@ -53,7 +53,7 @@ public Baumknoten(int i) {wert=i;}
     }
     /**
      * Drucken einen Unterbaum und rücke entsprechend bei Unterbäumen ein
-     * @param einruecken
+     * @param einruecken Anzahl der eingerueckten Stellen
      */
     public void druckeUnterbaum(int einruecken) {
         if (l != null) {
@@ -69,8 +69,8 @@ public Baumknoten(int i) {wert=i;}
     }
     /**
      * Berechne Höhe des Baums durch rekursive Tiefensuche
-     * @return
-     */
+     * @return die Hoehe des Baumes
+     **/
     public int hoehe() {
         System.out.println("Implementieren Sie Baumknoten.hoehe() als rekursive Methode");
         return -1;
@@ -85,7 +85,7 @@ public Baumknoten(int i) {wert=i;}
     }
     /**
      * Erlaubt den Zahlenwert als Text auszudrucken
-     * @return
-     */
+     * @return Objekt als Zeichenkette
+     **/
     public String toString() { return Integer.toString(wert);}
 }

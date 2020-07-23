@@ -10,11 +10,7 @@ public class Passagierflugzeug extends Flugzeug {
 
     public Passagierflugzeug(String kennz, int maxPas, float leerg) {
         super(kennz,leerg);
-        if (maxPas >= 0) {
-            this.maxPassagiere = maxPas;
-        } else {
-            maxPassagiere = 0;
-        }
+        this.maxPassagiere = Math.max(maxPas, 0);
         passagiere = 0;
     }
 

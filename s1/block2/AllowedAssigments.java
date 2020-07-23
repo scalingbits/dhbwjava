@@ -4,6 +4,7 @@ package s1.block2;
  *
  * @author s@scalingbits.com
  */
+@SuppressWarnings("ConstantConditions")
 public class AllowedAssigments {
 
     /**

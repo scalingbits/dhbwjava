@@ -41,14 +41,14 @@ public class BinAddApplet extends JApplet implements ActionListener {
 
     private JTextField eingabeText;
     private JButton enterButton;
-    private JButton maxButtonA;
-    private JButton maxButtonB;
-    private JButton minButtonA;
-    private JButton minButtonB;
-    private JButton berechneButton;
-    private JTextField inputFieldA;
-    private JTextField inputFieldB;
-    private JTextField outputDigitalField;
+    private final JButton maxButtonA;
+    private final JButton maxButtonB;
+    private final JButton minButtonA;
+    private final JButton minButtonB;
+    private final JButton berechneButton;
+    private final JTextField inputFieldA;
+    private final JTextField inputFieldB;
+    private final JTextField outputDigitalField;
     private int[] bitsA;
     private int[] bitsB;
     private String inputA = "1";
@@ -373,7 +373,7 @@ public class BinAddApplet extends JApplet implements ActionListener {
      /**
      * Starten der Anwendung als eigenständiges Programm
      *
-     * @param args
+     * @param args Kommadozeilenargumente, hier nicht benoetigt
      */
     public static void main(String[] args) {
         // Es wird ein JFrame benötigt, in das das Applet als Komponente

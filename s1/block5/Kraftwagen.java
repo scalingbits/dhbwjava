@@ -9,8 +9,8 @@ public class Kraftwagen {
     public Kraftwagen(double ek, double vk, String nummernSchild) {
 
         // Initialisierung der Variablen mit einfachen Konsistenzprüfungen
-        verkaufsPreis = (ek < vk) ? vk : ek;
-        einkaufsPreis = (ek < vk) ? ek : vk;
+        verkaufsPreis = Math.max(ek, vk);
+        einkaufsPreis = Math.min(ek, vk);
         kennzeichen = nummernSchild;
     }
 

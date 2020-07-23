@@ -43,8 +43,9 @@ public class Passagierflugzeug {
     }
     @Override
     /**
+     * Erzeugen einer Zeichenkette zum Erkennen des Objekts
      * @return Daten des Flugzeugs als Zeichenkette
-     */
+     **/
     public String toString() {
         return kennzeichen + ", Passagiere: " + passagiere + 
                 ", Besatzung: " + besatzung+ ", Treibstoff: " + treibstoff + "l"

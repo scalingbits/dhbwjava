@@ -1,7 +1,7 @@
 package s1.block10;
 public class Konto11 {
     int betrag;
-    private int ueberweisungsLimit;
+    private final int ueberweisungsLimit;
     private static final int MINLIMIT =1;
     public static final int OK = 0;
     public static final int NEGATIVERWERT = 1;
@@ -22,8 +22,7 @@ public class Konto11 {
     public void ueberweisenAuf (Konto11 b, int wert) {
         if (wert < 0) throw new UeberweisungsAusnahme("Negativer Wert" + wert);
         else {
-            int maxlimit = (ueberweisungsLimit<b.ueberweisungsLimit) ?
-                    ueberweisungsLimit: b.ueberweisungsLimit;
+            int maxlimit = Math.min(ueberweisungsLimit, b.ueberweisungsLimit);
             if (wert > maxlimit )
                 throw new LimitAusnahme("Limit ueberschritten " + wert,
                         maxlimit);

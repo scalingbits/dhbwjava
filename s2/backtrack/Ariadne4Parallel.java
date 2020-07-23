@@ -39,10 +39,9 @@ public class Ariadne4Parallel extends Ariadne {
         /**
          * Führe Task in eigenem Thread aus und nutze Instanzvariablen
          * als Parameter um Aufgabe auszuführen.
-         * @throws java.lang.Exception
-         */
+         **/
         @Override
-        public List<Position> call() throws Exception {
+        public List<Position> call() {
             return a.suche(von, nach);
         }
     }

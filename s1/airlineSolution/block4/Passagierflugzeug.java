@@ -27,17 +27,11 @@ public class Passagierflugzeug {
     public Passagierflugzeug(String kennzeichen, int maxPassagiere, double leergewicht,
                              double maxGewicht) {
         this.kennzeichen = kennzeichen;
-        if (maxPassagiere >= 0)
-            this.maxPassagiere = maxPassagiere;
-        else
-            this.maxPassagiere = 0;
+        this.maxPassagiere = Math.max(maxPassagiere, 0);
         this.besatzung = 0;
         this.treibstoff = 0;
         this.leergewicht = leergewicht;
-        if (maxGewicht > leergewicht)
-            this.maxGewicht= maxGewicht;
-        else
-            this.maxGewicht= leergewicht;
+        this.maxGewicht = Math.max(maxGewicht, leergewicht);
     }
     /**
      * 
@@ -112,8 +106,9 @@ public class Passagierflugzeug {
     
     @Override
     /**
+     * Erzeugen einer Zeichenkette zum Erkennen des Objekts
      * @return Daten des Flugzeugs als Zeichenkette
-     */
+     **/
     public String toString() {
         return kennzeichen + ", Passagiere: " + passagiere + 
                 ", Besatzung: " + besatzung+ ", Treibstoff: " + treibstoff + "l"

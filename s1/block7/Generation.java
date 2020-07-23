@@ -6,7 +6,7 @@ public class Generation {
     // Hier ein Feld für alten Zustand deklarieren
     // Hier ein Feld für neuen Zustand deklarieren
     // die Felder muessen zweidimensional, vom Typ boolean sein, quadratisch sein
-    /**
+    /*
      * Groesse des quadratischen Feldes
      */
 
@@ -14,7 +14,7 @@ public class Generation {
     /**
      * Anlegen aller benoetigten Felder mit Initialwerten
      * Alle Feldelemente sollen mit dem Zustand "false" = leer versehen sein
-     */
+     **/
     public Generation() {
         // Initialisieren sie die beiden Felder
         // alle Felder sollen den Zustand "false" haben. Dies ist ein leeres Feld

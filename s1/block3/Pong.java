@@ -48,7 +48,7 @@ public class Pong extends JApplet {
          * Der Tastendruck muss analysiert werden
          * @param e Ereignis
          *
-         */
+         **/
         public void keyPressed(KeyEvent e) {
             char c = e.getKeyChar();
             if ((c == 'I') || (c == 'i')) schlaegerHoch= true;

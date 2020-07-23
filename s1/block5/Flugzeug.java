@@ -5,7 +5,7 @@ public class Flugzeug {
     // 1. Privates Attribut zur Verwaltung der Passagierkapazität
     //     Tipp: Untersuchen Sie die Druckmethode zur Wahl der
     //           Variablennamen (1-5)!
-    private int maxPassagiere;
+    private final int maxPassagiere;
     // 2. Privates Attribut zur Verwaltung der aktuellen Pasagiere
     private int passagiere;
     // 3. Leergewicht in privates Attribut ändern
@@ -26,23 +26,11 @@ public class Flugzeug {
     public Flugzeug(String kennz, int kapazitaet, int leergew, int maxgew) {
         kennzeichen = kennz;
         // Prüfen ob Kapazität größere Null ist
-        if (kapazitaet >= 0) {
-            maxPassagiere = kapazitaet;
-        } else {
-            maxPassagiere = 0;
-        }
+        maxPassagiere = Math.max(kapazitaet, 0);
         // Prüfen ob Leergewicht größer Null ist
-        if (leergew > 0) {
-            leergewicht = leergew;
-        } else {
-            leergewicht = 0;
-        }
-        // Prüfen ob Maximalgewicht größer-gleich Leergeicht ist.
-        if (maxgew > leergewicht) {
-            maxgewicht = maxgew;
-        } else {
-            maxgewicht = leergewicht; // Viel Spass...
-        }
+        leergewicht = Math.max(leergew, 0);
+        // Prüfen ob Maximalgewicht größer-gleich Leergewicht ist.
+        maxgew = Math.max(leergewicht, maxgewicht);
     }
 
     /**
