@@ -1,9 +1,7 @@
 package s2.thread;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import javax.swing.JPanel;
+import javax.swing.*;
+import java.awt.*;
 /**
  *
  * @author s@scalingbits.com
@@ -20,7 +18,7 @@ public class ThreadingPanel extends JPanel {
     /**
      * Methode die das Panel überlädt mit der Implementierung
      * der Treads
-     * @param g
+     * @param g das Grafikobjekt (wird vom Laufzeitsystem gestellt)
      */
     @Override
     public void paintComponent(Graphics g) {

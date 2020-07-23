@@ -14,7 +14,7 @@ public class Serialisierung {
     /**
      * Erzeuge eine Person und die Adresse. Schreibe sie in eine
      * Datei und lese sie aus der Datei
-     * @param args
+     * @param args Kommandozeilenparameter (hier nicht benoetigt)
      */
     public static void main(String[] args) {
         final String meineDatei = "serialisiert.ser";
@@ -60,7 +60,7 @@ public class Serialisierung {
     /**
      *
      * @param datei die Datei aus der gelesen werden soll
-     * @return
+     * @return das gelesene Objekt
      */
     public static Object lesen(String datei) {
         System.out.println("Lesen aus " + datei);

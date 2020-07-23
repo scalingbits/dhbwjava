@@ -37,7 +37,7 @@ public class Zufallszahlen {
     /**
      * Suche die am häufigsten vorkommende Zahl
      * @param feld Feld mit Häufigkeiten
-     * @return
+     * @return die haeufigste Zahl
      */
     private static int haeufigsteZahl(int[][][] feld) {
         int max = -1;

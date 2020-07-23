@@ -121,7 +121,7 @@ public class Passagierflugzeug {
     /**
      * Ueberschriebene Methode die das Kennzeichen anstatt der Objektidentitaet
      * druckt
-     * @return
+     * @return Zeichenkette mit der Objektbeschreibung
      */
     public String toString() {return kennzeichen;}
 

@@ -121,7 +121,7 @@ public class IntShiftApplet extends JApplet implements ActionListener {
 }
     /**
      * Diese Methode decodiert Benutzer
-     * @param e
+     * @param e das Ereignisobjekt
      */
     @Override
     public void actionPerformed(ActionEvent e) {

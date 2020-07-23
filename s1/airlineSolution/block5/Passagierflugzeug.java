@@ -72,7 +72,7 @@ public class Passagierflugzeug {
 
     /**
      * Tankinhalt in Liter
-     * @return 
+     * @return  Tankinhalt
      */
     public double getankt() {return treibstoff;}
     

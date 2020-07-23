@@ -32,23 +32,23 @@ public class Buch extends Ware {
      *
      * @since 1.0
      */
-    private String isbn;
+    private final String isbn;
     private Buch alteAuflage;
     /**
      * Referenz aus alte Auflage
-     * @return
+     * @return ein Buch einer alten Auflage
      */
     public Buch getAlteAuflage() { return alteAuflage; }
     /**
      * zuweisen einer alten Auflage
-     * @param alteAuflage
+     * @param alteAuflage ein Buch einer alten Auflage
      */
     void setAlteAuflage(Buch alteAuflage) {
         this.alteAuflage = alteAuflage;
     }
     /**
      * Auslesen der ISBN-Nummer (eine Zeichenkette)
-     * @return
+     * @return ISBN Nummer
      */
     public String getISBN() { return isbn; }
     /**

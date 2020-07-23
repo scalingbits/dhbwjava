@@ -16,8 +16,8 @@ public class InsertionSort extends Sortierer {
     }
     /**
      * sortiert ein Feld im Bereich startIndex bis endeIndex
-     * @param startIndex
-     * @param endeIndex
+     * @param startIndex Anfang des Sortierintervalls
+     * @param endeIndex Ende des Sortierintervalls
      */
     public void sortieren(int startIndex, int endeIndex) {
         for (int sortierGrenze = startIndex;sortierGrenze < endeIndex;
@@ -37,7 +37,7 @@ public class InsertionSort extends Sortierer {
     }
     /**
      * Liefert den Namen des Insertion Sorts
-     * @return
+     * @return Name des Sortierverfahrens
      */
     public String algorithmus() {
         return "Sortieren durch Einfuegen";

@@ -64,7 +64,7 @@ public class QuickSort extends Sortierer {
     /**
      * Liefert den Namen des Insertion Sorts
      *
-     * @return
+     * @return Name des Algorithmus
      */
     @Override
     public String algorithmus() {

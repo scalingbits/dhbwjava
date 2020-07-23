@@ -25,14 +25,14 @@ public class EineListe {
     }
     /**
      * Liefert den Kopf der Liste oder einen Null Zeiger
-     * @return
+     * @return der Listenkopf
      */
     public Listenknoten getKopf() {
         return kopf;
     }
     /**
      * Liefert das Ende der Liste oder einen Null Zeiger
-     * @return
+     * @return das Listenende
      */
     public Listenknoten getEnde() {
         return ende;
@@ -52,8 +52,8 @@ public class EineListe {
      * Füge hinter dem Listenknoten "nach" den Knoten "k"ein.
      * Füge nichts ein wenn der Listenknoten "nach" nicht in der Liste
      * vorhanden ist
-     * @param nach
-     * @param k
+     * @param nach nach diesem Knoten wird etwas eingefuegt
+     * @param k der einzufuegende Knoten
      */
     public void einfuegeNach(Listenknoten nach, Listenknoten k) {
         System.out.println("5. Implementieren Sie EineListe.einfuegeNach()");
@@ -75,8 +75,8 @@ public class EineListe {
     } // Ende Methode loesche()
     /**
      * Ist wahr wenn ein Knoten mit dem gleichen Wert existiert
-     * @param k
-     * @return
+     * @param k ist dieser Knoten enthalten?
+     * @return wahr oder falsch
      */
     public boolean enthaelt(Listenknoten k) {
         boolean result = false;
