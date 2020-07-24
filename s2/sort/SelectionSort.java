@@ -37,7 +37,7 @@ public class SelectionSort extends Sortierer{
     }
     /**
      * Liefert den Namen des SelectionSorts
-     * @return Name des Alhorithmus
+     * @return Name des Algorithmus
      */
     @Override
     public String algorithmus() {return "Sortieren durch Auswahl";}
