@@ -53,8 +53,8 @@ public class EineListeLoesung {
      * Füge hinter dem Listenknoten "nach" den Knoten "k"ein.
      * Füge nichts ein wenn der Listenknoten "nach" nicht in der Liste
      * vorhanden ist
-     * @param nach
-     * @param k
+     * @param nach einfuegen nach diesem Knoten
+     * @param k einzufuegender Knoten
      */
     public void einfuegeNach(Listenknoten nach, Listenknoten k) {
         Listenknoten t;
@@ -84,7 +84,7 @@ public class EineListeLoesung {
     }
     /**
      * Füge einen Knoten am Anfang der Liste ein
-     * @param k 
+     * @param k am Kopf einzufuegender Knoten
      */
     public void einfuegeAnKopf(Listenknoten k) {
         k.setVorgaenger(null);
@@ -138,8 +138,8 @@ public class EineListeLoesung {
  
     /**
      * Ist wahr wenn ein Knoten mit dem gleichen Wert existiert
-     * @param k
-     * @return
+     * @param k zu testender Knoten
+     * @return Ergebnis
      */
     public boolean enthaelt(Listenknoten k) {
         Listenknoten t = kopf;

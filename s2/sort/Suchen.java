@@ -10,7 +10,7 @@ public class Suchen {
     public final static int groesse = 500000000;
     /**
      * Hauptprogramm
-     * @param args
+     * @param args Parameter der Kommandozeile (nicht benoetigt)
      */
     public static void main(String[] args) {
         erzeugeFeld();

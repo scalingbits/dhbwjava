@@ -40,7 +40,7 @@ public class SchreibInDatei {
      * Umkopieren zwischen zwei Streams
      * @param r Eingabestream
      * @param w Ausgabestream
-     * @throws IOException 
+     * @throws IOException Probleme mit der  Ein/Ausgabe
      */
     public static void umkopieren(Reader r, Writer w) throws IOException{
         int c;

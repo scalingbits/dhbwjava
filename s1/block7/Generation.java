@@ -46,7 +46,7 @@ public class Generation {
 
     /**
      * Das Feld mit den aktuellen Werten
-     * @return
+     * @return das Feld
      */
     public boolean[][] status() {return null;} // Hier das aktuelle Feld zurückgeben
 

@@ -54,7 +54,6 @@ public class Position implements Serializable{
     /**
      * Erneuere eine Position mit den Werten einer anderen Position
      * @param p Die Position die als Vorlage dient
-     * @return nothing
      */
     public void update (Position p) {
         if (p != null) {

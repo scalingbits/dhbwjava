@@ -20,7 +20,7 @@ public class Person {
 
     /**
      * Das ist ein Copy Konstruktor
-     * @param vorlage
+     * @param vorlage eine Porson
      */
     public Person(Person vorlage) {
         name = vorlage.name;

@@ -18,13 +18,11 @@ public class Ware {
     /**
      * Der aktuelle Mehrwertsteuersatz 2010.
      * Er liegt zur Zeit bei {@value}.
-     * @since 1.0
-     * @version 1.0
      */
     public static final double mws = 0.19;
     private double nettoPreis; //Deklaration
     public boolean halbeMws;
-    private String name;
+    private final String name;
     public Ware empfehlung;
     /**
      * Konstruktor fuer die Klasse Ware

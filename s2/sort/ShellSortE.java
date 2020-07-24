@@ -13,7 +13,6 @@ public class ShellSortE extends Sortierer {
      * zurück
      * @param startIndex erstes zu sortierendes Feldelement
      * @param endeIndex letztes zu sortierendes Feldelement
-     * @return ein sortiertes Feld
      */
     public void sortieren(int startIndex, int endeIndex) {
         int i,j,k;
@@ -37,7 +36,6 @@ public class ShellSortE extends Sortierer {
 
     /**
      * Liefert den Namen des Insertion Sorts
-     * @return
      */
     public String algorithmus() {
         return "Shell Sort";

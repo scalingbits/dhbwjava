@@ -14,7 +14,7 @@ public class Lager {
     /**
      * * Groesse des Bestands
      */
-    private int initBestand = 20;
+    private final int initBestand = 20;
     /**
      * Standardkonstruktor der das Lager initialisiert
      */
@@ -35,8 +35,8 @@ public class Lager {
     /**
      * Einlagern von Waren. Existierende Waren werden verdraengt.
      * Lager wird dynamisch vergrößert
-     * @param ware1
-     * @param pos
+     * @param ware1 die Ware
+     * @param pos die Position
      */
     public void einlagern(Ware ware1,int pos) {
         if (pos>=bestand.length) {
@@ -51,7 +51,7 @@ public class Lager {
     /**
      * Einlagern von Waren. Es wird die erste freie Position gesucht.
      * Lager wird dynamisch vergrößert
-     * @param ware1
+     * @param ware1 die Ware
      * @return eingelagerte Position
      */
     public int einlagern(Ware ware1) {

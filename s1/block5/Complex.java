@@ -2,8 +2,8 @@ package s1.block5;
 
 public class Complex {
 
-    private double re; // Realteil der Zahl
-    private double im; // Imaginaerteil der Zahl (i)
+    private final double re; // Realteil der Zahl
+    private final double im; // Imaginaerteil der Zahl (i)
 
     public Complex(double r, double i) {
         re = r;

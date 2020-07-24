@@ -2,7 +2,7 @@ package s1.block8;
 
 public class CircleHasPoint {
     private double radius;
-    private Point p;
+    private final Point p;
     public CircleHasPoint(double xx, double yy, double r) {
         p = new Point(xx,yy);
         radius=r;

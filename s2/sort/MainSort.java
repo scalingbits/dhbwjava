@@ -119,7 +119,7 @@ public class MainSort {
      /**
      * Sortieren von zufallsgenerierten Feldern bis eine maximale
      * Zeit pro Sortiervorgang in Sekunden erreicht ist
-     * @param maxTime
+     * @param maxTime maximale Zeit
      */
     public static void phase2(int maxTime) {
         // Maximale Laufzeit in Nanosekunden

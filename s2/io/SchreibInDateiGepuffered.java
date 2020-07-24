@@ -45,7 +45,7 @@ public class SchreibInDateiGepuffered {
      * Umkopieren zwischen zwei Streams
      * @param r Eingabestream
      * @param w Ausgabestream
-     * @throws IOException 
+     * @throws IOException Probleme mit der  Ein/Ausgabe
      */
     public static void umkopieren(BufferedReader r, BufferedWriter w) throws IOException{
         String z;

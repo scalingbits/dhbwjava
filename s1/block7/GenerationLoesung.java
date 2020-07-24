@@ -7,7 +7,7 @@ public class GenerationLoesung {
     /**
      * Groesse des quadratischen Feldes
      */
-    private int size = 50;
+    private final int size = 50;
     private boolean[][] alt;
     private boolean[][] aktuell;
 
@@ -69,7 +69,7 @@ public class GenerationLoesung {
     /**
      * Das Feld mit den aktuellen Werten
      *
-     * @return
+     * @return das Feld
      */
     public boolean[][] status() {
         return aktuell;

@@ -7,7 +7,7 @@ package s2.listen;
    public class MainTestListe {
      /**
      * Testroutinen für einfache Listen
-     * @param args
+     * @param args  Kommandozeilenargumente (nicht benoetigt)
      */
     public static void main(String[] args) {
         EineListe testListe = new EineListe();

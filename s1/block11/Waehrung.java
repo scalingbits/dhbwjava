@@ -14,7 +14,7 @@ public interface Waehrung {
     /**
      * Multipliziert den Wert des Objekts mit der Fließkommazahl
      *
-     * @param f
+     * @param f ein Faktor
      * @return neues Objekt welches das Produkt enthält
      */
     Waehrung mult(double f);

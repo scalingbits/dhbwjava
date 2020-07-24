@@ -5,10 +5,10 @@ import java.util.Arrays;
 import java.util.Locale;
 
 public class PersonUebung2 implements Comparable  {
-    private String nachname;
-    private String vorname;
-    private static int maxLaenge = 10; // Maximale Laenge von Zufallszeichenketten
-    private static Locale myLocale = Locale.GERMANY; // Zu verwendende Sortierordnung
+    private final String nachname;
+    private final String vorname;
+    private static final int maxLaenge = 10; // Maximale Laenge von Zufallszeichenketten
+    private static final Locale myLocale = Locale.GERMANY; // Zu verwendende Sortierordnung
     /**
      * Konstruktor der Klasse Person
      * @param nn Nachname
@@ -48,7 +48,7 @@ public class PersonUebung2 implements Comparable  {
     }
     /**
      * Erlaubt den Vor- und Nachnamen  als Text auszudrucken
-     * @return
+     * @return Name der Person
      */
     @Override
     public String toString() {

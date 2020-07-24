@@ -34,8 +34,8 @@ public class Ware {
      */
     public static final double mws = 0.19;
     private double nettoPreis; //Deklaration
-    private boolean halbeMws;
-    private String name;
+    private final boolean halbeMws;
+    private final String name;
     public Ware empfehlung;
     /**
      * Konstruktor fuer die Klasse Ware
@@ -53,7 +53,7 @@ public class Ware {
      * tiefes Vergleichen. Berücksichtigt beim Namen nicht
      * die Groß/kleinschreinung. Berücksichtigt rekursiv die
      * Empfehlungen
-     * @param dieAndereWare
+     * @param dieAndereWare eine Ware
      * @return wahr wenn beide Waren dem Vergleich entsprechen.
      */
     public boolean equals(Ware dieAndereWare) {
@@ -87,7 +87,7 @@ public class Ware {
 
     /**
      * liefere wahr zurück wenn Mwssatz reduziert ist
-     * @return
+     * @return halbe Mwst.
      */
     public boolean getHalbeMws() {return halbeMws;}
 

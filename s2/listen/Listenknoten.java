@@ -27,7 +27,7 @@ public Listenknoten(int einWert) { wert=einWert;}
     }
      /**
      * Erlaubt den Zahlenwert als Text auszudrucken
-     * @return
+     * @return Wert des Objektes
      */
     @Override
     public String toString() { return Integer.toString(wert);}

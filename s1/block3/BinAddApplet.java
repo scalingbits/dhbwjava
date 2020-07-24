@@ -336,6 +336,7 @@ public class BinAddApplet extends JApplet implements ActionListener {
         repaint();
          */
     }
+    @SuppressWarnings("UnnecessaryLocalVariable")
     public int[] decode(float s) {
         int size = 32;
         /*

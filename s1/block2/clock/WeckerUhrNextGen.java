@@ -94,7 +94,7 @@ public class WeckerUhrNextGen extends JApplet {
     /**
      * Starten der Anwendung als eigenständiges Programm
      *
-     * @param args
+     * @param args Kommandozeilenargumente (nicht benoeigt)
      */
     public static void main(String[] args) {
         appletMode = false;

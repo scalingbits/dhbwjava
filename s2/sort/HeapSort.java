@@ -36,7 +36,7 @@ public class HeapSort extends Sortierer{
      * liefere -1 zurück falls keine linker Sohn existiert
      * @param index für den Sohn berechnet wird
      * @param endeIndex letzter belegter Indexplatz
-     * @return
+     * @return Index linker Sohn
      */
     private int linkerSohn(int index, int endeIndex) {
         int ls = index*2+1;
@@ -45,11 +45,11 @@ public class HeapSort extends Sortierer{
         else return ls;
     }
     /**
-     * Berechne Index des linken Sohns für gegebenen Index
+     * Berechne Index des rechter Sohns für gegebenen Index
      * liefere -1 zurück falls keine linker Sohn existiert
      * @param index für den Sohn berechnet wird
      * @param endeIndex letzter belegter Indexplatz
-     * @return
+     * @return Index rechter Sohn
      */
     private int rechterSohn(int index, int endeIndex) {
         int rs = (index+1)*2;
@@ -85,7 +85,7 @@ public class HeapSort extends Sortierer{
     }
     /**
      * Liefert den Namen des Heap Sorts
-     * @return
+     * @return Name des Algorithmus
      */
     public String algorithmus() {return "Heap Sort";}
 }

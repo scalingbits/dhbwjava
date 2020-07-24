@@ -37,7 +37,7 @@ public class Vokalverschiebung {
      * Vokalverschieben zwischen zwei Streams
      * @param r Eingabestream
      * @param w Ausgabestream
-     * @throws IOException 
+     * @throws IOException Probleme mit Ein/Ausgabe
      */
     public static void schieben(Reader r, Writer w) throws IOException{
         int c;

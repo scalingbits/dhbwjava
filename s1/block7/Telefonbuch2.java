@@ -97,7 +97,7 @@ public class Telefonbuch2 {
     }
     /**
      * Hauptprogramm
-     * @param args
+     * @param args Parameter der Kommandozeile (nicht benoetigt)
      */
     public static void main(String[] args) {
         test();

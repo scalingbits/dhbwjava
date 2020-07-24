@@ -123,7 +123,7 @@ public class Pong extends JApplet {
 
     /**
      * Anwendung wurde als Standalone Programm gestartet
-     * @param args
+     * @param args  Kommandozeilenargumente (nicht benoetigt)
      */
     public static void main(String[] args) {
         appletMode = false;

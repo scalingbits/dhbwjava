@@ -75,7 +75,7 @@ public class MainBuch {
     /**
      * Das Hauptprogramm
      *
-     * @param args
+     * @param args Kommandozeilenargumente (nicht benoetigt)
      */
     public static void main(String[] args) {
 
