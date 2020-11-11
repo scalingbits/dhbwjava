@@ -5,9 +5,9 @@ public class Test {
      * Zu erzeugende Generationen
      */
     public static int generationen = 3; // Initial testen
-    //public static int generationen = 19; // mit -XX:+printGC
-    //public static int generationen = 22; // mit -Xmx500m -XX:+printGC
-    //public static int generationen = 23; // mit -Xms500m -Xmx1024m -XX:+printGC
+    //public static int generationen = 19; // mit -Xlog:gc
+    //public static int generationen = 22; // mit -Xmx500m -Xlog:gc
+    //public static int generationen = 23; // mit -Xms500m -Xmx1024m -Xlog:gc
     public static void main(String[] args) {
         Person p;
         systemStatus();
