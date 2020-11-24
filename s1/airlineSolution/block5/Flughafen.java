@@ -1,5 +1,7 @@
 package s1.airlineSolution.block5;
 
+import s1.block5.Vorfeldbus;
+
 /**
  *
  * @author stsch
@@ -27,7 +29,9 @@ public class Flughafen {
         System.out.println("Am Gate 3: " + pad.gate3);
         System.out.println("Treibstoff: " + pad.treibstoffLager);
         System.out.println("***********************");
-        
+
+        s1.block5.Vorfeldbus bus1 = s1.block5.Vorfeldbus.busausliefern("PAD");
+        s1.block5.Vorfeldbus bus2 = Vorfeldbus.busausliefern("PAD");
 
         // Boeing 747, https://de.wikipedia.org/wiki/Boeing_747#747-400
         Passagierflugzeug lh1 = new Passagierflugzeug("D-ABTL", 360, 191000, 400000);

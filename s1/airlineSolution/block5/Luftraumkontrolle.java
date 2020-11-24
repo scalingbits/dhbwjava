@@ -1,4 +1,4 @@
-package s1.block5;
+package s1.airlineSolution.block5;
 
 /**
  * Diese Klasse ist ein Beispiel für eine Einzelstück (Singelton)

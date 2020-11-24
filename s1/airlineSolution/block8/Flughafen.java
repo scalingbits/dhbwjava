@@ -1,5 +1,7 @@
 package s1.airlineSolution.block8;
 
+import s1.airlineSolution.block5.Luftraumkontrolle;
+
 /**
  *
  * @author s@scalingbits.com
@@ -130,6 +132,9 @@ public class Flughafen {
         //Frachtflugzeug meinF =  (Frachtflugzeug) paderborn.vorfeld[3];
         //System.out.println("Kennzeichen: " + meinF.kennzeichen);
         //meinF.entladen(100F);
+
+        System.out.println("Mein Tower: " + Luftraumkontrolle.meineLuftraumkontrolle());
+        System.out.println("Mein Tower: " + Luftraumkontrolle.meineLuftraumkontrolle());
 
         paderborn.drucken();
 

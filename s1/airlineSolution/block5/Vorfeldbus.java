@@ -1,4 +1,4 @@
-package s1.block5;
+package s1.airlineSolution.block5;
 
 /**
  * Implementierung einer Fabrik (Factory)
