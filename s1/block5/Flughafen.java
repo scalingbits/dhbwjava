@@ -14,6 +14,9 @@ public class Flughafen {
         pad.name="Paderborn";
         pad.treibstoffLager = 1000000;
 
+        Vorfeldbus bus1 = Vorfeldbus.busausliefern("PAD");
+        Vorfeldbus bus2 = Vorfeldbus.busausliefern("PAD");
+
 
         // Boeing 747, https://de.wikipedia.org/wiki/Boeing_747#747-400
         Flugzeug lh1 = new Flugzeug("ABTL",450000,200,200);
@@ -75,5 +78,8 @@ public class Flughafen {
         System.out.println("Am Gate 3: " + pad.gate3.kennzeichen);
         System.out.println("Treibstoff: " + pad.treibstoffLager);
         System.out.println("***********************");
+
+        System.out.println("Mein Tower: " + Luftraumkontrolle.meineLuftraumkontrolle());
+        System.out.println("Mein Tower: " + Luftraumkontrolle.meineLuftraumkontrolle());
     }
 }
