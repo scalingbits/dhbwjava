@@ -100,7 +100,7 @@ public class Flughafen {
                 + paderborn.anGate(1).anzPassagiere()
                 + " Besatzung: " + paderborn.anGate(1).lese_Besatzung());
         System.out.println("Was wiegt ein Passagier?");
-        System.out.println(Flugzeug.duchschnittsgewicht);
+        System.out.println(Flugzeug.DURCHSCHNITTSGEWICHT);
         System.out.println("Was wiegt ein Passagier maximal?");
         System.out.println(Flugzeug.maxPassagierGewicht());
 

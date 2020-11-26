@@ -6,7 +6,7 @@ package s1.airlineSolution.block8;
  */
 public abstract class Flugzeug {
 
-    static final float duchschnittsgewicht = 100F;
+    static final float DURCHSCHNITTSGEWICHT = 100F;
     protected int besatzung;
     float treibstoff;
     float leergewicht;
@@ -38,12 +38,12 @@ public abstract class Flugzeug {
     public float gewicht() {
         float g;
         g = leergewicht + treibstoff
-                + (besatzung) * duchschnittsgewicht;
+                + (besatzung) * DURCHSCHNITTSGEWICHT;
         return g;
     }
 
     static public float maxPassagierGewicht() {
-        return duchschnittsgewicht * 3;
+        return DURCHSCHNITTSGEWICHT * 3;
     }
 
 

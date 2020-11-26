@@ -32,7 +32,7 @@ public class Passagierflugzeug extends Flugzeug {
     }
 
     static public float maxPassagierGewicht() {
-        return duchschnittsgewicht * 3;
+        return DURCHSCHNITTSGEWICHT * 3;
     }
 
     /**
@@ -82,7 +82,7 @@ public class Passagierflugzeug extends Flugzeug {
     @Override
     public float gewicht() {
         float g;
-        g = super.gewicht() + passagiere * duchschnittsgewicht;
+        g = super.gewicht() + passagiere * DURCHSCHNITTSGEWICHT;
         return g;
     }
 
