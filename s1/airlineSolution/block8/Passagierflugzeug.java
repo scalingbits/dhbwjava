@@ -31,8 +31,13 @@ public class Passagierflugzeug extends Flugzeug {
         return f;
     }
 
+
+    /**
+     * Schwerstes zulässiges Passagiergewicht in kg
+     * @return Passagiergewicht in kg
+     */
     static public float maxPassagierGewicht() {
-        return DURCHSCHNITTSGEWICHT * 3;
+        return DURCHSCHNITTSGEWICHT * 3F;
     }
 
     /**
@@ -48,8 +53,8 @@ public class Passagierflugzeug extends Flugzeug {
     }
 
     /**
-     * Hier steigen Passagiere und Besatzungsmitglieder ein Vorsicht bei den
-     * Bewsatzsmitgliedern wird kein Check durchgeführt
+     * Hier steigen Passagiere und Besatzungsmitglieder ein. Vorsicht bei den
+     * Besatzungsmitgliedern wird kein Check durchgeführt
      *
      * @param e Anzahl der Passagiere.
      * @param besatz Anzahl der Besatzung
@@ -62,23 +67,28 @@ public class Passagierflugzeug extends Flugzeug {
         besatzung = besatz;
     }
 
+    /**
+     * Einsteigen eines einzelnen Passagiers.
+     * Im wird ohne weitere Warnung das Einsteigen verweigert falls
+     * das Flugzeug belegt ist!
+     */
     public void einsteigen() {
         final int a;
         if (passagiere + 1 <= maxPassagiere) {
             passagiere++;
         }
-
     }
 
-    public void alleEinsteigen(int pass, int bes) {
-        if ((passagiere + pass <= maxPassagiere) && (pass >= 0)) {
-            passagiere = passagiere + pass;
-        }
-        besatzung = besatzung + bes;
-    }
-
+    /**
+     * Anzahl der Passagiere im Flugzeug
+     * @return
+     */
     public int anzPassagiere() { return passagiere;}
 
+    /**
+     * Gewicht des Flugzeugs. Diese Methode ist ueberschrieben!
+     * @return das Gewicht mit dem Gewicht der Passagiere
+     */
     @Override
     public float gewicht() {
         float g;

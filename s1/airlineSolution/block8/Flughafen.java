@@ -7,32 +7,34 @@ package s1.airlineSolution.block8;
 public class Flughafen {
 
     String name;
-    Passagierflugzeug[] gates;
+    Passagierflugzeug[] gate;
     // 1. Neu in Block 8: Ein Vorfeld für Flugzeuge
     Flugzeug[] vorfeld;
     float treibstofflager;
 
-    public Flughafen(String name, int anzahlGates) {
+    public Flughafen(String name, int anzahlGates, int parkPos) {
         vorfeld = new Flugzeug[10]; // Fest für jeden Flughafen
         this.name = name;
         if (anzahlGates > 0)
-            gates = new Passagierflugzeug[anzahlGates];
+            gate = new Passagierflugzeug[anzahlGates];
+        if (parkPos > 0)
+            vorfeld = new Flugzeug[parkPos];
     }
 
     public void andocken(int gatenr, Passagierflugzeug f) {
-        if ((gatenr >= 0) && (gates.length-1 >= gatenr))
-            gates[gatenr] = f;
+        if ((gatenr >= 0) && (gate.length-1 >= gatenr))
+            gate[gatenr] = f;
     }
 
     public Passagierflugzeug anGate(int gatenr) {
-        return gates[gatenr];
+        return gate[gatenr];
     }
 
     public void drucken() {
         System.out.println(" *** Status Flughafen: " + name);
-        for ( int i = 0; i< gates.length; i++)
+        for (int i = 0; i< gate.length; i++)
         {
-            if (gates[i] == null)
+            if (gate[i] == null)
                 System.out.println("Gate " + i + ": ist leer.");
             else
                 System.out.println("Gate " + i + ": "  +
@@ -50,7 +52,7 @@ public class Flughafen {
 
     public static void main(String[] args) {
 
-        Flughafen paderborn = new Flughafen("Paderborn",6);
+        Flughafen paderborn = new Flughafen("Paderborn",6,20);
         paderborn.treibstofflager = 1_000_000F;
         paderborn.vorfeld[0] = new Frachtflugzeug("D-AAA1", 200000F);
         paderborn.vorfeld[1] = new Frachtflugzeug("D-AAA2", 200000F);
@@ -58,7 +60,7 @@ public class Flughafen {
         paderborn.vorfeld[3] = new Passagierflugzeug("D-AAA4",170, 200000F);
 
         //Mehr Gates machen die Ausgabe sehr lang...
-        Flughafen fra = new Flughafen("Frankfurt", 9);
+        Flughafen fra = new Flughafen("Frankfurt", 60, 100);
 
         Passagierflugzeug meinFlieger = new Passagierflugzeug("D-ABDT", 119, 20_000F);
         meinFlieger.setBesatzung(4);
@@ -67,20 +69,20 @@ public class Flughafen {
 
         Passagierflugzeug deinFlieger = meinFlieger;
         System.out.println("deinFlieger Passagiere: " + deinFlieger.anzPassagiere());
-
         System.out.println("meinFlieger Passagiere: " + meinFlieger.anzPassagiere());
 
         paderborn.andocken(1,meinFlieger);
         paderborn.andocken(2,Passagierflugzeug.baueAirbusA320("D-ACCC"));
-        paderborn.andocken(3,paderborn.gates[2]);
+        paderborn.andocken(3,paderborn.gate[2]);
         paderborn.andocken(4,Passagierflugzeug.baueAirbusA320("D-ADDD"));
         //
 
         paderborn.drucken();
         fra.drucken();
-        System.out.println("Gewicht Flugzeug Gate1 "
+        System.out.println("Testen der ueberschriebenen Methode gewicht(): ");
+        System.out.println("Gewicht Flugzeug Gate1: "
                 + paderborn.anGate(1).gewicht());
-        System.out.println("Gewicht Flugzeug Gate2 "
+        System.out.println("Gewicht Flugzeug Gate2: "
                 + paderborn.anGate(2).gewicht());
 
         System.out.println("Passagiere im Fl. am Gate 1: "
@@ -95,14 +97,14 @@ public class Flughafen {
         System.out.println("Passagiere im Fl. am Gate 1: "
                 + paderborn.anGate(1).anzPassagiere()
                 + " Besatzung: " + paderborn.anGate(1).lese_Besatzung());
-        paderborn.anGate(1).alleEinsteigen(10, 2);
+        paderborn.anGate(1).einsteigen(10, 2);
         System.out.println("Passagiere im Fl. am Gate 1: "
                 + paderborn.anGate(1).anzPassagiere()
                 + " Besatzung: " + paderborn.anGate(1).lese_Besatzung());
         System.out.println("Was wiegt ein Passagier?");
         System.out.println(Flugzeug.DURCHSCHNITTSGEWICHT);
         System.out.println("Was wiegt ein Passagier maximal?");
-        System.out.println(Flugzeug.maxPassagierGewicht());
+        System.out.println(Passagierflugzeug.maxPassagierGewicht());
 
         paderborn.drucken();
 
