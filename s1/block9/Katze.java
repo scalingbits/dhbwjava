@@ -1,5 +1,9 @@
 package s1.block9;
 
+/**
+ *
+ * @author s@scalingbits.com
+ */
 public class Katze extends Haustier {
 
     private Vogel lieblingsVogel;
@@ -23,7 +27,10 @@ public class Katze extends Haustier {
             this.lieblingsVogel = lieblingsVogel;
 
     }
-
+    /**
+     * Eine Beschreibung meiner Katze
+     * @return Eine Beschreibung meiner Katze
+     */
     public String beschreibung() {
         return super.beschreibung() + ", mag " + vogel();
     }

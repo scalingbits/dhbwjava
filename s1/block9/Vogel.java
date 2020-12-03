@@ -22,6 +22,10 @@ public class Vogel extends Haustier{
         this.singvogel = singvogel;
     }
 
+    /**
+     * Eine Beschreibung meines Vogels
+     * @return Eine Beschreibung meines Vogels
+     */
     public String beschreibung() {
         String saenger = (singvogel) ? "ein" : "kein";
         return super.beschreibung() + ", ist "

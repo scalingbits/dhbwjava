@@ -1,9 +1,22 @@
 package s1.block9;
 
+/**
+ *
+ * @author s@scalingbits.com
+ */
 public abstract class Haustier {
 
+    /**
+     * Names des Haustiers
+     */
     private String name;
+    /**
+     * nur wahr bei Hunden. Hunde sind steurpflichtig
+     */
     private boolean steuerpflichtig;
+    /**
+     * Die Tierarztkosten in Euro
+     */
     private double kostenTierarzt;
 
     /**
@@ -68,6 +81,10 @@ public abstract class Haustier {
         this.kostenTierarzt = kostenTierarzt;
     }
 
+    /**
+     * Eine Beschreibung meines Tieres
+     * @return Eine Beschreibung meines Tieres
+     */
     public String beschreibung() {
         String stpf = (steuerpflichtig) ? ", " : ", nicht ";
         String b = "Name :" + name

@@ -2,7 +2,7 @@ package s1.block9;
 
 /**
  *
- * @author s@scalaingbits.com
+ * @author s@scalingbits.com
  */
 public class TierTest {
 
