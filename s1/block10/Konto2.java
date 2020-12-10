@@ -18,11 +18,11 @@ public class Konto2 {
         }
         else return false;
     }
-    public boolean ueberweisenAuf (Konto2 b, int wert) {
+    public boolean ueberweisenAuf (Konto2 k, int wert) {
         boolean korrekt;
         korrekt = auszahlen(wert);
         if (korrekt)
-            korrekt= b.einzahlen(wert);
+            korrekt= k.einzahlen(wert);
         return korrekt;
     }
     @Override

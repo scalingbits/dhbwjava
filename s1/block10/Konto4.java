@@ -12,10 +12,10 @@ public class Konto4 {
         assert (b>=0);
         betrag -= b;
     }
-    public void ueberweisenAuf (Konto4 b, int wert) {
+    public void ueberweisenAuf (Konto4 k, int wert) {
         assert(wert>=0): "Versuch einer negativen Überweisung von " + wert ;
         auszahlen(wert);
-        b.einzahlen(wert);
+        k.einzahlen(wert);
     }
     @Override
     public String toString() {return betrag + " Euro";}

@@ -19,19 +19,19 @@ public class Konto7 {
         assert (b>=0);
         betrag -= b;
     }
-    public void ueberweisenAuf (Konto7 b, int wert) {
+    public void ueberweisenAuf (Konto7 k, int wert) {
         if (wert < 0) throw new IllegalArgumentException("Negativer Wert " + wert);
         else
         if (wert > ueberweisungsLimit )
             throw new IllegalArgumentException("Limit ueberschritten " + wert
                     + "; Limit: " + ueberweisungsLimit);
         else
-        if (wert > b.ueberweisungsLimit )
+        if (wert > k.ueberweisungsLimit )
             throw new IllegalArgumentException("Limit ueberschritten " + wert
-                    + "; Limit: " + b.ueberweisungsLimit);
+                    + "; Limit: " + k.ueberweisungsLimit);
         else {
             auszahlen(wert);
-            b.einzahlen(wert);
+            k.einzahlen(wert);
         }
     }
     @Override

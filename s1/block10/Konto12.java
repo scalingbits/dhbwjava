@@ -19,16 +19,16 @@ public class Konto12 {
         assert (b>=0);
         betrag -= b;
     }
-    public void ueberweisenAuf(Konto12 b, int wert) throws Ueberweisungsausnahme12  {
+    public void ueberweisenAuf(Konto12 k, int wert) throws Ueberweisungsausnahme12  {
         if (wert < 0) throw new Ueberweisungsausnahme12("Negativer Wert" + wert);
         else {
-            int maxlimit = Math.min(ueberweisungsLimit, b.ueberweisungsLimit);
+            int maxlimit = Math.min(ueberweisungsLimit, k.ueberweisungsLimit);
             if (wert > maxlimit )
                 throw new LimitAusnahme("Limit ueberschritten " + wert,
                         maxlimit);
             else {
                 auszahlen(wert);
-                b.einzahlen(wert);
+                k.einzahlen(wert);
             }
         }
     }

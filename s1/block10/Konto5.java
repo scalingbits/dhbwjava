@@ -16,10 +16,10 @@ public class Konto5 {
         assert (b>=0);
         betrag -= b;
     }
-    public void ueberweisenAuf (Konto5 b, int wert) {
+    public void ueberweisenAuf (Konto5 k, int wert) {
         assert(wert>=0);
         auszahlen(wert);
-        b.einzahlen(wert);
+        k.einzahlen(wert);
     }
     @Override
     public String toString() {return betrag + " Euro";}

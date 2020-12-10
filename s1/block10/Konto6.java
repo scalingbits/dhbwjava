@@ -19,14 +19,14 @@ public class Konto6 {
         assert (b>=0);
         betrag -= b;
     }
-    public int ueberweisenAuf (Konto6 b, int wert) {
+    public int ueberweisenAuf (Konto6 k, int wert) {
         if (wert < 0) return NEGATIVERWERT;
         else
-        if ((wert > ueberweisungsLimit )|| (wert > b.ueberweisungsLimit ))
+        if ((wert > ueberweisungsLimit )|| (wert > k.ueberweisungsLimit ))
             return LIMITUEBERSCHRITTEN;
         else {
             auszahlen(wert);
-            b.einzahlen(wert);
+            k.einzahlen(wert);
             return OK;
         }
     }

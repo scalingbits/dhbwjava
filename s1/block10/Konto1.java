@@ -10,9 +10,9 @@ public class Konto1 {
     private void auszahlen(int b) {
         betrag -= b;
     }
-    public void ueberweisenAuf (Konto1 b, int wert) {
+    public void ueberweisenAuf (Konto1 k, int wert) {
         auszahlen(wert);
-        b.einzahlen(wert);
+        k.einzahlen(wert);
     }
     @Override
     public String toString() {return betrag + " Euro";}

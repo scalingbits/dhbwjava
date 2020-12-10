@@ -12,9 +12,9 @@ public class Konto3 {
         assert (b>=0): "Versuch " + b + " zu auszuzahlen";
         betrag -= b;
     }
-    public void ueberweisenAuf (Konto3 b, int wert) {
+    public void ueberweisenAuf (Konto3 k, int wert) {
         auszahlen(wert);
-        b.einzahlen(wert);
+        k.einzahlen(wert);
     }
     @Override
     public String toString() {return betrag + " Euro";}
