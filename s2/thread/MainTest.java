@@ -27,7 +27,6 @@ public static final int INCRITICALPATH = 0;
     public void run() {
         long anfangszeit = System.nanoTime();
         System.out.println("Thread [" + meineID + "] gestartet");
-        //GUIupdate(NOTINCRITICALPATH);
         for (long i = 0; i < 200; i++) {
             Thread t = Thread.currentThread();
             // Erlaube anderen Threads die CPU zu holen

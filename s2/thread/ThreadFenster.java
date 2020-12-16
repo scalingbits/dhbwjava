@@ -87,12 +87,10 @@ public class exitActionListener implements ActionListener {
         syncPanel.add(syncButton);
         syncPanel.add(nosyncButton);
         //Aufbau des Panels
-        //buttonPanel = new JPanel(new GridLayout(1, 0));
         buttonPanel = new JPanel();
         buttonPanel.add(threadsLabel);
         buttonPanel.add(threadSlider);
         buttonPanel.add(threadDisplay);
-        //buttonPanel.add(okButton);
         buttonPanel.add(syncPanel);
         buttonPanel.add(exitButton);
         tp = new ThreadingPanel();

@@ -32,7 +32,7 @@ public class ThreadingPanel extends JPanel {
         }
     }
 
-/**
+     /**
      * Malen eines Threads und seines Zustands
      * @param g Graphicshandle
      * @param id Identifier
@@ -42,23 +42,18 @@ public class ThreadingPanel extends JPanel {
     public void paintThread(Graphics g, int id, int x, int y) {
         int xOffset = 1; // offset Box zu Text
         int yOffset = 7; // offset Box zu Text
-        //String wertThread = k.toString(); // Wert als Text
 
-       if (MainTest.mt[id] != null) {
-            if (MainTest.mt[id].threadStatus == MainTest.ENDED) {
-                g.setColor(Color.LIGHT_GRAY);
-            }
-            if (MainTest.mt[id].threadStatus == MainTest.NOTINCRITICALPATH) {
-                g.setColor(Color.GREEN);
-            }
-            if (MainTest.mt[id].threadStatus == MainTest.INCRITICALPATH) {
-                g.setColor(Color.RED);
+        if (MainTest.mt[id] != null) {
+            switch(MainTest.mt[id].threadStatus) {
+                case MainTest.ENDED:             g.setColor(Color.LIGHT_GRAY); break;
+                case MainTest.NOTINCRITICALPATH: g.setColor(Color.GREEN); break;
+                case MainTest.INCRITICALPATH:    g.setColor(Color.RED); break;
+                default: assert(true):"Hier laeuft etwas falsch";
             }
         }
         int breite = 2 * ziffernBreite;
         int xNextNodeOffset = 20;
         int yNextNodeOffset = ziffernHoehe * 6 / 5; // Vertikaler Offset zur naechsten Kn.ebene
-        //g.setColor(Color.); // Farbe des Rechtecks im Hintergrund
         g.fillRoundRect(x - xOffset, y - yOffset, breite, ziffernHoehe, 3, 3);
         g.setColor(Color.black); // Schriftfarbe
         g.drawString(Integer.toString(id), x + xOffset, y + yOffset);
