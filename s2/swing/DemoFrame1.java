@@ -121,7 +121,7 @@ public class DemoFrame1 extends javax.swing.JFrame {
     }
 
     /**
-     * Initialierung alle Komponenten
+     * Initialierung alle Komponenten im Konstruktor
      */
     public DemoFrame1() {
         initComponents();
@@ -129,7 +129,7 @@ public class DemoFrame1 extends javax.swing.JFrame {
 
     /**
      * Hauptprogramm: Erzeuge eine Instanz von DemoFrame1 und zeige sie an
-     * @param args
+     * @param args wird nicht verwendet
      */
     public static void main(String[] args) {
 
@@ -139,10 +139,10 @@ public class DemoFrame1 extends javax.swing.JFrame {
 
     /**
      * Führe Operation 1 aus (Button 1 wurde gedrückt)
-     * @param s1
-     * @param s2
-     * @param s3
-     * @return
+     * @param s1 Eingabezeichenkette 1
+     * @param s2 Eingabezeichenkette 2
+     * @param s3 Eingabezeichenkette 3
+     * @return Alle Zeichenketten verkettet
      */
     public String executeOperation1(String s1, String s2, String s3) {
         // Add Application logic here:
@@ -151,11 +151,11 @@ public class DemoFrame1 extends javax.swing.JFrame {
     }
 
     /**
-     * Führe Operation 2 aus (Button 2 wurde gedrückt)
-     * @param s1
-     * @param s2
-     * @param s3
-     * @return
+     *  Führe Operation 2 aus (Button 2 wurde gedrückt)
+     * @param s1 Eingabezeichenkette 1
+     * @param s2 Eingabezeichenkette 2
+     * @param s3 Eingabezeichenkette 3
+     * @return Alle Zeichenketten verkettet
      */
     public String executeOperation2(String s1, String s2, String s3) {
         // Add Application logic here:
@@ -165,10 +165,10 @@ public class DemoFrame1 extends javax.swing.JFrame {
 
     /**
      * Führe Operation 3 aus (Button 3 wurde gedrückt)
-     * @param s1
-     * @param s2
-     * @param s3
-     * @return
+     * @param s1 Eingabezeichenkette 1
+     * @param s2 Eingabezeichenkette 2
+     * @param s3 Eingabezeichenkette 3
+     * @return Alle Zeichenketten verkettet
      */
     public String executeOperation3(String s1, String s2, String s3) {
         // Add Application logic here:
