@@ -10,23 +10,20 @@ import java.awt.event.ActionListener;
  */
 public class DemoFrame1 extends javax.swing.JFrame {
 
-    private ButtonGroup buttonGroup1;
-    private JPanel jPanel1;
-    private JLabel jLabel1;
-    private JTextField jTextFieldin[];
+    private JTextField[] jTextFieldin;
     private JTextField jTextField2;
     private JButton jButton1;
     private JButton jButton2;
     private JButton jButton3;
-    /**
-     * Anzahl der Eingabefelder
-     */
-    private int inFields = 3;
+
 
     /**
      * Initialisieren aller Komponenten
      */
     private void initComponents() {
+        JLabel jLabel1;
+         //Anzahl der Eingabefelder
+         int inFields = 3;
         jLabel1 = new JLabel();
         jTextFieldin = new JTextField[inFields];
         for (int i = 0; i < inFields; i++) {
