@@ -9,6 +9,10 @@ import java.awt.event.ActionListener;
  */
    public class SystemExitListener implements ActionListener{
       @Override
+      /**
+       * Diese Methode führt eine Aktion aus. Sie beendet die Anwendung!
+       * @param args die EIngabeparamter werden ignoriert
+       */
       public void actionPerformed(ActionEvent e) {
          System.exit(0);
       }

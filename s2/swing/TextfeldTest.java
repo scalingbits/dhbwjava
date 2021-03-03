@@ -6,6 +6,10 @@ import javax.swing.JTextField;
  * @author s@scalingbits.com
  */
 public class TextfeldTest {
+    /**
+     * Dieses Hauptprogramm erzeugt ein JFrame mit einem JTextField
+     * @param args die Parameterliste wird ignoriert
+     */
     public static void main(String[] args) {
         JFrame frame = new JFrame("Ein Fenster mit Textfeld");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -1,9 +1,8 @@
 package s2.swing;
 
+import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import javax.swing.JButton;
-import javax.swing.JFrame;
 
 /**
  *
@@ -34,6 +33,11 @@ public class MouseAdapterInnereKlasseTest {
         myJFrame.pack();
         myJFrame.setVisible(true);
     }
+
+    /**
+     * Das Hauptprogramm
+     * @param args die Parameterliste wird ignoriert
+     */
     public static void main(String[] args) {
         MouseAdapterInnereKlasseTest mat =
                 new MouseAdapterInnereKlasseTest();
