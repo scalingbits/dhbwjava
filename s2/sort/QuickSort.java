@@ -27,7 +27,7 @@ public class QuickSort extends Sortierer {
     public void sortieren(int startIndex, int endeIndex) {
         int i = startIndex;
         int j = endeIndex;
-        int pivotWert = feld[startIndex + (endeIndex - startIndex) / 2];
+        int pivotWert = feld[(startIndex + endeIndex)/2];
         //System.out.println("von"+ startIndex+", bis:"+endeIndex +
         //        " pivot:" + pivotWert);
         while (i <= j) {

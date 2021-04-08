@@ -90,7 +90,7 @@ public class QuickSortParallel extends Sortierer{
     private int teilsortieren(int startIndex, int endeIndex) {
         int i = startIndex;
         int j = endeIndex;
-        int pivotWert = feld[startIndex+(endeIndex-startIndex)/2];
+        int pivotWert = feld[(startIndex + endeIndex)/2];
         //druckenKonsole();
         while (i<=j) {
            // Suche vom unteren Ende des Bereichs aufsteigend einen
