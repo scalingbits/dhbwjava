@@ -11,8 +11,11 @@ public class Test {
         Zimmer<Person> bude = new Zimmer<>();
         bude.rein(hans);
         // Viel Zeit vergeht....
-        
-        Person xyz = bude.einwohner();
+        // Die Wohnung wird verkauft
+        Zimmer<Person> neueWohnung = bude;
+
+        // Wer wohnt denn bei mir?
+        Person xyz = neueWohnung.einwohner();
         
         System.out.println("Mein Einwohner: " + xyz);
         
@@ -20,11 +23,16 @@ public class Test {
         Student willi = new Student();
         bruchbude.rein(willi);
         // Zeit vergeht...
-        
-        Person y = bruchbude.einwohner();
+        // Die Wohnung wird verkauft
+        Zimmer<Student> neueBruchbude = bude;
+
+        // Hier findet der Polymorphismus der Vererbung Anwendwung
+        // Ja, Studenten sind auch Personen!
+        Person y = neueBruchbude.einwohner();
         System.out.println("Einwohner Bruchbude: " + y);
-        
-        Student yy = bruchbude.einwohner();
+
+        // Hier muss ja ein Student wohnen!
+        Student yy = neueBruchbude.einwohner();
         //Student zz = (Student)      bude.einwohner();
         
         Katze mietze = new Katze();
@@ -43,7 +51,9 @@ public class Test {
         
         // Nicht generische Verwendung der Klasse Zimmer
         Zimmer wohnung = new Zimmer();
-        
+
+        // Das macht jetzt inhaltlich keinen Sinn
+        // Ist aber für Java OK
         wohnung.rein("Guten Morgen");
         // ... Viel Code dazwischen
         String x =  (String) wohnung.einwohner();
