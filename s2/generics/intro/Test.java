@@ -24,7 +24,7 @@ public class Test {
         bruchbude.rein(willi);
         // Zeit vergeht...
         // Die Wohnung wird verkauft
-        Zimmer<Student> neueBruchbude = bude;
+        Zimmer<Student> neueBruchbude = bruchbude;
 
         // Hier findet der Polymorphismus der Vererbung Anwendwung
         // Ja, Studenten sind auch Personen!

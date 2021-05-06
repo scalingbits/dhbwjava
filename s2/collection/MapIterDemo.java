@@ -40,26 +40,27 @@ public static void ausgabenMatrikelnr(Map<Integer,Student> mp) {
         int s;
         Student st;
         Set<Integer> matrikelNummern = mp.keySet();
-        Iterator<Integer> iterMatrikel = matrikelNummern.iterator(); // Einsetzen: Zuweisen des Iterators
+        Iterator<Integer> iterMatrikel = null; // Einsetzen: Zuweisen des Iterators
         System.out.println("Name ("
                 + mp.getClass() + "):");
-        while (iterMatrikel.hasNext()) {  // Einsetzen: Iteratorbedingung einfügen
-            s = iterMatrikel.next(); // Einsetzen: Auslesen des Iterators
-            System.out.println("Matrikelnummer: " + s);
+        boolean replaceMe = true; // Diese Variable wird benoetigt damit der Code der Vorlage uebersetzt
+        while (replaceMe ) {  // Einsetzen: Iteratorbedingung einfügen
+            s = 0; // Einsetzen: Auslesen des Iterators
+            System.out.println("Matrikelnummer: " + s); //Entfernen Kommentar
         }
         int mnr = 15;
         System.out.println("Student mit Matrikelnummer " + mnr +
-                " ist:" + mp.get(mnr)); // Einsetzen: Studentin mit Matrikelnr mnr
+                " ist:" + null ); // Einsetzen: Studentin mit Matrikelnr mnr
         mnr = 16;
         System.out.println("Student mit Matrikelnummer " + mnr +
-                " ist:" + mp.get(mnr) ); // Einsetzen: Studentin mit Matrikelnr mnr
+                " ist:" + null ); // Einsetzen: Studentin mit Matrikelnr mnr
         System.out.println("Alle Werte der MatrikelMap:");
-        Collection<Student> l = mp.values(); // Einsetzen: Collection mit den Studenten
+        Collection<Student> l = null; // Einsetzen: Collection mit den Studenten
         Iterator<Student> iterStudi = l.iterator();
         System.out.println("Name ("
                 + mp.getClass() + "):");
-        while (iterStudi.hasNext()) { // Einsetzen: Schleifenbedingung des Iterators
-            st = iterStudi.next();
+        while (replaceMe) { // Einsetzen: Schleifenbedingung des Iterators
+            st = null;
             System.out.println("Student: " + st);
             }
     }
@@ -72,23 +73,24 @@ public static void ausgabenNamen(Map<String,Student> mp) {
         System.out.println("Einsetzen: Vorbereitungen zum Auslesen der Nachnamen");
         System.out.println("Namen ("
                 + mp.getClass() + "):");
-        while (namen.hasNext()) { // Einsetzen: Iteratorbedingung einfügen
-            str = namen.next();// Einsetzen: Auslesen des Iterators
-            System.out.println("Nachname: " + str);
+        boolean replaceMe = true; // Diese Variable wird benoetigt damit der Code der Vorlage uebersetzt
+        while (replaceMe) { // Einsetzen: Iteratorbedingung einfügen
+             str = null; // Einsetzen: Auslesen des Iterators
+             System.out.println("Nachname: " + str);
         }
         String nme = "Merian";
         System.out.println("Student mit Name " + nme +
-                " ist:" + mp.get(nme)); // Einsetzen der Operation zum Auslesen der Studentin mit Namen nme
+                " ist:" + null); // Einsetzen der Operation zum Auslesen der Studentin mit Namen nme
         nme = "Herschel";
         System.out.println("Student mit Name " + nme +
-                " ist:" + mp.get(nme)); // Einsetzen der Operation zum Auslesen der Studenin mit Namen nme
+                " ist:" + null); // Einsetzen der Operation zum Auslesen der Studenin mit Namen nme
         System.out.println("Alle Werte der NamenMap:");
-        Collection<Student> l = mp.values(); // Einsetzen: Auslesen der gesamten Collection
+        Collection<Student> l = null; // Einsetzen: Auslesen der gesamten Collection
         Iterator<Student> iterStudi = l.iterator();
         System.out.println("Name ("
                 + mp.getClass() + "):");
-        while (iterStudi.hasNext()) { // Einsetzen: Iteratorbedingung einfügen
-            st = iterStudi.next();// Einsetzen: Auslesen des Iterators
+        while (true) { // Einsetzen: Iteratorbedingung einfügen
+            st = null;// Einsetzen: Auslesen des Iterators
             System.out.println("Student: " + st);
             }
     }
