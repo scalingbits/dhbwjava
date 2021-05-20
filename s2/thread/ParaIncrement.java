@@ -7,10 +7,12 @@ package s2.thread;
 public class ParaIncrement extends Thread {
     public static int zaehler=0;
     public static final int  MAX= Integer.MAX_VALUE/100;
-    
-    public synchronized static void increment() {
-        zaehler++;
-    }
+
+    /**
+     * increment with potential conflicts (overwriting)
+     * Add "synchronized" as key word to make it save (and slow)
+     */
+    public static void increment() { zaehler++; }
 
      /**
      * Starten des Threads
