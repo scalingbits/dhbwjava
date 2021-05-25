@@ -1,11 +1,6 @@
 package s2.io;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.Reader;
-import java.io.Writer;
+import java.io.*;
 
 /**
  *
@@ -17,17 +12,31 @@ public class Vokalverschiebung {
      * @param args enthält optional zuerst Pfad zur Engabedatei, und zur Ausgabedatei
      */
     public static void main(String[] args) {
+        // Diese Dateien haben keinen voll qualifizierten Pfad
+        // Sie werden in dem Verzeichnis gelesen und geschrieben in dem die Anwendung
+        // gestartet wird
+        // Wird die Anwendung mit IntelliJ gestartet, so wird hier das Projektverzeichnis
+        // von IntelliJ verwendet
         String fe = "scalingbitsRein.txt";
         String fa = "scalingbitsRaus.txt";
+        // Ueberschreiben mit Kommandozeilenparameter falls sie existieren
         if (args.length >= 2) {
             fe = args[0];
             fa = args[1];
         }
-        try { 
-            schieben(new FileReader(new File(fe)),
-                       new FileWriter(new File(fa)));
-        } catch (IOException ex) {
+        try {
+            File dateirein = new File(fe);
+            File dateiraus = new File(fa);
+            System.out.println("Werde aus Datei " + dateirein.getAbsolutePath() + " lesen.");
+            System.out.println("Werde in Datei " + dateiraus.getAbsolutePath() + " schreiben.");
 
+            // Direktes Bearbeiten. Nicht gepuffert
+            schieben(new FileReader(dateirein),
+                       new FileWriter(dateiraus));
+            // Gepuffertes Bearbeiten
+            //schieben(new BufferedReader(new FileReader(dateirein)),
+            //        new BufferedWriter(new FileWriter(dateiraus)));
+        } catch (IOException ex) {
             System.out.println("Probleme im IO Subsystem. Scotty beam me up...");
             System.out.println(ex.getMessage());
         } 
@@ -56,6 +65,7 @@ public class Vokalverschiebung {
             }
             w.write(c);
         }
+        // Schliesen der Dateien
         r.close();
         w.close();
     }
