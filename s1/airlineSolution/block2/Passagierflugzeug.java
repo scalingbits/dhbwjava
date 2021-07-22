@@ -13,14 +13,22 @@ public class Passagierflugzeug {
     double leergewicht;
     final double durchschnittsgewicht=75;
     final double gewichtKerosin= 0.845d;
-    
-    
+
+    /**
+     * Hier wird das aktuelle Gewicht berechnet
+     * @return Gesamtgewicht des Flugzeuges
+     */
     public double gewicht() {
         double meinGewicht = leergewicht + passagiere*durchschnittsgewicht+
                 besatzung*durchschnittsgewicht+treibstoff*gewichtKerosin;
         return meinGewicht;
         
     }
+
+    /**
+     * Diese Methode erzeugt eine Zeichenkette mit dem Zustand des Flugzeugs
+     * @return alle Daten des Flugzeugs als Zeichenkette
+     */
     public String toString() {
         return kennzeichen + ", Passagiere: " + passagiere + 
                 ", Besatzung: " + besatzung+ ", Treibstoff: " + treibstoff + "l"

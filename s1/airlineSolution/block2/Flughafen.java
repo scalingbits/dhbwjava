@@ -13,7 +13,11 @@ public class Flughafen {
     Passagierflugzeug gate5;
     Passagierflugzeug gate6;
     double treibstoffLager;
-    
+
+    /**
+     * Das Hauptprogramm. Hier wird die Anwendung gestarted
+     * @param args Konsolenparameter koennen uebergeben werden. Sie werden aber nicht ausgewertet
+     */
     public static void main(String[] args) {
         Flughafen pad = new Flughafen();
         pad.name="Paderborn";

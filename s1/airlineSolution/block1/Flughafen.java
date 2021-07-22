@@ -15,7 +15,7 @@ public class Flughafen {
     double treibstoffLager;
 
     /**
-     * DAs Hauptprogramm. Hier wird die Anwendung gestarted
+     * Das Hauptprogramm. Hier wird die Anwendung gestarted
      * @param args Konsolenparameter koennen uebergeben werden. Sie werden aber nicht ausgewertet
      */
     public static void main(String[] args) {
