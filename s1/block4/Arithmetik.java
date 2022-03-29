@@ -8,9 +8,12 @@ public class Arithmetik {
      * @param args Konsolenparameter
      **/
     public static void main(String[] args) {
-        int a = 5;
-        int b = 8;
-        int c = 0;
+        int a;
+        int b;
+        int c;
+
+        a=5;
+        b=8;
 
         if (args.length > 1) {
             try {

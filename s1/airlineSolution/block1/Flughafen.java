@@ -21,7 +21,7 @@ public class Flughafen {
     public static void main(String[] args) {
         Flughafen pad = new Flughafen();
         pad.name="Paderborn";
-        pad.treibstoffLager = 1000000;
+        pad.treibstoffLager = 1000000.5D;
         
         System.out.println("*** Unser Flughafen ***");
         System.out.println("Flughafen " + pad.name);

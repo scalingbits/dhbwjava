@@ -49,12 +49,13 @@ public class MainSort {
         // gewünschten Implementierung
         String nameSortierKlasse;
         if (algorithmusName.equals("")) {
-           //algorithmusName = "TrivialSort";
+           algorithmusName = "TrivialSort";
            //algorithmusName = "SelectionSort";
            //algorithmusName = "InsertionSort";
            //algorithmusName = "BubbleSort";
+           // algorithmusName = "HeapSort";
            //algorithmusName = "QuickSort";
-           algorithmusName = "QuickSortParallel";
+           //algorithmusName = "QuickSortParallel";
         }
         Class<?> meineKlasse;
         Constructor<?> konstruktor;
@@ -67,7 +68,7 @@ public class MainSort {
             // Nimm den Ersten. Es sollte nure einen geben
             konstruktor = konstruktoren[0];
             // Erzeuge eine Instanz dynamisch
-            sort = (Sortierer) konstruktor.newInstance((Object)feld);
+            sort = (Sortierer) konstruktor.newInstance(feld);
         } catch (ClassNotFoundException ex) {
             System.out.println("Klasse nicht gefunden. Scotty beam me up");
         } catch (InstantiationException ex) {

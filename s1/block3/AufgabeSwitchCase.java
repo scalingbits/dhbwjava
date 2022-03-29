@@ -1,6 +1,6 @@
 package s1.block3;
 
-public class CaseAufgabe {
+public class AufgabeSwitchCase {
     static short k;
 
     public static void main(String[] args) {
@@ -19,17 +19,18 @@ public class CaseAufgabe {
                 case 2:
                 case 3:
                 case 4:
-                    System.out.println("LINKS");
+                    System.out.print("LINKS");
                     break;
                 case 6:
                 case 7:
                 case 8:
                 case 9:
-                    System.out.println("RECHTS");
+                    System.out.print("RECHTS");
                     break;
                 default:
-                    System.out.println("MITTE");
+                    System.out.print("MITTE");
             } // switch
+            System.out.println(); //Neue Zeile
         } // for i
     } // main
 }
